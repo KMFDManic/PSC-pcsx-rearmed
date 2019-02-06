@@ -2,7 +2,7 @@
 
 # default stuff goes here, so that config can override
 TARGET ?= pcsx
-CFLAGS += -Wall -ggdb -Iinclude -ffast-math
+CFLAGS += -Wall -Iinclude -ffast-math
 ifdef CONFIG_ENABLE_MENU
 CFLAGS += -DCONFIG_ENABLE_MENU
 endif
@@ -28,6 +28,7 @@ config.mak:
 endif
 else # NO_CONFIG_MAK
 config.mak:
+	@echo "NO MAK"
 endif
 
 -include Makefile.local

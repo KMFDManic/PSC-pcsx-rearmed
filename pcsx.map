@@ -1,0 +1,2924 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+                              libpcsxcore/cdriso.o (__aeabi_uldivmod)
+/usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+                              /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+/usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+                              libpcsxcore/new_dynarec/new_dynarec.o (__clear_cache)
+/usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+                              /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+
+As-needed library included to satisfy reference by file (symbol)
+
+libSDL2-2.0.so.0              frontend/libpicofe/plat_sdl.o (SDL_CreateTexture)
+libpng16.so.16                frontend/libpicofe/readpng.o (png_create_write_struct@@PNG16_0)
+libdl.so.2                    plugins/cdrcimg/cdrcimg.o (dlsym@@GLIBC_2.4)
+libm.so.6                     plugins/dfsound/spu.o (tanh@@GLIBC_2.4)
+libpthread.so.0               plugins/dfsound/spu.o (sem_post@@GLIBC_2.4)
+libz.so.1                     libpcsxcore/misc.o (gzwrite)
+libc.so.6                     frontend/menu.o (strcasestr@@GLIBC_2.4)
+
+Allocating common symbols
+Common symbol       size              file
+
+SPU_playSample      0x4               libpcsxcore/plugins.o
+SPU_async           0x4               libpcsxcore/plugins.o
+pl_plat_clear       0x4               frontend/plugin_lib.o
+drawW               0x4               plugins/dfxvideo/gpulib_if.o
+INCLUDE_TITLE       0x8               libpcsxcore/cdrom.o
+GlobalTextAddrX     0x4               plugins/dfxvideo/gpulib_if.o
+Ymax                0x2               plugins/dfxvideo/gpulib_if.o
+cdimg_read_func     0x4               libpcsxcore/cdriso.o
+SPU_writeDMA        0x4               libpcsxcore/plugins.o
+hash_table          0x100000          libpcsxcore/new_dynarec/new_dynarec.o
+drawY               0x4               plugins/dfxvideo/gpulib_if.o
+psxVuw_t            0x4               plugins/dfxvideo/gpulib_if.o
+plat_sdl_screen     0x4               frontend/libpicofe/plat_sdl.o
+NET_sendData        0x4               libpcsxcore/plugins.o
+gpuDisp             0x4               frontend/main.o
+psxVsl              0x4               plugins/dfxvideo/gpulib_if.o
+NET_close           0x4               libpcsxcore/plugins.o
+VRAMRead            0x10              plugins/dfxvideo/gpulib_if.o
+in_keystate         0x4               frontend/plugin_lib.o
+g_layer_y           0x4               frontend/plugin_lib.o
+TWin                0x10              plugins/dfxvideo/gpulib_if.o
+ffile               0x40              libpcsxcore/psxbios.o
+GPU_readDataMem     0x4               libpcsxcore/plugins.o
+g_layer_w           0x4               frontend/plugin_lib.o
+GPU_freeze          0x4               libpcsxcore/plugins.o
+GPU_showScreenPic   0x4               libpcsxcore/plugins.o
+PAD2_about          0x4               libpcsxcore/plugins.o
+CDR_getBuffer       0x4               libpcsxcore/plugins.o
+plat_target         0x34              frontend/libpicofe/plat_dummy.o
+CmdLen              0x1               plugins/dfinput/main.o
+plat_sdl_gl_active  0x4               frontend/libpicofe/plat_sdl.o
+SPU_shutdown        0x4               libpcsxcore/plugins.o
+GPU_writeStatus     0x4               libpcsxcore/plugins.o
+PAD2_open           0x4               libpcsxcore/plugins.o
+cdr                 0x89d8            libpcsxcore/cdrom.o
+CDR_getStatus       0x4               libpcsxcore/plugins.o
+PAD2_configure      0x4               libpcsxcore/plugins.o
+g_menuscreen_h      0x4               frontend/menu.o
+SPU_playADPCMchannel
+                    0x4               libpcsxcore/plugins.o
+lGPUstatusRet       0x4               plugins/dfxvideo/gpulib_if.o
+NET_about           0x4               libpcsxcore/plugins.o
+PAD1_setSensitive   0x4               libpcsxcore/plugins.o
+changedisc_message  0x80              frontend/main.o
+g_scaler            0x4               frontend/menu.o
+CDR_readTrack       0x4               libpcsxcore/plugins.o
+CurByte             0x1               plugins/dfinput/main.o
+PAD1_poll           0x4               libpcsxcore/plugins.o
+psxVsb              0x4               plugins/dfxvideo/gpulib_if.o
+SPU_writeRegister   0x4               libpcsxcore/plugins.o
+isUnknowCdrom       0x4               frontend/main.o
+plat_sdl_resize_cb  0x4               frontend/libpicofe/plat_sdl.o
+SPU_enableRvbConfig
+                    0x4               libpcsxcore/plugins.o
+PAD1_test           0x4               libpcsxcore/plugins.o
+CDR_readCDDA        0x4               libpcsxcore/plugins.o
+PAD1_configure      0x4               libpcsxcore/plugins.o
+event_cycles        0x3c              libpcsxcore/new_dynarec/emu_if.o
+emu_action_old      0x4               frontend/main.o
+NET_open            0x4               libpcsxcore/plugins.o
+CDR_about           0x4               libpcsxcore/plugins.o
+Ymin                0x2               plugins/dfxvideo/gpulib_if.o
+soft_filter         0x4               frontend/menu.o
+SPU_readDMA         0x4               libpcsxcore/plugins.o
+GPU_open            0x4               libpcsxcore/plugins.o
+tsdev               0x4               frontend/plugin_lib.o
+ostr                0x100             libpcsxcore/disr3000a.o
+g_menubg_src_ptr    0x4               frontend/menu.o
+gpu                 0x1134            plugins/gpulib/gpu.o
+CDR_stop            0x4               libpcsxcore/plugins.o
+Mcd1Data            0x20000           libpcsxcore/sio.o
+g_menubg_ptr        0x4               frontend/menu.o
+NET_queryPlayer     0x4               libpcsxcore/plugins.o
+PAD1_shutdown       0x4               libpcsxcore/plugins.o
+psxMapHook          0x4               libpcsxcore/psxmem.o
+state_slot          0x4               frontend/main.o
+psxUnmapHook        0x4               libpcsxcore/psxmem.o
+GPU_dmaChain        0x4               libpcsxcore/plugins.o
+SPU_playCDDAchannel
+                    0x4               libpcsxcore/plugins.o
+lx1                 0x2               plugins/dfxvideo/gpulib_if.o
+PAD2_init           0x4               libpcsxcore/plugins.o
+lx3                 0x2               plugins/dfxvideo/gpulib_if.o
+g_emu_resetting     0x4               frontend/main.o
+g_emu_want_quit     0x4               frontend/main.o
+NET_sendPadData     0x4               libpcsxcore/plugins.o
+VRAMWrite           0x10              plugins/dfxvideo/gpulib_if.o
+GPU_about           0x4               libpcsxcore/plugins.o
+SPU_open            0x4               libpcsxcore/plugins.o
+SPU_configure       0x4               libpcsxcore/plugins.o
+pfile               0x4               libpcsxcore/psxbios.o
+translation_cache   0x1000000         libpcsxcore/new_dynarec/new_dynarec.o
+iUseFixes           0x4               plugins/dfxvideo/gpulib_if.o
+psxVuw              0x4               plugins/dfxvideo/gpulib_if.o
+CDR_getTN           0x4               libpcsxcore/plugins.o
+padd2               0x66              libpcsxcore/plugins.o
+ly2                 0x2               plugins/dfxvideo/gpulib_if.o
+GPU_test            0x4               libpcsxcore/plugins.o
+ly0                 0x2               plugins/dfxvideo/gpulib_if.o
+CDR_getTD           0x4               libpcsxcore/plugins.o
+GPU_makeSnapshot    0x4               libpcsxcore/plugins.o
+PAD2_setSensitive   0x4               libpcsxcore/plugins.o
+analog_deadzone     0x4               frontend/menu.o
+PAD1_query          0x4               libpcsxcore/plugins.o
+State_CdlPause      0x1               libpcsxcore/cdrom.o
+NET_setInfo         0x4               libpcsxcore/plugins.o
+in_state_gun        0x4               frontend/plugin_lib.o
+SPU_close           0x4               libpcsxcore/plugins.o
+g_menuscreen_ptr    0x4               frontend/menu.o
+PAD1_keypressed     0x4               libpcsxcore/plugins.o
+SPU_readDMAMem      0x4               libpcsxcore/plugins.o
+pl_vout_buf         0x4               frontend/plugin_lib.o
+GPU_writeDataMem    0x4               libpcsxcore/plugins.o
+g_layer_h           0x4               frontend/plugin_lib.o
+CDR_open            0x4               libpcsxcore/plugins.o
+GPU_updateLace      0x4               libpcsxcore/plugins.o
+pl_plat_hud_print   0x4               frontend/plugin_lib.o
+nottime_message     0x80              frontend/main.o
+in_type1            0x4               frontend/plugin_lib.o
+open_invalid_time   0x4               frontend/menu.o
+NET_test            0x4               libpcsxcore/plugins.o
+CurCmd              0x1               plugins/dfinput/main.o
+SPU_test            0x4               libpcsxcore/plugins.o
+SPU_readRegister    0x4               libpcsxcore/plugins.o
+new_dynarec_did_compile
+                    0x4               libpcsxcore/new_dynarec/new_dynarec.o
+new_dynarec_hacks   0x4               libpcsxcore/new_dynarec/new_dynarec.o
+drawH               0x4               plugins/dfxvideo/gpulib_if.o
+NET_recvData        0x4               libpcsxcore/plugins.o
+NET_recvPadData     0x4               libpcsxcore/plugins.o
+GPU_getScreenPic    0x4               libpcsxcore/plugins.o
+CDR_test            0x4               libpcsxcore/plugins.o
+xaSave_iRightVolume
+                    0x4               libpcsxcore/cdrom.o
+scanlines           0x4               frontend/menu.o
+sbi_sectors         0x4               libpcsxcore/ppf.o
+GlobalTextAddrY     0x4               plugins/dfxvideo/gpulib_if.o
+soft_scaling        0x4               frontend/menu.o
+g_opts              0x4               frontend/menu.o
+out_current         0x4               plugins/dfsound/out.o
+GPU_readStatus      0x4               libpcsxcore/plugins.o
+CDR_close           0x4               libpcsxcore/plugins.o
+NET_keypressed      0x4               libpcsxcore/plugins.o
+drawX               0x4               plugins/dfxvideo/gpulib_if.o
+CDR_getDriveLetter  0x4               libpcsxcore/plugins.o
+biosA0              0x400             libpcsxcore/psxbios.o
+jump_dirty          0x4000            libpcsxcore/new_dynarec/new_dynarec.o
+lLowerpart          0x4               plugins/dfxvideo/gpulib_if.o
+g_layer_x           0x4               frontend/plugin_lib.o
+PAD1_open           0x4               libpcsxcore/plugins.o
+SPU_init            0x4               libpcsxcore/plugins.o
+cfgfile_basename    0x100             frontend/main.o
+CDR_play            0x4               libpcsxcore/plugins.o
+GlobalTextTP        0x4               plugins/dfxvideo/gpulib_if.o
+psxVsw              0x4               plugins/dfxvideo/gpulib_if.o
+spu                 0x900             plugins/dfsound/spu.o
+ready_to_go         0x4               frontend/main.o
+in_enable_vibration
+                    0x4               frontend/plugin_lib.o
+PSXDisplay          0x4c              plugins/dfxvideo/gpulib_if.o
+GPU_init            0x4               libpcsxcore/plugins.o
+DataReadMode        0x2               plugins/dfxvideo/gpulib_if.o
+PAD1_startPoll      0x4               libpcsxcore/plugins.o
+gte_handlers        0x100             libpcsxcore/new_dynarec/emu_if.o
+dwCfgFixes          0x4               plugins/dfxvideo/gpulib_if.o
+GPU_displayText     0x4               libpcsxcore/plugins.o
+NET_resume          0x4               libpcsxcore/plugins.o
+nfile               0x4               libpcsxcore/psxbios.o
+PAD2_shutdown       0x4               libpcsxcore/plugins.o
+in_evdev_allow_abs_only
+                    0x4               frontend/libpicofe/linux/in_evdev.o
+solodisc_message    0x80              frontend/main.o
+lGPUInfoVals        0x40              plugins/dfxvideo/gpulib_if.o
+PAD2_readPort2      0x4               libpcsxcore/plugins.o
+cycle_multiplier    0x4               libpcsxcore/new_dynarec/new_dynarec.o
+CDR_configure       0x4               libpcsxcore/plugins.o
+jump_in             0x4000            libpcsxcore/new_dynarec/new_dynarec.o
+NET_configure       0x4               libpcsxcore/plugins.o
+sdl2_texture        0x4               frontend/libpicofe/plat_sdl.o
+PAD2_close          0x4               libpcsxcore/plugins.o
+PAD2_test           0x4               libpcsxcore/plugins.o
+CDR_setfilename     0x4               libpcsxcore/plugins.o
+sdl2_window         0x4               frontend/libpicofe/plat_sdl.o
+SPU_fadein          0x4               libpcsxcore/plugins.o
+GPU_boStatus        0x4               libpcsxcore/plugins.o
+in_adev_is_nublike  0x8               frontend/plugin_lib.o
+Mcd2Data            0x20000           libpcsxcore/sio.o
+invalid_code        0x100000          libpcsxcore/new_dynarec/emu_if.o
+GPU_shutdown        0x4               libpcsxcore/plugins.o
+SPU_freeze          0x4               libpcsxcore/plugins.o
+PAD1_init           0x4               libpcsxcore/plugins.o
+sdl2_renderer       0x4               frontend/libpicofe/plat_sdl.o
+cdrIsoMultidiskCount
+                    0x4               libpcsxcore/cdriso.o
+McdDisable          0x2               libpcsxcore/sio.o
+PAD2_poll           0x4               libpcsxcore/plugins.o
+lx2                 0x2               plugins/dfxvideo/gpulib_if.o
+lx0                 0x2               plugins/dfxvideo/gpulib_if.o
+scenes              0x4               plugins/dfxvideo/gpulib_if.o
+psxVul              0x4               plugins/dfxvideo/gpulib_if.o
+Config              0xd0e             libpcsxcore/psxcommon.o
+biosC0              0x400             libpcsxcore/psxbios.o
+hud_new_msg         0x4               frontend/main.o
+SPU_about           0x4               libpcsxcore/plugins.o
+GPU_clearDynarec    0x4               libpcsxcore/plugins.o
+zero_mem            0x1000            libpcsxcore/new_dynarec/pcsxmem.o
+GPU_close           0x4               libpcsxcore/plugins.o
+CDR_getBufferSub    0x4               libpcsxcore/plugins.o
+cdrIsoMultidiskSelect
+                    0x4               libpcsxcore/cdriso.o
+g_menuscreen_w      0x4               frontend/menu.o
+SPU_registerScheduleCb
+                    0x4               libpcsxcore/plugins.o
+spu_config          0x20              plugins/dfsound/spu.o
+GlobalTextPAGE      0x4               plugins/dfxvideo/gpulib_if.o
+GPU_configure       0x4               libpcsxcore/plugins.o
+padd1               0x66              libpcsxcore/plugins.o
+xaSave_iLeftVolume  0x4               libpcsxcore/cdrom.o
+ly3                 0x2               plugins/dfxvideo/gpulib_if.o
+CDR_getTE           0x4               libpcsxcore/plugins.o
+ly1                 0x2               plugins/dfxvideo/gpulib_if.o
+out                 0x4               libpcsxcore/new_dynarec/new_dynarec.o
+plat_sdl_quit_cb    0x4               frontend/libpicofe/plat_sdl.o
+SPU_writeDMAMem     0x4               libpcsxcore/plugins.o
+PAD2_query          0x4               libpcsxcore/plugins.o
+GPU_keypressed      0x4               libpcsxcore/plugins.o
+PAD1_close          0x4               libpcsxcore/plugins.o
+NET_shutdown        0x4               libpcsxcore/plugins.o
+psxVub              0x4               plugins/dfxvideo/gpulib_if.o
+DataWriteMode       0x2               plugins/dfxvideo/gpulib_if.o
+PAD2_keypressed     0x4               libpcsxcore/plugins.o
+GPU_vBlank          0x4               libpcsxcore/plugins.o
+GPU_writeData       0x4               libpcsxcore/plugins.o
+PAD1_readPort1      0x4               libpcsxcore/plugins.o
+CurPad              0x1               plugins/dfinput/main.o
+biosB0              0x400             libpcsxcore/psxbios.o
+pl_plat_blit        0x4               frontend/plugin_lib.o
+ok_image            0x80              frontend/main.o
+GlobalTextABR       0x4               plugins/dfxvideo/gpulib_if.o
+PAD1_about          0x4               libpcsxcore/plugins.o
+GPU_setPatchFlag    0x4               libpcsxcore/plugins.o
+in_type2            0x4               frontend/plugin_lib.o
+psxVuw_eom          0x4               plugins/dfxvideo/gpulib_if.o
+NET_pause           0x4               libpcsxcore/plugins.o
+CDR_init            0x4               libpcsxcore/plugins.o
+SPU_registerCallback
+                    0x4               libpcsxcore/plugins.o
+p2_connected        0x4               libpcsxcore/sio.o
+CDR_shutdown        0x4               libpcsxcore/plugins.o
+hud_msg             0x40              frontend/main.o
+PAD2_startPoll      0x4               libpcsxcore/plugins.o
+emu_action          0x4               frontend/main.o
+NET_init            0x4               libpcsxcore/plugins.o
+ChanBuf             0xe08             plugins/dfsound/spu.o
+g_autostateld_opt   0x4               frontend/menu.o
+GPU_readData        0x4               libpcsxcore/plugins.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/cdriso.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/cdrom.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/cheat.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/debug.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/decode_xa.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/disr3000a.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/mdec.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/misc.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/plugins.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/ppf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxbios.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxcommon.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxcounters.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxdma.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxhle.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxhw.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxinterpreter.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/psxmem.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/r3000a.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/sio.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/socket.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/spu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/gte.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/gte_nf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/gte_divider.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/new_dynarec/new_dynarec.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/new_dynarec/pcsxmem.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libpcsxcore/new_dynarec/emu_if.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/dma.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/freeze.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/registers.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/spu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/out.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/nullsnd.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfsound/sdl.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/gpulib/gpu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/gpulib/vout_pl.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfxvideo/gpulib_if.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/cdrcimg/cdrcimg.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfinput/main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfinput/pad.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 plugins/dfinput/guncon.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/cspace.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/in_sdl.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/plat_sdl.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/plat_dummy.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/linux/in_evdev.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/plat_sdl.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/plugin_lib.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/linux/plat.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/readpng.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/fonts.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/menu.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/libpicofe/input.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 frontend/plugin.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+LOAD libpcsxcore/cdriso.o
+LOAD libpcsxcore/cdrom.o
+LOAD libpcsxcore/cheat.o
+LOAD libpcsxcore/debug.o
+LOAD libpcsxcore/decode_xa.o
+LOAD libpcsxcore/disr3000a.o
+LOAD libpcsxcore/mdec.o
+LOAD libpcsxcore/misc.o
+LOAD libpcsxcore/plugins.o
+LOAD libpcsxcore/ppf.o
+LOAD libpcsxcore/psxbios.o
+LOAD libpcsxcore/psxcommon.o
+LOAD libpcsxcore/psxcounters.o
+LOAD libpcsxcore/psxdma.o
+LOAD libpcsxcore/psxhle.o
+LOAD libpcsxcore/psxhw.o
+LOAD libpcsxcore/psxinterpreter.o
+LOAD libpcsxcore/psxmem.o
+LOAD libpcsxcore/r3000a.o
+LOAD libpcsxcore/sio.o
+LOAD libpcsxcore/socket.o
+LOAD libpcsxcore/spu.o
+LOAD libpcsxcore/gte.o
+LOAD libpcsxcore/gte_nf.o
+LOAD libpcsxcore/gte_divider.o
+LOAD libpcsxcore/gte_arm.o
+LOAD libpcsxcore/gte_neon.o
+LOAD libpcsxcore/new_dynarec/new_dynarec.o
+LOAD libpcsxcore/new_dynarec/linkage_arm.o
+LOAD libpcsxcore/new_dynarec/pcsxmem.o
+LOAD libpcsxcore/new_dynarec/emu_if.o
+LOAD plugins/dfsound/dma.o
+LOAD plugins/dfsound/freeze.o
+LOAD plugins/dfsound/registers.o
+LOAD plugins/dfsound/spu.o
+LOAD plugins/dfsound/out.o
+LOAD plugins/dfsound/nullsnd.o
+LOAD plugins/dfsound/arm_utils.o
+LOAD plugins/dfsound/sdl.o
+LOAD plugins/gpulib/gpu.o
+LOAD plugins/gpulib/vout_pl.o
+LOAD plugins/dfxvideo/gpulib_if.o
+LOAD plugins/cdrcimg/cdrcimg.o
+LOAD plugins/dfinput/main.o
+LOAD plugins/dfinput/pad.o
+LOAD plugins/dfinput/guncon.o
+LOAD frontend/cspace.o
+LOAD frontend/cspace_neon.o
+LOAD frontend/libpicofe/in_sdl.o
+LOAD frontend/libpicofe/plat_sdl.o
+LOAD frontend/libpicofe/plat_dummy.o
+LOAD frontend/libpicofe/linux/in_evdev.o
+LOAD frontend/plat_sdl.o
+LOAD frontend/plugin_lib.o
+LOAD frontend/libpicofe/linux/plat.o
+LOAD frontend/libpicofe/readpng.o
+LOAD frontend/libpicofe/fonts.o
+LOAD frontend/libpicofe/arm/neon_scale2x.o
+LOAD frontend/libpicofe/arm/neon_eagle2x.o
+LOAD frontend/menu.o
+LOAD frontend/libpicofe/input.o
+LOAD frontend/main.o
+LOAD frontend/plugin.o
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libSDL2.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libpng.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libdl.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libm.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libpthread.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libz.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libwayland-client.so
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libwayland-egl.so
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc_s.so
+START GROUP
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libgcc_s.so.1
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a
+END GROUP
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libc.so
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc_s.so
+START GROUP
+LOAD /usr/local/cross-tools/arm-linux-gnueabihf/lib//libgcc_s.so.1
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a
+END GROUP
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+LOAD /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x0))
+                0x0000000000000154                . = (SEGMENT_START ("text-segment", 0x0) + SIZEOF_HEADERS)
+
+.interp         0x0000000000000154       0x19
+ *(.interp)
+ .interp        0x0000000000000154       0x19 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.note.ABI-tag   0x0000000000000170       0x20
+ .note.ABI-tag  0x0000000000000170       0x20 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.note.gnu.build-id
+                0x0000000000000190       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000000000190       0x24 linker stubs
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x00000000000001b4       0x40
+ *(.gnu.hash)
+ .gnu.hash      0x00000000000001b4       0x40 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.dynsym         0x00000000000001f4      0xd80
+ *(.dynsym)
+ .dynsym        0x00000000000001f4      0xd80 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.dynstr         0x0000000000000f74      0xa14
+ *(.dynstr)
+ .dynstr        0x0000000000000f74      0xa14 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.gnu.version    0x0000000000001988      0x1b0
+ *(.gnu.version)
+ .gnu.version   0x0000000000001988      0x1b0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.gnu.version_d  0x0000000000001b38        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000001b38        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.gnu.version_r  0x0000000000001b38       0xe0
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000001b38       0xe0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.rel.dyn        0x0000000000001c18     0x6578
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x0000000000001c18        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ .rel.data.rel.ro
+                0x0000000000001c18      0x978 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .rel.data.rel.ro.local
+                0x0000000000002590     0x1088 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ .rel.data.rel.local
+                0x0000000000003618     0x2fd8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .rel.data.rel  0x00000000000065f0      0xde0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .rel.data      0x00000000000073d0       0x20 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000000000073f0      0xd90 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000000008180        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                [!provide]                        PROVIDE (__rel_iplt_start = .)
+ *(.rel.iplt)
+ .rel.iplt      0x0000000000008180        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                [!provide]                        PROVIDE (__rel_iplt_end = .)
+ .rel.init_array
+                0x0000000000008180        0x8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .rel.fini_array
+                0x0000000000008188        0x8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.rela.dyn       0x0000000000008190        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.rel.plt        0x0000000000008190      0x658
+ *(.rel.plt)
+ .rel.plt       0x0000000000008190      0x658 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x00000000000087e8        0xc
+ *(SORT_NONE(.init))
+ .init          0x00000000000087e8        0x8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+                0x00000000000087e8                _init
+ .init          0x00000000000087f0        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.plt            0x00000000000087f4      0x998
+ *(.plt)
+ .plt           0x00000000000087f4      0x998 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.iplt           0x000000000000918c        0x0
+ *(.iplt)
+ .iplt          0x000000000000918c        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+
+.text           0x0000000000009190    0xaedc4
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000000009190      0xad0 frontend/main.o
+                0x0000000000009190                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000009c60       0x48 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                0x0000000000009c60                _start
+ .text          0x0000000000009ca8       0x24 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .text          0x0000000000009ccc       0xd0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .text          0x0000000000009d9c     0x3c3c libpcsxcore/cdriso.o
+                0x0000000000009e5c                ISOreadCDDA
+                0x000000000000d79c                cdrIsoInit
+                0x000000000000d9bc                cdrIsoActive
+ .text          0x000000000000d9d8     0x5a34 libpcsxcore/cdrom.o
+                0x000000000000dd70                CheckDiscChange
+                0x000000000000df98                cdrLidSeekInterrupt
+                0x000000000000e31c                cdrAttenuate
+                0x000000000000e5d0                cdrRead0
+                0x000000000000e630                cdrWrite0
+                0x000000000000e660                cdrRead1
+                0x000000000000e6ec                cdrWrite1
+                0x000000000001056c                cdrRead2
+                0x00000000000105b0                cdrWrite2
+                0x0000000000010630                cdrRead3
+                0x0000000000010678                cdrWrite3
+                0x00000000000107f0                psxDma3
+                0x0000000000010b64                cdrDmaInterrupt
+                0x0000000000010bcc                cdrReset
+                0x0000000000010c8c                LidInterrupt
+                0x0000000000010d58                check_Motionjpeg
+                0x0000000000010ec4                check_scenes
+                0x0000000000010fb8                check_scenesforSPU
+                0x000000000001128c                cdrPlayInterrupt
+                0x0000000000011698                cdrInterrupt
+                0x00000000000129ec                cdrReadInterrupt
+                0x000000000001310c                cdrFreeze
+ .text          0x000000000001340c     0x2820 libpcsxcore/cheat.o
+                0x000000000001348c                ClearAllCheats
+                0x000000000001352c                LoadCheats
+                0x0000000000013814                SaveCheats
+                0x000000000001397c                ApplyCheats
+                0x0000000000013f20                AddCheat
+                0x000000000001413c                RemoveCheat
+                0x00000000000141bc                EditCheat
+                0x0000000000014384                FreeCheatSearchResults
+                0x00000000000143c4                FreeCheatSearchMem
+                0x00000000000143fc                CheatSearchBackupMemory
+                0x000000000001445c                CheatSearchEqual8
+                0x000000000001458c                CheatSearchEqual16
+                0x00000000000146bc                CheatSearchEqual32
+                0x00000000000147ec                CheatSearchNotEqual8
+                0x0000000000014914                CheatSearchNotEqual16
+                0x0000000000014a3c                CheatSearchNotEqual32
+                0x0000000000014b64                CheatSearchRange8
+                0x0000000000014cbc                CheatSearchRange16
+                0x0000000000014e14                CheatSearchRange32
+                0x0000000000014f6c                CheatSearchIncreasedBy8
+                0x0000000000015024                CheatSearchIncreasedBy16
+                0x00000000000150dc                CheatSearchIncreasedBy32
+                0x0000000000015194                CheatSearchDecreasedBy8
+                0x000000000001524c                CheatSearchDecreasedBy16
+                0x0000000000015304                CheatSearchDecreasedBy32
+                0x00000000000153bc                CheatSearchIncreased8
+                0x0000000000015470                CheatSearchIncreased16
+                0x0000000000015524                CheatSearchIncreased32
+                0x00000000000155d8                CheatSearchDecreased8
+                0x000000000001568c                CheatSearchDecreased16
+                0x0000000000015740                CheatSearchDecreased32
+                0x00000000000157f4                CheatSearchDifferent8
+                0x00000000000158a8                CheatSearchDifferent16
+                0x000000000001595c                CheatSearchDifferent32
+                0x0000000000015a10                CheatSearchNoChange8
+                0x0000000000015ac4                CheatSearchNoChange16
+                0x0000000000015b78                CheatSearchNoChange32
+ .text          0x0000000000015c2c     0x3614 libpcsxcore/debug.o
+                0x0000000000015c50                add_breakpoint
+                0x0000000000015ccc                delete_breakpoint
+                0x00000000000186cc                next_breakpoint
+                0x00000000000186ec                find_breakpoint
+                0x0000000000018750                StartDebugger
+                0x00000000000187d0                StopDebugger
+                0x0000000000018868                PauseDebugger
+                0x0000000000018888                ResumeDebugger
+                0x00000000000188a4                DebugVSync
+                0x0000000000018924                MarkMap
+                0x0000000000018934                IsMapMarked
+                0x000000000001895c                DebugCheckBP
+                0x00000000000190dc                ProcessDebug
+ .text          0x0000000000019240     0x1224 libpcsxcore/decode_xa.o
+                0x000000000001a380                ADPCM_InitDecode
+                0x000000000001a390                xa_decode_sector
+ .text          0x000000000001a464     0x55a8 libpcsxcore/disr3000a.o
+                0x000000000001f9d0                disR3000AF
+ .text          0x000000000001fa0c     0x24e4 libpcsxcore/mdec.o
+                0x0000000000021544                mdecInit
+                0x00000000000215b0                mdecWrite0
+                0x00000000000215c4                mdecRead0
+                0x00000000000215d8                mdecWrite1
+                0x0000000000021604                mdecRead1
+                0x0000000000021618                psxDma0
+                0x00000000000218b8                mdec0Interrupt
+                0x0000000000021920                psxDma1
+                0x0000000000021934                mdec1Interrupt
+                0x0000000000021a34                mdecFreeze
+ .text          0x0000000000021ef0     0x3b04 libpcsxcore/misc.o
+                0x00000000000221ec                LogPrint
+                0x0000000000022230                save_error
+                0x00000000000222b8                isTitleName
+                0x00000000000222d8                initTitleName
+                0x00000000000222f0                setCdromId
+                0x0000000000022390                setTitleName
+                0x00000000000225e0                setDiscChangeType
+                0x00000000000226b4                mmssdd
+                0x0000000000022778                StartCheckOpen
+                0x0000000000022790                CheckOpenEnabled
+                0x00000000000227fc                GetCdromFile
+                0x0000000000022a9c                LoadCdrom
+                0x0000000000023188                LoadCdromFile
+                0x00000000000235f0                CheckCdrom
+                0x0000000000023d30                fread_to_ram
+                0x0000000000023d98                Load
+                0x00000000000240d4                SaveState
+                0x00000000000243f8                getSaveStateArray
+                0x0000000000024424                SaveStateWork
+                0x0000000000024838                freeSaveStateMem
+                0x0000000000024934                SetCdromId
+                0x0000000000024a00                AutoSaveState
+                0x0000000000024ca0                InitAutoSave
+                0x0000000000024ed0                emu_sync_state
+                0x00000000000251b4                emu_sync_state2
+                0x0000000000025208                LoadState
+                0x00000000000255f0                CheckState
+                0x00000000000256ac                SendPcsxInfo
+                0x0000000000025790                RecvPcsxInfo
+                0x00000000000258fc                trim
+                0x00000000000259a4                calcCrc
+ .text          0x00000000000259f4     0x2b78 libpcsxcore/plugins.o
+                0x00000000000259f4                GPU__showScreenPic
+                0x00000000000259fc                CDR__getDriveLetter
+                0x0000000000025a04                CDR__setfilename
+                0x0000000000025a0c                SPU__registerScheduleCb
+                0x0000000000025a10                PAD2__poll
+                0x0000000000025a3c                PAD1__poll
+                0x0000000000025a40                PAD2__query
+                0x0000000000025a48                PAD2__keypressed
+                0x0000000000025a50                NET__setInfo
+                0x0000000000025a54                NET__keypressed
+                0x0000000000025a58                NET__test
+                0x0000000000025a60                NET__about
+                0x0000000000025a64                GPU__displayText
+                0x0000000000025a78                CDR__getStatus
+                0x00000000000260ac                CDR__play
+                0x00000000000260b4                GPU__getScreenPic
+                0x00000000000260bc                CDR__configure
+                0x00000000000260c4                CDR__test
+                0x00000000000260cc                SPU__configure
+                0x00000000000260d4                SPU__test
+                0x00000000000260dc                PAD1__configure
+                0x00000000000260e4                PAD1__test
+                0x00000000000260ec                PAD1__query
+                0x00000000000260f4                PAD1__keypressed
+                0x00000000000260fc                PAD2__configure
+                0x0000000000026104                CDR__stop
+                0x000000000002610c                GPU__keypressed
+                0x0000000000026110                GPU__clearDynarec
+                0x0000000000026114                GPU__vBlank
+                0x0000000000026118                GPU__configure
+                0x0000000000026120                GPU__test
+                0x0000000000026128                PAD2__test
+                0x0000000000026130                NET__configure
+                0x0000000000026138                PAD1__about
+                0x000000000002613c                PAD2__about
+                0x0000000000026140                CDR__about
+                0x0000000000026144                SPU__about
+                0x0000000000026148                GPU__about
+                0x000000000002614c                GPU__makeSnapshot
+                0x0000000000026150                _PADstartPoll
+                0x00000000000262fc                PAD1__startPoll
+                0x0000000000026338                PAD2__startPoll
+                0x0000000000026374                _PADpoll
+                0x0000000000026378                clearDynarec
+                0x000000000002639c                ReleasePlugins
+                0x0000000000026604                LoadPlugins
+                0x00000000000283f8                ReloadCdromPlugin
+                0x00000000000284f0                SetIsoFile
+                0x0000000000028524                GetIsoFile
+                0x0000000000028538                UsingIso
+                0x0000000000028554                SetCdOpenCaseTime
+ .text          0x000000000002856c      0xa4c libpcsxcore/ppf.o
+                0x00000000000286e0                FreePPFCache
+                0x0000000000028748                CheckPPFCache
+                0x0000000000028884                BuildPPFCache
+                0x0000000000028e04                LoadSBI
+                0x0000000000028f80                UnloadSBI
+ .text          0x0000000000028fb8     0x74dc libpcsxcore/psxbios.o
+                0x0000000000028fb8                psxBios_labs
+                0x0000000000028fec                psxBios_abs
+                0x0000000000028ff0                psxBios_atoi
+                0x0000000000029154                psxBios_atol
+                0x0000000000029158                psxBios_setjmp
+                0x00000000000291f8                psxBios_longjmp
+                0x0000000000029298                psxBios_strcat
+                0x0000000000029328                psxBios_strncat
+                0x00000000000293dc                psxBios_strncmp
+                0x0000000000029478                psxBios_strcpy
+                0x00000000000294f0                psxBios_strncpy
+                0x00000000000295d0                psxBios_strlen
+                0x0000000000029658                psxBios_rindex
+                0x00000000000296ec                psxBios_strrchr
+                0x00000000000296f0                psxBios_strpbrk
+                0x00000000000297b0                psxBios_strspn
+                0x0000000000029878                psxBios_strcspn
+                0x0000000000029944                psxBios_strstr
+                0x0000000000029a60                psxBios_toupper
+                0x0000000000029a98                psxBios_tolower
+                0x0000000000029ad0                psxBios_bcopy
+                0x0000000000029b60                psxBios_bzero
+                0x0000000000029bd8                psxBios_bcmp
+                0x0000000000029c98                psxBios_memcpy
+                0x0000000000029d34                psxBios_memset
+                0x0000000000029dbc                psxBios_memmove
+                0x0000000000029ea4                psxBios_memcmp
+                0x0000000000029ea8                psxBios_rand
+                0x0000000000029f04                psxBios_srand
+                0x0000000000029f44                psxBios_Exec
+                0x000000000002a004                psxBios_GPU_dw
+                0x000000000002a0d4                psxBios_SendGPU
+                0x000000000002a160                psxBios_GPU_cw
+                0x000000000002a1a0                psxBios_GPU_cwb
+                0x000000000002a218                psxBios_GPU_GetGPUStatus
+                0x000000000002a258                psxBios_StartRCnt
+                0x000000000002a2e0                psxBios_StopRCnt
+                0x000000000002a360                psxBios_OpenEvent
+                0x000000000002a438                psxBios_CloseEvent
+                0x000000000002a494                psxBios_TestEvent
+                0x000000000002a500                psxBios_EnableEvent
+                0x000000000002a55c                psxBios_WaitEvent
+                0x000000000002a560                psxBios_DisableEvent
+                0x000000000002a5bc                psxBios_OpenTh
+                0x000000000002a650                psxBios_CloseTh
+                0x000000000002a6a4                psxBios_InitPAD
+                0x000000000002a744                psxBios_StopPAD
+                0x000000000002a780                psxBios_PAD_dr
+                0x000000000002a7ac                psxBios_ResetEntryInt
+                0x000000000002a7e4                psxBios_HookEntryInt
+                0x000000000002a840                psxBios_UnDeliverEvent
+                0x000000000002a8f8                psxBios_lseek
+                0x000000000002a984                psxBios_close
+                0x000000000002a9b0                psxBios_InitCARD
+                0x000000000002a9e8                psxBios_StartCARD
+                0x000000000002aa28                psxBios_StopCARD
+                0x000000000002aa68                psxBios_Krom2RawAdd
+                0x000000000002abd0                psxBios_GetC0Table
+                0x000000000002abfc                psxBios_GetB0Table
+                0x000000000002ac28                psxBios__card_chan
+                0x000000000002ac60                psxBios_SysEnqIntRP
+                0x000000000002acac                psxBios_SysDeqIntRP
+                0x000000000002acf0                psxBios_ChangeClearRCnt
+                0x000000000002ad5c                psxBios_dummy
+                0x000000000002ad80                psxBios_ChangeClearPad
+                0x000000000002ad84                psxBios__new_card
+                0x000000000002ad88                psxBios__96_remove
+                0x000000000002ad8c                psxBios__96_init
+                0x000000000002ad90                psxBios_FlushCache
+                0x000000000002ad94                psxBios_strtok
+                0x000000000002ae14                psxBios_malloc
+                0x000000000002b020                psxBios_free
+                0x000000000002b0d8                psxBios_realloc
+                0x000000000002b108                psxBios_InitHeap
+                0x000000000002b210                psxBios_SetMem
+                0x000000000002b310                psxBios_putchar
+                0x000000000002b358                psxBios_puts
+                0x000000000002b3dc                psxBios_calloc
+                0x000000000002b44c                psxBios_getchar
+                0x000000000002b48c                psxBios_format
+                0x000000000002b590                psxBios_Load
+                0x000000000002b668                psxBios_LoadExec
+                0x000000000002b6f0                psxBios_sys_a0_4c
+                0x000000000002b758                psxBios_mem2vram
+                0x000000000002b884                psxBios_GPU_SendPackets
+                0x000000000002b924                psxBios_SetRCnt
+                0x000000000002b9a8                psxBios_GetRCnt
+                0x000000000002b9f4                psxBios_ResetRCnt
+                0x000000000002ba50                psxBios_StartPAD
+                0x000000000002baa8                psxBios_PAD_init
+                0x000000000002bb5c                psxBios_delete
+                0x000000000002bdb8                psxBios_open
+                0x000000000002c2ac                psxBios_nextfile
+                0x000000000002c6e0                psxBios_rename
+                0x000000000002ca48                psxBios_printf
+                0x000000000002cf90                psxBios_ReturnFromException
+                0x000000000002d03c                psxBios_memchr
+                0x000000000002d0d8                psxBios_index
+                0x000000000002d168                psxBios_strchr
+                0x000000000002d16c                psxBios_strcmp
+                0x000000000002d1f4                psxBios_ChangeTh
+                0x000000000002d70c                psxBios_qsort
+                0x000000000002d784                psxBios__bu_init
+                0x000000000002d910                psxBios__card_load
+                0x000000000002d9e8                psxBios__card_info
+                0x000000000002d9ec                psxBios_DeliverEvent
+                0x000000000002db24                psxBios__card_read
+                0x000000000002dc80                psxBios__card_write
+                0x000000000002de3c                psxBios_firstfile
+                0x000000000002e328                psxBios_read
+                0x000000000002e7c8                psxBios_write
+                0x000000000002eca4                psxBiosInit
+                0x000000000002f694                psxBiosShutdown
+                0x000000000002f698                biosInterrupt
+                0x000000000002fe34                psxBiosException
+                0x0000000000030074                psxBiosFreeze
+ .text          0x0000000000030494       0xc8 libpcsxcore/psxcommon.o
+                0x0000000000030494                EmuInit
+                0x0000000000030498                EmuReset
+                0x00000000000304ac                EmuShutdown
+                0x00000000000304c8                EmuUpdate
+                0x0000000000030518                __Log
+ .text          0x000000000003055c      0xd38 libpcsxcore/psxcounters.o
+                0x00000000000308fc                change_HSync_Motionjpeg
+                0x0000000000030934                psxRcntUpdate
+                0x0000000000030c58                psxRcntWcount
+                0x0000000000030cd0                psxRcntWmode
+                0x0000000000030d50                psxRcntWtarget
+                0x0000000000030ddc                psxRcntRcount
+                0x0000000000030e6c                psxRcntRmode
+                0x0000000000030e9c                psxRcntRtarget
+                0x0000000000030ec4                psxRcntInit
+                0x0000000000031048                psxRcntFreeze
+ .text          0x0000000000031294      0x870 libpcsxcore/psxdma.o
+                0x0000000000031294                spuInterrupt
+                0x00000000000312fc                psxDma4
+                0x00000000000314c8                psxDma2
+                0x0000000000031850                gpuInterrupt
+                0x00000000000318c4                psxDma6
+                0x0000000000031a9c                gpuotcInterrupt
+ .text          0x0000000000031b04      0x1f0 libpcsxcore/psxhle.o
+ .text          0x0000000000031cf4      0xec8 libpcsxcore/psxhw.o
+                0x0000000000031cf4                psxHwReset
+                0x0000000000031d68                psxHwRead8
+                0x0000000000031df8                psxHwRead16
+                0x0000000000032000                psxHwRead32
+                0x0000000000032264                psxHwWrite8
+                0x0000000000032324                psxHwWrite16
+                0x00000000000325f4                psxHwWrite32
+                0x0000000000032bb4                psxHwFreeze
+ .text          0x0000000000032bbc     0x1b7c libpcsxcore/psxinterpreter.o
+                0x0000000000032db8                psxADDIU
+                0x0000000000032df0                psxADDI
+                0x0000000000032df4                psxANDI
+                0x0000000000032e30                psxORI
+                0x0000000000032e6c                psxXORI
+                0x0000000000032ea8                psxSLTI
+                0x0000000000032ef0                psxSLTIU
+                0x0000000000032f38                psxADDU
+                0x0000000000032f7c                psxADD
+                0x0000000000032f80                psxSUBU
+                0x0000000000032fc4                psxSUB
+                0x0000000000032fc8                psxAND
+                0x000000000003300c                psxOR
+                0x0000000000033050                psxXOR
+                0x0000000000033094                psxNOR
+                0x00000000000330dc                psxSLT
+                0x0000000000033128                psxSLTU
+                0x0000000000033174                psxDIV
+                0x00000000000331e8                psxDIVU
+                0x0000000000033244                psxMULT
+                0x0000000000033280                psxMULTU
+                0x00000000000332bc                psxSLL
+                0x00000000000332f8                psxSRA
+                0x0000000000033334                psxSRL
+                0x0000000000033370                psxSLLV
+                0x00000000000333b4                psxSRAV
+                0x00000000000333f8                psxSRLV
+                0x000000000003343c                psxLUI
+                0x000000000003346c                psxMFHI
+                0x000000000003349c                psxMFLO
+                0x00000000000334cc                psxMTHI
+                0x00000000000334f8                psxMTLO
+                0x0000000000033524                psxRFE
+                0x0000000000033554                psxCFC0
+                0x000000000003358c                psxMFC0
+                0x0000000000033590                psxSPECIAL
+                0x00000000000335c4                psxREGIMM
+                0x00000000000335fc                psxCOP0
+                0x0000000000033634                psxCOP2
+                0x000000000003366c                psxBASIC
+                0x00000000000336a4                psxHLE
+                0x00000000000336e8                psxSYSCALL
+                0x0000000000033724                psxLB
+                0x0000000000033774                psxLBU
+                0x00000000000337c0                psxLH
+                0x0000000000033810                psxLHU
+                0x000000000003385c                psxLW
+                0x00000000000338a8                psxLWL
+                0x000000000003391c                psxLWR
+                0x0000000000033994                psxSB
+                0x00000000000339c8                psxSH
+                0x0000000000033a00                psxSW
+                0x0000000000033a34                psxSWL
+                0x0000000000033aa8                psxSWR
+                0x0000000000033eb0                psxBREAK
+                0x0000000000033eb4                psxNULL
+                0x0000000000033eb8                psxTestLoadDelay
+                0x0000000000033ecc                psxTestSWInts
+                0x0000000000033f20                MTC0
+                0x0000000000033f84                psxCTC0
+                0x0000000000033fb0                psxMTC0
+                0x0000000000033fb4                execI
+                0x0000000000034060                psxDelayTest
+                0x00000000000343f8                psxBGEZ
+                0x0000000000034434                psxBGEZAL
+                0x0000000000034478                psxBGTZ
+                0x00000000000344b4                psxBLEZ
+                0x00000000000344f0                psxBLTZ
+                0x000000000003452c                psxBLTZAL
+                0x0000000000034570                psxBEQ
+                0x00000000000345b4                psxBNE
+                0x00000000000345f8                psxJ
+                0x0000000000034628                psxJAL
+                0x0000000000034660                psxJR
+                0x0000000000034694                psxJALR
+                0x00000000000346d0                intExecute
+                0x000000000003470c                intExecuteBlock
+ .text          0x0000000000034738      0xbd4 libpcsxcore/psxmem.o
+                0x0000000000034738                psxUnmap
+                0x0000000000034778                psxMap
+                0x00000000000348b4                psxMemReset
+                0x00000000000349e0                psxMemShutdown
+                0x0000000000034a4c                psxMemInit
+                0x0000000000034cc4                psxMemRead8
+                0x0000000000034d78                psxMemRead16
+                0x0000000000034e2c                psxMemRead32
+                0x0000000000034ee0                psxMemWrite8
+                0x0000000000034fb0                psxMemWrite16
+                0x0000000000035080                psxMemWrite32
+                0x00000000000352a4                psxMemPointer
+ .text          0x000000000003530c      0x744 libpcsxcore/r3000a.o
+                0x000000000003530c                psxInit
+                0x00000000000353d4                psxReset
+                0x00000000000354a0                psxShutdown
+                0x00000000000354c8                psxException
+                0x0000000000035618                psxBranchTest
+                0x0000000000035940                psxJumpTest
+                0x00000000000359f8                psxExecuteBios
+ .text          0x0000000000035a50     0x1fd8 libpcsxcore/sio.o
+                0x0000000000035a50                sioWriteStat16
+                0x0000000000035a54                sioWriteMode16
+                0x0000000000035a68                sioWriteCtrl16
+                0x0000000000035b04                sioWriteBaud16
+                0x0000000000035b18                sioReadStat16
+                0x0000000000035b2c                sioReadMode16
+                0x0000000000035b40                sioReadCtrl16
+                0x0000000000035b54                sioReadBaud16
+                0x0000000000035b68                sio1ReadCtrl16
+                0x0000000000035b70                netError
+                0x0000000000035bc0                sioWrite8
+                0x00000000000366b4                sioInterrupt
+                0x0000000000036704                CreateMcd
+                0x0000000000036dac                LoadMcd
+                0x0000000000036dbc                LoadMcds
+                0x0000000000036de0                ConvertMcd
+                0x000000000003711c                SaveMcd
+                0x000000000003723c                sioRead8
+                0x00000000000373ec                GetMcdBlockInfo
+                0x0000000000037720                sioFreeze
+ .text          0x0000000000037a28      0x4c4 libpcsxcore/socket.o
+                0x0000000000037a28                StopServer
+                0x0000000000037a54                CloseClient
+                0x0000000000037a90                GetClient
+                0x0000000000037b7c                HasClient
+                0x0000000000037b98                ReadSocket
+                0x0000000000037cc8                RawReadSocket
+                0x0000000000037db8                WriteSocket
+                0x0000000000037de4                SetsBlock
+                0x0000000000037e18                SetsNonblock
+                0x0000000000037e4c                StartServer
+ .text          0x0000000000037eec       0xcc libpcsxcore/spu.o
+                0x0000000000037eec                SPUirq
+                0x0000000000037f1c                SPUschedule
+                0x0000000000037f84                spuUpdate
+ .text          0x0000000000037fb8     0x643c libpcsxcore/gte.o
+                0x0000000000037fb8                gteMFC2
+                0x0000000000038110                gteCFC2
+                0x0000000000038148                gteMTC2
+                0x000000000003829c                gteCTC2
+                0x0000000000038378                gteLWC2
+                0x00000000000384d4                gteSWC2
+                0x0000000000038628                gteRTPS
+                0x0000000000038b18                gteRTPT
+                0x0000000000039094                gteMVMVA
+                0x0000000000039438                gteNCLIP
+                0x00000000000394c4                gteAVSZ3
+                0x0000000000039588                gteAVSZ4
+                0x0000000000039654                gteSQR
+                0x0000000000039788                gteNCCS
+                0x0000000000039c08                gteNCCT
+                0x000000000003a3e0                gteNCDS
+                0x000000000003aa68                gteNCDT
+                0x000000000003b48c                gteOP
+                0x000000000003b5d8                gteDCPL
+                0x000000000003b8ac                gteGPF
+                0x000000000003bab8                gteGPL
+                0x000000000003bdf4                gteDPCS
+                0x000000000003c0ec                gteDPCT
+                0x000000000003c3a8                gteNCS
+                0x000000000003c844                gteNCT
+                0x000000000003cf90                gteCC
+                0x000000000003d27c                gteINTPL
+                0x000000000003d54c                gteCDP
+                0x000000000003da30                gteSQR_part_noshift
+                0x000000000003da60                gteSQR_part_shift
+                0x000000000003da9c                gteOP_part_noshift
+                0x000000000003dae8                gteOP_part_shift
+                0x000000000003db40                gteDCPL_part
+                0x000000000003dc54                gteGPF_part_noshift
+                0x000000000003dc8c                gteGPF_part_shift
+                0x000000000003dcd0                gteGPL_part_noshift
+                0x000000000003ddc0                gteGPL_part_shift
+                0x000000000003dedc                gteDPCS_part_noshift
+                0x000000000003e008                gteDPCS_part_shift
+                0x000000000003e110                gteINTPL_part_noshift
+                0x000000000003e20c                gteINTPL_part_shift
+                0x000000000003e314                gteMACtoRGB
+ .text          0x000000000003e3f4     0x296c libpcsxcore/gte_nf.o
+                0x000000000003e3f4                gteRTPS_nf
+                0x000000000003e62c                gteRTPT_nf
+                0x000000000003e8f0                gteMVMVA_nf
+                0x000000000003eb54                gteNCLIP_nf
+                0x000000000003eb98                gteAVSZ3_nf
+                0x000000000003ebcc                gteAVSZ4_nf
+                0x000000000003ec08                gteSQR_nf
+                0x000000000003ecc8                gteNCCS_nf
+                0x000000000003ef0c                gteNCCT_nf
+                0x000000000003f23c                gteNCDS_nf
+                0x000000000003f504                gteNCDT_nf
+                0x000000000003f8f8                gteOP_nf
+                0x000000000003f9d4                gteDCPL_nf
+                0x000000000003fb34                gteGPF_nf
+                0x000000000003fc20                gteGPL_nf
+                0x000000000003fd9c                gteDPCS_nf
+                0x000000000003ff14                gteDPCT_nf
+                0x0000000000040048                gteNCS_nf
+                0x0000000000040264                gteNCT_nf
+                0x0000000000040540                gteCC_nf
+                0x00000000000406a4                gteINTPL_nf
+                0x00000000000407f4                gteCDP_nf
+                0x00000000000409dc                gteGPL_part_noshift_nf
+                0x0000000000040a20                gteGPL_part_shift_nf
+                0x0000000000040a70                gteDPCS_part_noshift_nf
+                0x0000000000040b40                gteDPCS_part_shift_nf
+                0x0000000000040be4                gteINTPL_part_noshift_nf
+                0x0000000000040c7c                gteINTPL_part_shift_nf
+                0x0000000000040d20                gteMACtoRGB_nf
+ .text          0x0000000000040d60       0xe4 libpcsxcore/gte_divider.o
+                0x0000000000040d60                DIVIDE
+ .text          0x0000000000040e44      0x664 libpcsxcore/gte_arm.o
+                0x0000000000040e44                gteRTPS_nf_arm
+                0x0000000000040fbc                gteRTPT_nf_arm
+                0x0000000000041140                gteMVMVA_part_arm
+                0x0000000000041204                gteMVMVA_part_nf_arm
+                0x0000000000041284                gteMVMVA_part_cv3sh12_arm
+                0x00000000000412fc                gteNCLIP_arm
+                0x0000000000041360                gteMACtoIR_lm0
+                0x00000000000413d0                gteMACtoIR_lm1
+                0x0000000000041440                gteMACtoIR_lm0_nf
+                0x0000000000041460                gteMACtoIR_lm1_nf
+ .text          0x00000000000414a8      0x6b8 libpcsxcore/gte_neon.o
+                0x00000000000414a8                gteRTPS_neon
+                0x00000000000416f0                gteRTPT_neon
+                0x0000000000041a4c                gteMVMVA_part_neon
+                0x0000000000041adc                gteMACtoIR_flags_neon
+ .text          0x0000000000041b60    0x307d8 libpcsxcore/new_dynarec/new_dynarec.o
+                0x0000000000049138                clear_all_regs
+                0x0000000000049154                get_reg
+                0x0000000000049194                get_reg2
+                0x00000000000491e4                count_free_regs
+                0x000000000004921c                dirty_reg
+                0x0000000000049228                set_const
+                0x0000000000049234                clear_const
+                0x0000000000049240                is_const
+                0x0000000000049260                get_const
+                0x00000000000492bc                lsn
+                0x0000000000049b2c                needed_again
+                0x0000000000049d1c                loop_reg
+                0x000000000004ae9c                alloc_all
+                0x000000000004af8c                do_dirty_stub
+                0x000000000004b358                ll_add
+                0x000000000004b390                ll_add_flags
+                0x000000000004b3c0                check_addr
+                0x000000000004b544                remove_hash
+                0x000000000004b5a8                ll_remove_matching_addrs
+                0x000000000004b608                ll_clear
+                0x000000000004b638                invalidate_page
+                0x000000000004b7dc                invalidate_block
+                0x000000000004b91c                invalidate_addr
+                0x000000000004bb5c                invalidate_all_pages
+                0x000000000004bc08                add_link
+                0x000000000004bc60                clean_blocks
+                0x000000000004be58                mov_alloc
+                0x000000000004bf8c                shiftimm_alloc
+                0x000000000004c5e0                shift_alloc
+                0x000000000004c5fc                alu_alloc
+                0x000000000004d414                imm16_alloc
+                0x000000000004db3c                load_alloc
+                0x000000000004de1c                store_alloc
+                0x000000000004df68                c1ls_alloc
+                0x000000000004e064                c2ls_alloc
+                0x000000000004e12c                multdiv_alloc
+                0x000000000004e2f4                cop0_alloc
+                0x000000000004e420                cop1_alloc
+                0x000000000004e5c0                float_alloc
+                0x000000000004e5f8                fconv_alloc
+                0x000000000004e5fc                c2op_alloc
+                0x000000000004e600                fcomp_alloc
+                0x000000000004e654                syscall_alloc
+                0x000000000004e694                delayslot_alloc
+                0x000000000004e7ac                mchecksum
+                0x000000000004e7fc                rchecksum
+                0x000000000004e834                rlist
+                0x000000000004e8b8                enabletrace
+                0x000000000004e8bc                memdebug
+                0x000000000004ea28                alu_assemble
+                0x00000000000501b4                imm16_assemble
+                0x0000000000050d90                shiftimm_assemble
+                0x0000000000051764                load_assemble
+                0x00000000000524f8                store_assemble
+                0x0000000000052fe4                storelr_assemble
+                0x0000000000054290                c1ls_assemble
+                0x00000000000542ac                c2ls_assemble
+                0x0000000000054838                mov_assemble
+                0x00000000000549f0                syscall_assemble
+                0x0000000000054aa8                hlecall_assemble
+                0x0000000000054b88                intcall_assemble
+                0x0000000000054c40                ds_assemble
+                0x0000000000054e9c                internal_branch
+                0x0000000000054eb4                wb_invalidate
+                0x0000000000055170                load_regs
+                0x00000000000552e8                address_generation
+                0x0000000000055a40                load_consts
+                0x0000000000055ec4                store_regs_bt
+                0x00000000000561dc                load_regs_bt
+                0x0000000000056220                match_bt
+                0x0000000000056528                ds_assemble_entry
+                0x0000000000056938                do_cc
+                0x0000000000056cb0                do_ccstub
+                0x00000000000580cc                ujump_assemble
+                0x000000000005846c                rjump_assemble
+                0x0000000000058b88                cjump_assemble
+                0x000000000005aec8                sjump_assemble
+                0x000000000005c8dc                fjump_assemble
+                0x000000000005da04                unneeded_registers
+                0x000000000005fe60                clean_registers
+                0x0000000000061134                new_dynarec_clear_full
+                0x00000000000612f8                new_dynarec_init
+                0x000000000006146c                new_dynarec_cleanup
+                0x0000000000061540                new_dynarec_save_blocks
+                0x0000000000061744                new_recompile_block
+                0x0000000000071fe4                get_addr
+                0x00000000000721fc                get_addr_ht
+                0x000000000007224c                new_dynarec_load_blocks
+ .text          0x0000000000072338      0x934 libpcsxcore/new_dynarec/linkage_arm.o
+                0x0000000000072338                dyna_linker
+                0x0000000000072480                exec_pagefault
+                0x00000000000724c8                dyna_linker_ds
+                0x0000000000072620                jump_vaddr_r0
+                0x0000000000072628                jump_vaddr_r1
+                0x0000000000072634                jump_vaddr_r2
+                0x0000000000072640                jump_vaddr_r3
+                0x000000000007264c                jump_vaddr_r4
+                0x0000000000072658                jump_vaddr_r5
+                0x0000000000072664                jump_vaddr_r6
+                0x0000000000072670                jump_vaddr_r8
+                0x000000000007267c                jump_vaddr_r9
+                0x0000000000072688                jump_vaddr_r10
+                0x0000000000072694                jump_vaddr_r12
+                0x00000000000726a0                jump_vaddr_r7
+                0x00000000000726a8                jump_vaddr
+                0x00000000000726e4                verify_code_ds
+                0x00000000000726e8                verify_code
+                0x00000000000726e8                verify_code_vm
+                0x000000000007274c                cc_interrupt
+                0x00000000000727dc                do_interrupt
+                0x00000000000727ec                fp_exception
+                0x0000000000072818                fp_exception_ds
+                0x0000000000072820                jump_syscall
+                0x0000000000072848                jump_syscall_hle
+                0x0000000000072880                jump_hlecall
+                0x0000000000072898                jump_intcall
+                0x00000000000728b0                new_dyna_leave
+                0x00000000000728c4                invalidate_addr_r0
+                0x00000000000728cc                invalidate_addr_r1
+                0x00000000000728d8                invalidate_addr_r2
+                0x00000000000728e4                invalidate_addr_r3
+                0x00000000000728f0                invalidate_addr_r4
+                0x00000000000728fc                invalidate_addr_r5
+                0x0000000000072908                invalidate_addr_r6
+                0x0000000000072914                invalidate_addr_r7
+                0x0000000000072920                invalidate_addr_r8
+                0x000000000007292c                invalidate_addr_r9
+                0x0000000000072938                invalidate_addr_r10
+                0x0000000000072944                invalidate_addr_r12
+                0x0000000000072964                new_dyna_start
+                0x0000000000072990                jump_handler_read8
+                0x00000000000729bc                jump_handler_read16
+                0x00000000000729ec                jump_handler_read32
+                0x0000000000072a14                jump_handler_write8
+                0x0000000000072a64                jump_handler_write16
+                0x0000000000072ab8                jump_handler_write32
+                0x0000000000072b04                jump_handler_write_h
+                0x0000000000072b34                jump_handle_swl
+                0x0000000000072b9c                jump_handle_swr
+                0x0000000000072bec                rcnt0_read_count_m0
+                0x0000000000072c00                rcnt1_read_count_m0
+                0x0000000000072c14                rcnt2_read_count_m0
+                0x0000000000072c28                rcnt0_read_count_m1
+                0x0000000000072c40                rcnt1_read_count_m1
+                0x0000000000072c58                rcnt2_read_count_m1
+ .text          0x0000000000072c6c     0x198c libpcsxcore/new_dynarec/pcsxmem.o
+                0x0000000000073758                read_mem_dummy
+                0x0000000000073760                new_dyna_pcsx_mem_load_state
+                0x0000000000073798                pcsxmem_is_handler_dynamic
+                0x00000000000737dc                new_dyna_pcsx_mem_init
+                0x0000000000074504                new_dyna_pcsx_mem_reset
+                0x00000000000745c8                new_dyna_pcsx_mem_shutdown
+ .text          0x00000000000745f8      0x824 libpcsxcore/new_dynarec/emu_if.o
+                0x0000000000074a98                gen_interupt
+                0x0000000000074aa8                pcsx_mtc0
+                0x0000000000074af8                pcsx_mtc0_ds
+                0x0000000000074afc                new_dyna_before_save
+                0x0000000000074b24                new_dyna_after_save
+                0x0000000000074b4c                new_dyna_freeze
+                0x0000000000074d5c                new_dyna_freeze_data
+                0x0000000000074e14                do_insn_trace
+                0x0000000000074e18                do_insn_cmp
+ .text          0x0000000000074e1c      0x198 plugins/dfsound/dma.o
+                0x0000000000074e1c                SPUreadDMA
+                0x0000000000074e54                SPUreadDMAMem
+                0x0000000000074ec0                SPUwriteDMA
+                0x0000000000074f04                SPUwriteDMAMem
+ .text          0x0000000000074fb4      0x89c plugins/dfsound/freeze.o
+                0x0000000000074fb4                LoadStateV5
+                0x0000000000075204                LoadStateUnknown
+                0x000000000007528c                SPUfreeze
+ .text          0x0000000000075850     0x1014 plugins/dfsound/registers.o
+                0x00000000000759c8                SPUwriteRegister
+                0x0000000000076704                SPUreadRegister
+ *fill*         0x0000000000076864        0x4 
+ .text          0x0000000000076868     0x4d64 plugins/dfsound/spu.o
+                0x0000000000078124                InitADSR
+                0x00000000000781ec                schedule_next_irq
+                0x0000000000078360                SPUupdate
+                0x0000000000078364                SPUplayADPCMchannel
+                0x0000000000079228                SPUplayCDDAchannel
+                0x0000000000079304                ClearWorkingState
+                0x0000000000079348                SPUResetStream
+                0x000000000007935c                SPUinit
+                0x0000000000079514                SPUopen
+                0x0000000000079554                SPUclose
+                0x0000000000079590                SPUshutdown
+                0x0000000000079660                SPUtest
+                0x0000000000079668                SPUconfigure
+                0x0000000000079670                SPUabout
+                0x0000000000079674                SPUregisterCallback
+                0x0000000000079694                SPUregisterCDDAVolume
+                0x00000000000796b4                SPUregisterScheduleCb
+                0x00000000000796d4                spu_get_debug_info
+                0x00000000000797bc                detect_pi
+                0x000000000007993c                SPUfadein
+                0x0000000000079a00                SPUenableRvbConfig
+                0x0000000000079a88                SPUisRvbConfigEnabled
+                0x000000000007a060                do_samples
+                0x000000000007b050                SPUasync
+ .text          0x000000000007b5cc      0x118 plugins/dfsound/out.o
+                0x000000000007b5cc                SetupSound
+ .text          0x000000000007b6e4       0x70 plugins/dfsound/nullsnd.o
+                0x000000000007b6fc                out_register_none
+ .text          0x000000000007b754       0xf0 plugins/dfsound/arm_utils.o
+                0x000000000007b754                mix_chan
+                0x000000000007b7bc                mix_chan_rvb
+ *fill*         0x000000000007b844        0x4 
+ .text          0x000000000007b848      0x410 plugins/dfsound/sdl.o
+                0x000000000007bbec                SOUND_isPlaying
+                0x000000000007bc00                out_register_sdl
+ .text          0x000000000007bc58     0x23dc plugins/gpulib/gpu.o
+                0x000000000007cdb8                GPUsetPatchFlag
+                0x000000000007ce4c                GPUinit
+                0x000000000007cec8                GPUshutdown
+                0x000000000007cf70                GPUwriteStatus
+                0x000000000007d1d8                GPUwriteDataMem
+                0x000000000007d224                GPUwriteData
+                0x000000000007d25c                GPUdmaChain
+                0x000000000007d9cc                GPUreadDataMem
+                0x000000000007da34                GPUreadData
+                0x000000000007daa0                GPUreadStatus
+                0x000000000007dae0                GPUfreeze
+                0x000000000007dd04                GPUupdateLace
+                0x000000000007de64                GPUvBlank
+                0x000000000007df24                GPUrearmedCallbacks
+                0x000000000007dff8                GPUboStatus
+ .text          0x000000000007e034      0x46c plugins/gpulib/vout_pl.o
+                0x000000000007e148                vout_init
+                0x000000000007e150                vout_finish
+                0x000000000007e158                vout_update
+                0x000000000007e384                vout_blank
+                0x000000000007e404                GPUopen
+                0x000000000007e468                GPUclose
+                0x000000000007e48c                vout_set_config
+ .text          0x000000000007e4a0    0x202f0 plugins/dfxvideo/gpulib_if.o
+                0x000000000009de2c                renderer_init
+                0x000000000009df64                renderer_finish
+                0x000000000009df68                renderer_notify_res_change
+                0x000000000009df6c                check_pmt_cmd
+                0x000000000009e080                do_cmd_list
+                0x000000000009e4e0                renderer_sync_ecmds
+                0x000000000009e658                renderer_update_caches
+                0x000000000009e65c                renderer_flush_queues
+                0x000000000009e660                renderer_set_interlace
+                0x000000000009e664                renderer_set_config
+ .text          0x000000000009e790      0xefc plugins/cdrcimg/cdrcimg.o
+                0x000000000009f1e4                uncompressPSC
+                0x000000000009f60c                cdrcimg_set_fname
+                0x000000000009f620                cdrcimg_get_sym
+ .text          0x000000000009f68c      0x1b0 plugins/dfinput/main.o
+                0x000000000009f68c                dfinput_activate
+ .text          0x000000000009f83c      0x728 plugins/dfinput/pad.o
+                0x000000000009f83c                PADpoll_pad
+                0x000000000009fe3c                PADstartPoll_pad
+                0x000000000009fed4                pad_init
+ .text          0x000000000009ff64      0x220 plugins/dfinput/guncon.o
+                0x000000000009ff64                PADpoll_guncon
+                0x000000000009ffe4                PADstartPoll_guncon
+                0x00000000000a0164                guncon_init
+ .text          0x00000000000a0184      0x4b0 frontend/cspace.o
+                0x00000000000a0184                bgr555_to_rgb565_without_neon
+                0x00000000000a01e8                bgr_to_uyvy_init
+                0x00000000000a02e8                rgb565_to_uyvy
+                0x00000000000a0400                bgr555_to_uyvy
+                0x00000000000a0518                bgr888_to_uyvy
+ .text          0x00000000000a0634      0x2c8 frontend/cspace_neon.o
+                0x00000000000a0634                bgr555_to_rgb565
+                0x00000000000a06f8                bgr555_to_rgb565_b
+                0x00000000000a0808                bgr888_to_rgb888
+                0x00000000000a0844                bgr888_to_rgb565
+                0x00000000000a08a0                rgb888_to_rgb565
+ .text          0x00000000000a08fc      0xe7c frontend/libpicofe/in_sdl.o
+                0x00000000000a16fc                in_sdl_init
+ .text          0x00000000000a1778      0xb50 frontend/libpicofe/plat_sdl.o
+                0x00000000000a1778                plat_sdl_change_video_mode
+                0x00000000000a1b84                plat_sdl_event_handler
+                0x00000000000a1bdc                plat_sdl_init
+                0x00000000000a21fc                plat_sdl_finish
+                0x00000000000a22b8                plat_sdl_overlay_clear
+ .text          0x00000000000a22c8       0x10 frontend/libpicofe/plat_dummy.o
+                0x00000000000a22c8                plat_target_init
+                0x00000000000a22d0                plat_target_finish
+                0x00000000000a22d4                plat_target_setup_input
+ .text          0x00000000000a22d8      0xd9c frontend/libpicofe/linux/in_evdev.o
+                0x00000000000a300c                in_evdev_init
+ .text          0x00000000000a3074      0xb20 frontend/plat_sdl.o
+                0x00000000000a315c                plat_init
+                0x00000000000a3320                plat_finish
+                0x00000000000a3360                plat_gvideo_open
+                0x00000000000a3364                plat_gvideo_set_mode
+                0x00000000000a3484                plat_gvideo_flip
+                0x00000000000a3558                plat_gvideo_close
+                0x00000000000a355c                plat_video_menu_enter
+                0x00000000000a3900                plat_video_menu_begin
+                0x00000000000a3a00                plat_video_menu_end
+                0x00000000000a3b64                plat_video_menu_leave
+                0x00000000000a3b84                plat_prepare_screenshot
+                0x00000000000a3b8c                plat_trigger_vibrate
+                0x00000000000a3b90                plat_minimize
+ .text          0x00000000000a3b94     0x2418 frontend/plugin_lib.o
+                0x00000000000a5354                set_scenes
+                0x00000000000a5368                change_frame_Motionjpeg
+                0x00000000000a53b8                set_bo_trg
+                0x00000000000a5484                paint_black
+                0x00000000000a54ac                pl_prepare_screenshot
+                0x00000000000a5550                pl_switch_dispmode
+                0x00000000000a55c0                pl_update_gun
+                0x00000000000a55e0                pl_frame_limit
+                0x00000000000a5cf0                pl_timing_prepare
+                0x00000000000a5e78                pl_start_watchdog
+                0x00000000000a5ef4                pl_init
+ .text          0x00000000000a5fac      0x6ec frontend/libpicofe/linux/plat.o
+                0x00000000000a6044                plat_is_dir
+                0x00000000000a6068                plat_get_skin_dir
+                0x00000000000a60a8                plat_get_root_dir
+                0x00000000000a6140                plat_get_ticks_ms
+                0x00000000000a6178                plat_get_ticks_us
+                0x00000000000a61a8                plat_sleep_ms
+                0x00000000000a61b4                plat_wait_event
+                0x00000000000a6334                plat_mmap
+                0x00000000000a64e0                plat_mremap
+                0x00000000000a6530                plat_munmap
+                0x00000000000a65d4                plat_mem_set_exec
+                0x00000000000a6648                lprintf
+ .text          0x00000000000a6698      0x914 frontend/libpicofe/readpng.o
+                0x00000000000a6698                readpng
+                0x00000000000a6cd8                writepng
+ .text          0x00000000000a6fac      0x26c frontend/libpicofe/fonts.o
+                0x00000000000a6fac                basic_text_out16_nf
+                0x00000000000a70b0                basic_text_out_uyvy_nf
+                0x00000000000a71b4                basic_text_out16
+ *fill*         0x00000000000a7218        0x8 
+ .text          0x00000000000a7220     0x1860 frontend/libpicofe/arm/neon_scale2x.o
+                0x00000000000a7220                neon_scale2x_8_8
+                0x00000000000a763c                neon_scale2x_16_16
+                0x00000000000a7d80                neon_scale2x_8_16
+ .text          0x00000000000a8a80     0x1be8 frontend/libpicofe/arm/neon_eagle2x.o
+                0x00000000000a8a80                neon_eagle2x_8_8
+                0x00000000000a8ff4                neon_eagle2x_16_16
+                0x00000000000a9854                neon_eagle2x_8_16
+ .text          0x00000000000aa668     0x9274 frontend/menu.o
+                0x00000000000ac784                emu_make_path
+                0x00000000000ac7f4                config_change
+                0x00000000000add60                text_out16
+                0x00000000000b073c                menu_init_base
+                0x00000000000b0b2c                show_text_image
+                0x00000000000b0c68                menu_init
+                0x00000000000b1574                menu_notify_mode_change
+                0x00000000000b1588                menu_prepare_emu
+                0x00000000000b16e0                menu_loop
+                0x00000000000b1a10                menu_update_msg
+                0x00000000000b1c64                swap_cd
+                0x00000000000b2b60                menu_finish
+                0x00000000000b2ba0                make_file_name
+ .text          0x00000000000b38dc     0x1c94 frontend/libpicofe/input.o
+                0x00000000000b39a8                in_register
+                0x00000000000b3c78                in_combos_find
+                0x00000000000b3d08                in_combos_do
+                0x00000000000b3dcc                in_update
+                0x00000000000b3e64                in_update_analog
+                0x00000000000b3eb4                in_update_keycode
+                0x00000000000b425c                in_menu_wait_any
+                0x00000000000b4304                in_menu_wait
+                0x00000000000b441c                in_get_dev_binds
+                0x00000000000b4444                in_get_dev_def_binds
+                0x00000000000b4478                in_get_config
+                0x00000000000b4538                in_set_config
+                0x00000000000b46c0                in_get_dev_name
+                0x00000000000b473c                in_name_to_id
+                0x00000000000b47b4                in_get_key_name
+                0x00000000000b4938                in_get_key_code
+                0x00000000000b49c8                in_bind_key
+                0x00000000000b4b04                in_unbind_all
+                0x00000000000b4bc0                in_config_parse_dev
+                0x00000000000b4d88                in_config_bind_key
+                0x00000000000b4fc0                in_clean_binds
+                0x00000000000b5060                in_debug_dump
+                0x00000000000b511c                in_probe
+                0x00000000000b5300                in_register_driver
+                0x00000000000b5520                in_init
+                0x00000000000b5554                bIsValidHotPlugEvent
+ .text          0x00000000000b5570     0x26e4 frontend/main.o
+                0x00000000000b5d1c                set_cd_image
+                0x00000000000b5e04                emu_set_default_config
+                0x00000000000b5f1c                emu_core_preinit
+                0x00000000000b5fbc                emu_core_ask_exit
+                0x00000000000b5ff0                SysRunGui
+                0x00000000000b6000                SysReset
+                0x00000000000b6080                SysClose
+                0x00000000000b60f4                SysUpdate
+                0x00000000000b60f8                get_state_filename
+                0x00000000000b610c                emu_check_state
+                0x00000000000b6148                emu_load_state
+                0x00000000000b61a4                SysPrintf
+                0x00000000000b66b0                emu_on_new_cd
+                0x00000000000b6730                emu_core_init
+                0x00000000000b68dc                emu_auto_save_state
+                0x00000000000b696c                emu_save_state
+                0x00000000000b69fc                SysMessage
+                0x00000000000b7068                OpenPlugins
+                0x00000000000b70b4                ClosePlugins
+                0x00000000000b71cc                SysLoadLibrary
+                0x00000000000b72a4                SysLoadSym
+                0x00000000000b72c0                SysLibError
+                0x00000000000b72c4                SysCloseLibrary
+                0x00000000000b72d8                create_power_off_thread
+                0x00000000000b7364                power_off
+                0x00000000000b73ec                do_emu_action
+                0x00000000000b7bf4                begin_watch_cpu_temperature
+ .text          0x00000000000b7c54      0x19c frontend/plugin.o
+                0x00000000000b7d20                plugin_link
+                0x00000000000b7da4                plugin_call_rearmed_cbs
+ .text          0x00000000000b7df0       0x30 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+                0x00000000000b7df0                __aeabi_uldivmod
+ .text          0x00000000000b7e20        0xc /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+                0x00000000000b7e20                __aeabi_ldiv0
+                0x00000000000b7e20                __aeabi_idiv0
+ .text          0x00000000000b7e2c       0x14 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+                0x00000000000b7e2c                __clear_cache
+ .text          0x00000000000b7e40      0x114 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+                0x00000000000b7e40                __udivmoddi4
+ .text          0x00000000000b7f54        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ .text          0x00000000000b7f54        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000000b7f54        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000000b7f54        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000000b7f54        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000000b7f54        0x0 linker stubs
+
+.fini           0x00000000000b7f54        0x8
+ *(SORT_NONE(.fini))
+ .fini          0x00000000000b7f54        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+                0x00000000000b7f54                _fini
+ .fini          0x00000000000b7f58        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x00000000000b7f60    0x29c8c
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x00000000000b7f60        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                0x00000000000b7f60                _IO_stdin_used
+ .rodata.str1.4
+                0x00000000000b7f64      0x4f5 libpcsxcore/cdriso.o
+                                        0x519 (size before relaxing)
+ *fill*         0x00000000000b8459        0x3 
+ .rodata        0x00000000000b845c       0x90 libpcsxcore/cdrom.o
+ .rodata.str1.4
+                0x00000000000b84ec      0x16b libpcsxcore/cdrom.o
+ *fill*         0x00000000000b8657        0x1 
+ .rodata.str1.4
+                0x00000000000b8658       0x5f libpcsxcore/cheat.o
+                                         0x67 (size before relaxing)
+ *fill*         0x00000000000b86b7        0x1 
+ .rodata.str1.4
+                0x00000000000b86b8      0xce7 libpcsxcore/debug.o
+                                        0xcef (size before relaxing)
+ *fill*         0x00000000000b939f        0x1 
+ .rodata        0x00000000000b93a0       0x30 libpcsxcore/decode_xa.o
+ .rodata.str1.4
+                0x00000000000b93d0      0x43b libpcsxcore/disr3000a.o
+                                        0x44f (size before relaxing)
+ *fill*         0x00000000000b980b        0x1 
+ .rodata        0x00000000000b980c      0x200 libpcsxcore/mdec.o
+ .rodata        0x00000000000b9a0c      0x28a libpcsxcore/misc.o
+ *fill*         0x00000000000b9c96        0x2 
+ .rodata.str1.4
+                0x00000000000b9c98      0x912 libpcsxcore/misc.o
+                                        0x932 (size before relaxing)
+ *fill*         0x00000000000ba5aa        0x2 
+ .rodata.str1.4
+                0x00000000000ba5ac      0x6fd libpcsxcore/plugins.o
+                                        0x701 (size before relaxing)
+ *fill*         0x00000000000baca9        0x3 
+ .rodata.str1.4
+                0x00000000000bacac       0x76 libpcsxcore/ppf.o
+                                         0x82 (size before relaxing)
+ *fill*         0x00000000000bad22        0x2 
+ .rodata        0x00000000000bad24     0xdaac libpcsxcore/psxbios.o
+                0x00000000000baf54                font_889f
+                0x00000000000c7544                font_8140
+ .rodata.str1.4
+                0x00000000000c87d0      0xe9c libpcsxcore/psxbios.o
+                                        0xeb8 (size before relaxing)
+ .rodata        0x00000000000c966c        0x8 libpcsxcore/psxcounters.o
+ .rodata.str1.4
+                0x00000000000c9674       0x4d libpcsxcore/psxhle.o
+ *fill*         0x00000000000c96c1        0x3 
+ .rodata.str1.4
+                0x00000000000c96c4       0x91 libpcsxcore/psxmem.o
+                                         0xa1 (size before relaxing)
+ *fill*         0x00000000000c9755        0x3 
+ .rodata.str1.4
+                0x00000000000c9758       0x37 libpcsxcore/r3000a.o
+                                         0x3b (size before relaxing)
+ *fill*         0x00000000000c978f        0x1 
+ .rodata.str1.4
+                0x00000000000c9790       0xa4 libpcsxcore/sio.o
+                                         0xac (size before relaxing)
+ .rodata.str1.4
+                0x00000000000c9834       0x26 libpcsxcore/socket.o
+                                         0x2f (size before relaxing)
+ *fill*         0x00000000000c985a        0x2 
+ .rodata        0x00000000000c985c    0x10000 libpcsxcore/gte_divider.o
+ .rodata.str1.4
+                0x00000000000d985c      0x786 libpcsxcore/new_dynarec/new_dynarec.o
+                                        0x91e (size before relaxing)
+ *fill*         0x00000000000d9fe2        0x2 
+ .rodata.str1.4
+                0x00000000000d9fe4       0x56 libpcsxcore/new_dynarec/pcsxmem.o
+ *fill*         0x00000000000da03a        0x6 
+ .rodata        0x00000000000da040      0x440 libpcsxcore/new_dynarec/emu_if.o
+                0x00000000000da040                gte_reg_writes
+                0x00000000000da240                gte_reg_reads
+                0x00000000000da440                gte_cycletab
+ .rodata.str1.4
+                0x00000000000da480       0x83 libpcsxcore/new_dynarec/emu_if.o
+                                        0x111 (size before relaxing)
+ *fill*         0x00000000000da503        0x1 
+ .rodata.str1.4
+                0x00000000000da504        0x6 plugins/dfsound/freeze.o
+ *fill*         0x00000000000da50a        0x2 
+ .rodata        0x00000000000da50c       0x20 plugins/dfsound/registers.o
+ .rodata        0x00000000000da52c      0x880 plugins/dfsound/spu.o
+ .rodata.str1.4
+                0x00000000000dadac       0x3c plugins/dfsound/out.o
+ .rodata.str1.4
+                0x00000000000dade8        0x5 plugins/dfsound/nullsnd.o
+ .rodata.str1.4
+                0x00000000000dade8        0x4 plugins/dfsound/sdl.o
+ .rodata        0x00000000000dadec      0x128 plugins/gpulib/gpu.o
+                0x00000000000dadec                cmd_lengths
+ .rodata.str1.4
+                0x00000000000daf14       0x24 plugins/gpulib/gpu.o
+ .rodata        0x00000000000daf38     0x192c plugins/dfxvideo/gpulib_if.o
+                0x00000000000db148                PMT_MASK_60_62
+ .rodata.str1.4
+                0x00000000000dc864      0x41e plugins/cdrcimg/cdrcimg.o
+                                        0x4c1 (size before relaxing)
+ *fill*         0x00000000000dcc82        0x2 
+ .rodata.str1.4
+                0x00000000000dcc84      0x26e frontend/libpicofe/in_sdl.o
+                                        0x32e (size before relaxing)
+ *fill*         0x00000000000dcef2        0x2 
+ .rodata.str1.4
+                0x00000000000dcef4      0x7b1 frontend/libpicofe/plat_sdl.o
+ *fill*         0x00000000000dd6a5        0x3 
+ .rodata.str1.4
+                0x00000000000dd6a8      0x54b frontend/libpicofe/linux/in_evdev.o
+                                        0x623 (size before relaxing)
+ *fill*         0x00000000000ddbf3        0x1 
+ .rodata        0x00000000000ddbf4       0xac frontend/plat_sdl.o
+                0x00000000000ddbf4                in_sdl_joy_map_2
+                0x00000000000ddc14                in_sdl_joy_map_1
+                0x00000000000ddc34                in_sdl_key_map
+ .rodata.str1.4
+                0x00000000000ddca0      0x3b4 frontend/plat_sdl.o
+                                        0x3bc (size before relaxing)
+ .rodata        0x00000000000de054       0x28 frontend/plugin_lib.o
+ .rodata.str1.4
+                0x00000000000de07c      0x13e frontend/plugin_lib.o
+ *fill*         0x00000000000de1ba        0x2 
+ .rodata.str1.4
+                0x00000000000de1bc      0x116 frontend/libpicofe/linux/plat.o
+                                        0x126 (size before relaxing)
+ *fill*         0x00000000000de2d2        0x2 
+ .rodata.str1.4
+                0x00000000000de2d4      0x32f frontend/libpicofe/readpng.o
+                                        0x337 (size before relaxing)
+ *fill*         0x00000000000de603        0x1 
+ .rodata        0x00000000000de604      0xc2e frontend/menu.o
+ *fill*         0x00000000000df232        0x2 
+ .rodata.str1.4
+                0x00000000000df234     0x1cfc frontend/menu.o
+                                       0x1da0 (size before relaxing)
+ .rodata.str1.4
+                0x00000000000e0f30      0x1eb frontend/libpicofe/input.o
+ *fill*         0x00000000000e111b        0x1 
+ .rodata        0x00000000000e111c       0x14 frontend/main.o
+ .rodata.str1.4
+                0x00000000000e1130      0xaa8 frontend/main.o
+                                        0xbb6 (size before relaxing)
+ .rodata.str1.4
+                0x00000000000e1bd8       0x14 frontend/plugin.o
+                                        0x373 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab      0x00000000000e1bec        0x0
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x00000000000e1bec        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .ARM.extab     0x00000000000e1bec        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx      0x00000000000e1bec        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x00000000000e1bec        0x8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .ARM.exidx     0x00000000000e1bf4        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+                                          0x8 (size before relaxing)
+                [!provide]                        PROVIDE (__exidx_end = .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x00000000000e1bf4        0x4
+ *(.eh_frame)
+ .eh_frame      0x00000000000e1bf4        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x00000000000f27d4                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x00000000000f27d4        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00000000000f27d4        0x4
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x00000000000f27d4        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00000000000f27d8        0x4
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x00000000000f27d8        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr            0x00000000000f27dc        0x4
+ *(.jcr)
+ .jcr           0x00000000000f27dc        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .jcr           0x00000000000f27dc        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+
+.data.rel.ro    0x00000000000f27e0     0x1cf8
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ .data.rel.ro.local
+                0x00000000000f27e0       0x10 libpcsxcore/cdriso.o
+ .data.rel.ro.local
+                0x00000000000f27f0       0x80 libpcsxcore/disr3000a.o
+ .data.rel.ro.local
+                0x00000000000f2870      0x420 libpcsxcore/misc.o
+ .data.rel.ro.local
+                0x00000000000f2c90       0x30 plugins/dfxvideo/gpulib_if.o
+ .data.rel.ro.local
+                0x00000000000f2cc0       0x60 plugins/cdrcimg/cdrcimg.o
+ .data.rel.ro.local
+                0x00000000000f2d20      0x424 frontend/libpicofe/in_sdl.o
+ .data.rel.ro.local
+                0x00000000000f3144      0xc3c frontend/libpicofe/linux/in_evdev.o
+ .data.rel.ro.local
+                0x00000000000f3d80       0x30 frontend/plat_sdl.o
+ .data.rel.ro.local
+                0x00000000000f3db0       0x10 frontend/plugin_lib.o
+ .data.rel.ro.local
+                0x00000000000f3dc0        0xc frontend/menu.o
+ .data.rel.ro.local
+                0x00000000000f3dcc       0x14 frontend/main.o
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x00000000000f3de0        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .data.rel.ro   0x00000000000f3de0       0x80 libpcsxcore/new_dynarec/new_dynarec.o
+                0x00000000000f3de0                invalidate_addr_reg
+                0x00000000000f3e20                jump_vaddr_reg
+ .data.rel.ro   0x00000000000f3e60       0x3c libpcsxcore/new_dynarec/emu_if.o
+ .data.rel.ro   0x00000000000f3e9c      0x330 frontend/menu.o
+ .data.rel.ro   0x00000000000f41cc      0x30c frontend/plugin.o
+
+.dynamic        0x00000000000f44d8      0x128
+ *(.dynamic)
+ .dynamic       0x00000000000f44d8      0x128 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                0x00000000000f44d8                _DYNAMIC
+
+.got            0x00000000000f4600      0xa00
+ *(.got.plt)
+ .got.plt       0x00000000000f4600      0x338 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                0x00000000000f4600                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x00000000000f4938        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.got)
+ .got           0x00000000000f4938      0x6c8 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.igot)
+                0x00000000000f5000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x00000000000f5000     0x5c30
+                [!provide]                        PROVIDE (__data_start = .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000000000f5000        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                0x00000000000f5000                data_start
+                0x00000000000f5000                __data_start
+ .data          0x00000000000f5004        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .data          0x00000000000f5004        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .data.rel.local
+                0x00000000000f5004        0x4 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+                0x00000000000f5004                __dso_handle
+ .data          0x00000000000f5008        0x0 libpcsxcore/cdriso.o
+ .data          0x00000000000f5008      0x164 libpcsxcore/cdrom.o
+                0x00000000000f5008                mgs_disk1_jp
+                0x00000000000f5028                mgs_disk2_jp
+                0x00000000000f5048                mgs_disk1_us
+                0x00000000000f5068                mgs_disk2_us
+                0x00000000000f5088                mgs_disk1_scenes_jp
+                0x00000000000f50e8                mgs_disk1_scenes_us
+                0x00000000000f5148                wa_us
+                0x00000000000f5150                wa_jp
+                0x00000000000f5158                Test20
+                0x00000000000f515c                Test22
+                0x00000000000f5164                Test23
+ .data.rel.local
+                0x00000000000f516c      0x400 libpcsxcore/cdrom.o
+                0x00000000000f516c                CmdName
+ .data          0x00000000000f556c        0x0 libpcsxcore/cheat.o
+ .data          0x00000000000f556c        0x0 libpcsxcore/debug.o
+ .data.rel.local
+                0x00000000000f556c       0x1c libpcsxcore/debug.o
+                0x00000000000f556c                breakpoint_type_names
+ .data          0x00000000000f5588        0x0 libpcsxcore/decode_xa.o
+ .data          0x00000000000f5588        0x0 libpcsxcore/disr3000a.o
+ .data.rel.local
+                0x00000000000f5588      0x500 libpcsxcore/disr3000a.o
+                0x00000000000f5588                disRNameCP0
+                0x00000000000f5608                disR3000A_SPECIAL
+                0x00000000000f5708                disR3000A_BCOND
+                0x00000000000f5788                disR3000A_COP0
+                0x00000000000f5808                disR3000A_BASIC
+                0x00000000000f5888                disR3000A_COP2
+                0x00000000000f5988                disR3000A
+ .data          0x00000000000f5a88        0x0 libpcsxcore/mdec.o
+ .data          0x00000000000f5a88        0x8 libpcsxcore/misc.o
+                0x00000000000f5a8c                isUnknownCdrom
+ .data.rel.local
+                0x00000000000f5a90       0x14 libpcsxcore/misc.o
+                0x00000000000f5a90                SaveFuncs
+ .data          0x00000000000f5aa4       0x1e libpcsxcore/plugins.o
+                0x00000000000f5aa4                mousepar
+                0x00000000000f5aac                analogpar
+                0x00000000000f5ab8                stdpar
+ .data          0x00000000000f5ac2        0x0 libpcsxcore/ppf.o
+ *fill*         0x00000000000f5ac2        0x2 
+ .data          0x00000000000f5ac4        0x4 libpcsxcore/psxbios.o
+ .data.rel.local
+                0x00000000000f5ac8      0xc00 libpcsxcore/psxbios.o
+                0x00000000000f5ac8                biosC0n
+                0x00000000000f5ec8                biosB0n
+                0x00000000000f62c8                biosA0n
+ .data          0x00000000000f66c8        0x0 libpcsxcore/psxcommon.o
+ .data          0x00000000000f66c8        0x8 libpcsxcore/psxcounters.o
+ .data          0x00000000000f66d0        0x0 libpcsxcore/psxdma.o
+ .data          0x00000000000f66d0        0x0 libpcsxcore/psxhle.o
+ .data.rel.local
+                0x00000000000f66d0      0x400 libpcsxcore/psxhle.o
+                0x00000000000f66d0                psxHLEt
+ .data          0x00000000000f6ad0        0x0 libpcsxcore/psxhw.o
+ .data          0x00000000000f6ad0       0x80 libpcsxcore/psxinterpreter.o
+                0x00000000000f6ad0                LWL_MASK
+                0x00000000000f6ae0                LWL_SHIFT
+                0x00000000000f6af0                LWR_MASK
+                0x00000000000f6b00                LWR_SHIFT
+                0x00000000000f6b10                SWL_SHIFT
+                0x00000000000f6b20                SWL_MASK
+                0x00000000000f6b30                SWR_SHIFT
+                0x00000000000f6b40                SWR_MASK
+ .data.rel      0x00000000000f6b50      0x280 libpcsxcore/psxinterpreter.o
+                0x00000000000f6b50                psxCP2
+                0x00000000000f6c50                psxCP2BSC
+                0x00000000000f6cd0                psxBSC
+ .data.rel.local
+                0x00000000000f6dd0      0x218 libpcsxcore/psxinterpreter.o
+                0x00000000000f6dd0                psxSPC
+                0x00000000000f6ed0                psxREG
+                0x00000000000f6f50                psxCP0
+                0x00000000000f6fd0                psxInt
+ .data          0x00000000000f6fe8        0x4 libpcsxcore/psxmem.o
+ .data          0x00000000000f6fec        0x0 libpcsxcore/r3000a.o
+ .data          0x00000000000f6fec        0xc libpcsxcore/sio.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/socket.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/spu.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/gte.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/gte_nf.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/gte_divider.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/gte_arm.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/gte_neon.o
+ .data          0x00000000000f6ff8        0x0 libpcsxcore/new_dynarec/new_dynarec.o
+ .data          0x00000000000f6ff8        0xc libpcsxcore/new_dynarec/linkage_arm.o
+ .data          0x00000000000f7004        0x0 libpcsxcore/new_dynarec/pcsxmem.o
+ .data          0x00000000000f7004        0x0 libpcsxcore/new_dynarec/emu_if.o
+ .data.rel      0x00000000000f7004      0x100 libpcsxcore/new_dynarec/emu_if.o
+                0x00000000000f7004                gte_handlers_nf
+ .data.rel.local
+                0x00000000000f7104      0x118 libpcsxcore/new_dynarec/emu_if.o
+                0x00000000000f7104                psxRec
+                0x00000000000f711c                gte_regnames
+ .data          0x00000000000f721c        0x0 plugins/dfsound/dma.o
+ .data          0x00000000000f721c        0x0 plugins/dfsound/freeze.o
+ .data          0x00000000000f721c        0x0 plugins/dfsound/registers.o
+ .data          0x00000000000f721c       0x60 plugins/dfsound/spu.o
+                0x00000000000f721c                pi_first
+ .data          0x00000000000f727c        0x0 plugins/dfsound/out.o
+ .data          0x00000000000f727c        0x0 plugins/dfsound/nullsnd.o
+ .data          0x00000000000f727c        0x4 plugins/dfsound/arm_utils.o
+ .data          0x00000000000f7280        0x0 plugins/dfsound/sdl.o
+ .data          0x00000000000f7280        0x0 plugins/gpulib/gpu.o
+ .data          0x00000000000f7280        0x0 plugins/gpulib/vout_pl.o
+ .data          0x00000000000f7280       0x16 plugins/dfxvideo/gpulib_if.o
+                0x00000000000f7280                dithertable
+                0x00000000000f7290                g_m1
+                0x00000000000f7292                g_m2
+                0x00000000000f7294                g_m3
+ *fill*         0x00000000000f7296        0x2 
+ .data.rel.local
+                0x00000000000f7298      0x800 plugins/dfxvideo/gpulib_if.o
+                0x00000000000f7298                primTableJ
+                0x00000000000f7698                primTableSkip
+ .data          0x00000000000f7a98        0x0 plugins/cdrcimg/cdrcimg.o
+ .data          0x00000000000f7a98        0x0 plugins/dfinput/main.o
+ .data          0x00000000000f7a98       0x80 plugins/dfinput/pad.o
+ .data          0x00000000000f7b18        0x0 plugins/dfinput/guncon.o
+ .data          0x00000000000f7b18        0x0 frontend/cspace.o
+ .data          0x00000000000f7b18        0x0 frontend/cspace_neon.o
+ .data          0x00000000000f7b18      0x768 frontend/libpicofe/in_sdl.o
+                0x00000000000f7b18                SDLK_to_My_SDLK_ARRAY
+ .data          0x00000000000f8280        0x4 frontend/libpicofe/plat_sdl.o
+ .data          0x00000000000f8284        0x0 frontend/libpicofe/plat_dummy.o
+ .data          0x00000000000f8284        0x0 frontend/libpicofe/linux/in_evdev.o
+ .data          0x00000000000f8284        0x0 frontend/plat_sdl.o
+ .data          0x00000000000f8284       0x28 frontend/plugin_lib.o
+                0x00000000000f8284                in_a1
+                0x00000000000f828c                in_a2
+                0x00000000000f8294                in_adev
+                0x00000000000f829c                in_adev_axis
+ .data.rel.local
+                0x00000000000f82ac       0xc4 frontend/plugin_lib.o
+                0x00000000000f82ac                pl_rearmed_cbs
+ .data          0x00000000000f8370        0x0 frontend/libpicofe/linux/plat.o
+ .data          0x00000000000f8370        0x0 frontend/libpicofe/readpng.o
+ .data          0x00000000000f8370      0xc00 frontend/libpicofe/fonts.o
+                0x00000000000f8370                fontdata8x8
+                0x00000000000f8770                fontdata6x8
+ .data          0x00000000000f8f70        0x0 frontend/libpicofe/arm/neon_scale2x.o
+ .data          0x00000000000f8f70        0x0 frontend/libpicofe/arm/neon_eagle2x.o
+ .data          0x00000000000f8f70       0x1c frontend/menu.o
+                0x00000000000f8f7c                g_gamma
+                0x00000000000f8f80                scanline_level
+ .data.rel      0x00000000000f8f8c     0x13f0 frontend/menu.o
+ .data.rel.local
+                0x00000000000fa37c      0x870 frontend/menu.o
+                0x00000000000fa37c                emuctrl_actions
+                0x00000000000fa40c                me_ctrl_actions
+ .data          0x00000000000fabec        0x0 frontend/libpicofe/input.o
+ .data          0x00000000000fabec       0x10 frontend/main.o
+                0x00000000000fabf0                display_mode
+                0x00000000000fabf4                language
+                0x00000000000fabf8                region
+ .data.rel.local
+                0x00000000000fabfc       0x34 frontend/main.o
+                0x00000000000fabfc                lang_list
+ .data          0x00000000000fac30        0x0 frontend/plugin.o
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ .data          0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.tm_clone_table
+                0x00000000000fac30        0x0
+ .tm_clone_table
+                0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .tm_clone_table
+                0x00000000000fac30        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+
+.data1
+ *(.data1)
+                0x00000000000fac30                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x00000000000fac30                . = .
+                0x00000000000fac30                __bss_start = .
+                0x00000000000fac30                __bss_start__ = .
+
+.bss            0x00000000000fb000  0x17ddf14
+ *(.dynbss)
+ .dynbss        0x00000000000fb000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000000fb000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .bss           0x00000000000fb000        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .bss           0x00000000000fb000        0x1 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ *fill*         0x00000000000fb001        0x3 
+ .bss           0x00000000000fb004     0x6db0 libpcsxcore/cdriso.o
+ .bss           0x0000000000101db4     0x5ba1 libpcsxcore/cdrom.o
+                0x0000000000101db4                is_disc_change
+                0x0000000000101db8                is_nop_count
+                0x0000000000101dbc                nop_cnt
+                0x0000000000101dd0                Loading2Setloc
+                0x0000000000107950                Test05
+                0x0000000000107954                Test04
+ *fill*         0x0000000000107955        0x3 
+ .bss           0x0000000000107958       0x28 libpcsxcore/cheat.o
+                0x0000000000107958                NumSearchResults
+                0x0000000000107960                SearchResults
+                0x0000000000107964                Cheats
+                0x0000000000107968                NumCheats
+                0x000000000010796c                NumCheatsAllocated
+                0x0000000000107970                CheatCodes
+                0x0000000000107974                NumCodes
+                0x0000000000107978                NumCodesAllocated
+                0x000000000010797c                prevM
+ .bss           0x0000000000107980       0x54 libpcsxcore/debug.o
+ .bss           0x00000000001079d4        0x0 libpcsxcore/decode_xa.o
+ .bss           0x00000000001079d4        0x0 libpcsxcore/disr3000a.o
+ .bss           0x00000000001079d4      0x520 libpcsxcore/mdec.o
+ .bss           0x0000000000107ef4      0x578 libpcsxcore/misc.o
+                0x0000000000107f0c                statefile_thread
+                0x0000000000107f10                CdromId
+                0x0000000000107f1c                disc_change_type
+                0x0000000000107f2c                CdromLabel
+                0x0000000000107f50                CdromPath
+                0x0000000000108050                CdromPath_old
+                0x0000000000108150                CdromLabel_old
+                0x0000000000108174                CdromId_old
+                0x0000000000108180                holdResetEvent
+                0x000000000010845c                memcardFlagOld
+                0x0000000000108460                memcardResetFlag
+                0x0000000000108468                time_to_sync_state
+ *fill*         0x000000000010846c        0x4 
+ .bss           0x0000000000108470      0x228 libpcsxcore/plugins.o
+                0x0000000000108580                hCDRDriver
+                0x0000000000108584                hGPUDriver
+                0x0000000000108588                hSPUDriver
+                0x000000000010858c                hPAD1Driver
+                0x0000000000108590                hPAD2Driver
+                0x0000000000108594                hNETDriver
+ .bss           0x0000000000108698       0x10 libpcsxcore/ppf.o
+ .bss           0x00000000001086a8      0xb48 libpcsxcore/psxbios.o
+                0x00000000001091e8                hleSoftCall
+ .bss           0x00000000001091f0        0x9 libpcsxcore/psxcommon.o
+                0x00000000001091f0                emuLog
+                0x00000000001091f4                Log
+                0x00000000001091f8                NetOpened
+ *fill*         0x00000000001091f9        0x3 
+ .bss           0x00000000001091fc       0x18 libpcsxcore/psxcounters.o
+                0x00000000001091fc                psxNextsCounter
+                0x0000000000109200                psxNextCounter
+                0x0000000000109204                hSyncCount
+                0x000000000010920c                frame_counter
+ .bss           0x0000000000109214        0x0 libpcsxcore/psxdma.o
+ .bss           0x0000000000109214        0x0 libpcsxcore/psxhle.o
+ .bss           0x0000000000109214        0x0 libpcsxcore/psxhw.o
+ .bss           0x0000000000109214        0xc libpcsxcore/psxinterpreter.o
+ .bss           0x0000000000109220       0x18 libpcsxcore/psxmem.o
+                0x0000000000109220                psxM
+                0x0000000000109224                psxP
+                0x0000000000109228                psxR
+                0x000000000010922c                psxH
+                0x0000000000109230                psxMemRLUT
+                0x0000000000109234                psxMemWLUT
+ .bss           0x0000000000109238        0x4 libpcsxcore/r3000a.o
+                0x0000000000109238                psxCpu
+ .bss           0x000000000010923c      0x124 libpcsxcore/sio.o
+                0x000000000010935c                memcardFlag
+ .bss           0x0000000000109360      0x20d libpcsxcore/socket.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/spu.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/gte.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/gte_nf.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/gte_divider.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/gte_arm.o
+ .bss           0x000000000010956d        0x0 libpcsxcore/gte_neon.o
+ *fill*         0x000000000010956d        0x3 
+ .bss           0x0000000000109570   0x318330 libpcsxcore/new_dynarec/new_dynarec.o
+ .bss           0x00000000004218a0      0x710 libpcsxcore/new_dynarec/linkage_arm.o
+                0x00000000004218a0                dynarec_local
+                0x00000000004218e0                next_interupt
+                0x00000000004218e4                cycle_count
+                0x00000000004218e8                last_count
+                0x00000000004218ec                pending_exception
+                0x00000000004218f0                stop
+                0x00000000004218f4                invc_ptr
+                0x00000000004218f8                address
+                0x00000000004218fc                psxRegs
+                0x00000000004218fc                reg
+                0x000000000042197c                lo
+                0x0000000000421980                hi
+                0x0000000000421984                reg_cop0
+                0x0000000000421a04                reg_cop2d
+                0x0000000000421a84                reg_cop2c
+                0x0000000000421b04                pcaddr
+                0x0000000000421c14                rcnts
+                0x0000000000421c84                mem_rtab
+                0x0000000000421c88                mem_wtab
+                0x0000000000421c8c                psxH_ptr
+                0x0000000000421c90                zeromem_ptr
+                0x0000000000421c94                inv_code_start
+                0x0000000000421c98                inv_code_end
+                0x0000000000421c9c                branch_target
+                0x0000000000421ca0                scratch_buf_ptr
+                0x0000000000421ca4                FCR0
+                0x0000000000421ca4                FCR31
+                0x0000000000421cb0                mini_ht
+                0x0000000000421db0                restore_candidate
+ .bss           0x0000000000421fb0    0x1c008 libpcsxcore/new_dynarec/pcsxmem.o
+ *fill*         0x000000000043dfb8        0x8 
+ .bss           0x000000000043dfc0      0x200 libpcsxcore/new_dynarec/emu_if.o
+ .bss           0x000000000043e1c0        0x0 plugins/dfsound/dma.o
+ .bss           0x000000000043e1c0        0x0 plugins/dfsound/freeze.o
+ .bss           0x000000000043e1c0        0xc plugins/dfsound/registers.o
+ .bss           0x000000000043e1cc     0x2f3c plugins/dfsound/spu.o
+ .bss           0x0000000000441108       0x68 plugins/dfsound/out.o
+ .bss           0x0000000000441170        0x0 plugins/dfsound/nullsnd.o
+ .bss           0x0000000000441170        0x0 plugins/dfsound/arm_utils.o
+ .bss           0x0000000000441170       0x18 plugins/dfsound/sdl.o
+                0x0000000000441170                iReadPos
+                0x0000000000441174                iWritePos
+                0x0000000000441178                g_isAudioPlaying
+                0x0000000000441180                pSndBuffer
+                0x0000000000441184                iBufSize
+ .bss           0x0000000000441188        0x8 plugins/gpulib/gpu.o
+                0x0000000000441188                g_gpu_patch_flag
+ .bss           0x0000000000441190        0xc plugins/gpulib/vout_pl.o
+ .bss           0x000000000044119c      0x138 plugins/dfxvideo/gpulib_if.o
+                0x000000000044119c                bCheckMask
+                0x000000000044119e                DrawSemiTrans
+                0x00000000004411a0                sSetMask
+                0x0000000000441290                lSetMask
+                0x0000000000441294                bUsingTWin
+                0x0000000000441296                bDoVSyncUpdate
+                0x000000000044129c                dwActFixes
+                0x00000000004412b4                usMirror
+                0x00000000004412b8                iDither
+                0x00000000004412bc                iUseDither
+                0x00000000004412c0                isBiosLogoEnd
+                0x00000000004412c4                iTrimJaggyFrame
+                0x00000000004412c8                isToShinDen
+                0x00000000004412cc                regions
+ .bss           0x00000000004412d4       0x64 plugins/cdrcimg/cdrcimg.o
+ .bss           0x0000000000441338        0x0 plugins/dfinput/main.o
+ .bss           0x0000000000441338       0xd8 plugins/dfinput/pad.o
+ .bss           0x0000000000441410        0x8 plugins/dfinput/guncon.o
+ .bss           0x0000000000441418      0x200 frontend/cspace.o
+ .bss           0x0000000000441618        0x0 frontend/cspace_neon.o
+ .bss           0x0000000000441618        0xc frontend/libpicofe/in_sdl.o
+ .bss           0x0000000000441624       0x38 frontend/libpicofe/plat_sdl.o
+                0x0000000000441648                gl_works
+ .bss           0x000000000044165c        0x0 frontend/libpicofe/plat_dummy.o
+ .bss           0x000000000044165c        0x0 frontend/libpicofe/linux/in_evdev.o
+ .bss           0x000000000044165c       0x1c frontend/plat_sdl.o
+ .bss           0x0000000000441678   0x240074 frontend/plugin_lib.o
+ .bss           0x00000000006816ec        0x4 frontend/libpicofe/linux/plat.o
+ .bss           0x00000000006816f0        0x0 frontend/libpicofe/readpng.o
+ .bss           0x00000000006816f0        0x0 frontend/libpicofe/fonts.o
+ .bss           0x00000000006816f0        0x0 frontend/libpicofe/arm/neon_scale2x.o
+ .bss           0x00000000006816f0        0x0 frontend/libpicofe/arm/neon_eagle2x.o
+ .bss           0x00000000006816f0      0x504 frontend/menu.o
+                0x0000000000681a00                menu_error_msg
+ .bss           0x0000000000681bf4      0x174 frontend/libpicofe/input.o
+ .bss           0x0000000000681d68       0x30 frontend/main.o
+                0x0000000000681d68                is_high_temperature
+                0x0000000000681d7c                power_off_flg
+                0x0000000000681d84                from_escape
+                0x0000000000681d94                enter_mode
+ .bss           0x0000000000681d98        0x0 frontend/plugin.o
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ .bss           0x0000000000681d98        0x0 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+ *(COMMON)
+ COMMON         0x0000000000681d98        0xc libpcsxcore/cdriso.o
+                0x0000000000681d98                cdimg_read_func
+                0x0000000000681d9c                cdrIsoMultidiskCount
+                0x0000000000681da0                cdrIsoMultidiskSelect
+ COMMON         0x0000000000681da4     0x89ec libpcsxcore/cdrom.o
+                0x0000000000681da4                INCLUDE_TITLE
+                0x0000000000681dac                cdr
+                0x000000000068a784                State_CdlPause
+                0x000000000068a788                xaSave_iRightVolume
+                0x000000000068a78c                xaSave_iLeftVolume
+ COMMON         0x000000000068a790      0x100 libpcsxcore/disr3000a.o
+                0x000000000068a790                ostr
+ COMMON         0x000000000068a890      0x280 libpcsxcore/plugins.o
+                0x000000000068a890                SPU_playSample
+                0x000000000068a894                SPU_async
+                0x000000000068a898                SPU_writeDMA
+                0x000000000068a89c                NET_sendData
+                0x000000000068a8a0                NET_close
+                0x000000000068a8a4                GPU_readDataMem
+                0x000000000068a8a8                GPU_freeze
+                0x000000000068a8ac                GPU_showScreenPic
+                0x000000000068a8b0                PAD2_about
+                0x000000000068a8b4                CDR_getBuffer
+                0x000000000068a8b8                SPU_shutdown
+                0x000000000068a8bc                GPU_writeStatus
+                0x000000000068a8c0                PAD2_open
+                0x000000000068a8c4                CDR_getStatus
+                0x000000000068a8c8                PAD2_configure
+                0x000000000068a8cc                SPU_playADPCMchannel
+                0x000000000068a8d0                NET_about
+                0x000000000068a8d4                PAD1_setSensitive
+                0x000000000068a8d8                CDR_readTrack
+                0x000000000068a8dc                PAD1_poll
+                0x000000000068a8e0                SPU_writeRegister
+                0x000000000068a8e4                SPU_enableRvbConfig
+                0x000000000068a8e8                PAD1_test
+                0x000000000068a8ec                CDR_readCDDA
+                0x000000000068a8f0                PAD1_configure
+                0x000000000068a8f4                NET_open
+                0x000000000068a8f8                CDR_about
+                0x000000000068a8fc                SPU_readDMA
+                0x000000000068a900                GPU_open
+                0x000000000068a904                CDR_stop
+                0x000000000068a908                NET_queryPlayer
+                0x000000000068a90c                PAD1_shutdown
+                0x000000000068a910                GPU_dmaChain
+                0x000000000068a914                SPU_playCDDAchannel
+                0x000000000068a918                PAD2_init
+                0x000000000068a91c                NET_sendPadData
+                0x000000000068a920                GPU_about
+                0x000000000068a924                SPU_open
+                0x000000000068a928                SPU_configure
+                0x000000000068a92c                CDR_getTN
+                0x000000000068a930                padd2
+                0x000000000068a998                GPU_test
+                0x000000000068a99c                CDR_getTD
+                0x000000000068a9a0                GPU_makeSnapshot
+                0x000000000068a9a4                PAD2_setSensitive
+                0x000000000068a9a8                PAD1_query
+                0x000000000068a9ac                NET_setInfo
+                0x000000000068a9b0                SPU_close
+                0x000000000068a9b4                PAD1_keypressed
+                0x000000000068a9b8                SPU_readDMAMem
+                0x000000000068a9bc                GPU_writeDataMem
+                0x000000000068a9c0                CDR_open
+                0x000000000068a9c4                GPU_updateLace
+                0x000000000068a9c8                NET_test
+                0x000000000068a9cc                SPU_test
+                0x000000000068a9d0                SPU_readRegister
+                0x000000000068a9d4                NET_recvData
+                0x000000000068a9d8                NET_recvPadData
+                0x000000000068a9dc                GPU_getScreenPic
+                0x000000000068a9e0                CDR_test
+                0x000000000068a9e4                GPU_readStatus
+                0x000000000068a9e8                CDR_close
+                0x000000000068a9ec                NET_keypressed
+                0x000000000068a9f0                CDR_getDriveLetter
+                0x000000000068a9f4                PAD1_open
+                0x000000000068a9f8                SPU_init
+                0x000000000068a9fc                CDR_play
+                0x000000000068aa00                GPU_init
+                0x000000000068aa04                PAD1_startPoll
+                0x000000000068aa08                GPU_displayText
+                0x000000000068aa0c                NET_resume
+                0x000000000068aa10                PAD2_shutdown
+                0x000000000068aa14                PAD2_readPort2
+                0x000000000068aa18                CDR_configure
+                0x000000000068aa1c                NET_configure
+                0x000000000068aa20                PAD2_close
+                0x000000000068aa24                PAD2_test
+                0x000000000068aa28                CDR_setfilename
+                0x000000000068aa2c                SPU_fadein
+                0x000000000068aa30                GPU_boStatus
+                0x000000000068aa34                GPU_shutdown
+                0x000000000068aa38                SPU_freeze
+                0x000000000068aa3c                PAD1_init
+                0x000000000068aa40                PAD2_poll
+                0x000000000068aa44                SPU_about
+                0x000000000068aa48                GPU_clearDynarec
+                0x000000000068aa4c                GPU_close
+                0x000000000068aa50                CDR_getBufferSub
+                0x000000000068aa54                SPU_registerScheduleCb
+                0x000000000068aa58                GPU_configure
+                0x000000000068aa5c                padd1
+                0x000000000068aac4                CDR_getTE
+                0x000000000068aac8                SPU_writeDMAMem
+                0x000000000068aacc                PAD2_query
+                0x000000000068aad0                GPU_keypressed
+                0x000000000068aad4                PAD1_close
+                0x000000000068aad8                NET_shutdown
+                0x000000000068aadc                PAD2_keypressed
+                0x000000000068aae0                GPU_vBlank
+                0x000000000068aae4                GPU_writeData
+                0x000000000068aae8                PAD1_readPort1
+                0x000000000068aaec                PAD1_about
+                0x000000000068aaf0                GPU_setPatchFlag
+                0x000000000068aaf4                NET_pause
+                0x000000000068aaf8                CDR_init
+                0x000000000068aafc                SPU_registerCallback
+                0x000000000068ab00                CDR_shutdown
+                0x000000000068ab04                PAD2_startPoll
+                0x000000000068ab08                NET_init
+                0x000000000068ab0c                GPU_readData
+ COMMON         0x000000000068ab10        0x4 libpcsxcore/ppf.o
+                0x000000000068ab10                sbi_sectors
+ COMMON         0x000000000068ab14      0xc48 libpcsxcore/psxbios.o
+                0x000000000068ab14                ffile
+                0x000000000068ab54                pfile
+                0x000000000068ab58                biosA0
+                0x000000000068af58                nfile
+                0x000000000068af5c                biosC0
+                0x000000000068b35c                biosB0
+ COMMON         0x000000000068b75c      0xd0e libpcsxcore/psxcommon.o
+                0x000000000068b75c                Config
+ COMMON         0x000000000068c46a        0x0 libpcsxcore/psxcounters.o
+ *fill*         0x000000000068c46a        0x2 
+ COMMON         0x000000000068c46c        0x8 libpcsxcore/psxmem.o
+                0x000000000068c46c                psxMapHook
+                0x000000000068c470                psxUnmapHook
+ COMMON         0x000000000068c474        0x0 libpcsxcore/r3000a.o
+ COMMON         0x000000000068c474    0x40008 libpcsxcore/sio.o
+                0x000000000068c474                Mcd1Data
+                0x00000000006ac474                Mcd2Data
+                0x00000000006cc474                McdDisable
+                0x00000000006cc478                p2_connected
+ *fill*         0x00000000006cc47c      0xb84 
+ COMMON         0x00000000006cd000  0x1108014 libpcsxcore/new_dynarec/new_dynarec.o
+                0x00000000006cd000                hash_table
+                0x00000000007cd000                translation_cache
+                0x00000000017cd000                new_dynarec_did_compile
+                0x00000000017cd004                new_dynarec_hacks
+                0x00000000017cd008                jump_dirty
+                0x00000000017d1008                cycle_multiplier
+                0x00000000017d1010                jump_in
+                0x00000000017d5010                out
+ COMMON         0x00000000017d5014     0x1000 libpcsxcore/new_dynarec/pcsxmem.o
+                0x00000000017d5014                zero_mem
+ COMMON         0x00000000017d6014   0x10013c libpcsxcore/new_dynarec/emu_if.o
+                0x00000000017d6014                event_cycles
+                0x00000000017d6050                gte_handlers
+                0x00000000017d6150                invalid_code
+ COMMON         0x00000000018d6150     0x1728 plugins/dfsound/spu.o
+                0x00000000018d6150                spu
+                0x00000000018d6a50                spu_config
+                0x00000000018d6a70                ChanBuf
+ COMMON         0x00000000018d7878        0x4 plugins/dfsound/out.o
+                0x00000000018d7878                out_current
+ COMMON         0x00000000018d787c     0x1134 plugins/gpulib/gpu.o
+                0x00000000018d787c                gpu
+ COMMON         0x00000000018d89b0      0x134 plugins/dfxvideo/gpulib_if.o
+                0x00000000018d89b0                drawW
+                0x00000000018d89b4                GlobalTextAddrX
+                0x00000000018d89b8                Ymax
+                0x00000000018d89bc                drawY
+                0x00000000018d89c0                psxVuw_t
+                0x00000000018d89c4                psxVsl
+                0x00000000018d89c8                VRAMRead
+                0x00000000018d89d8                TWin
+                0x00000000018d89e8                lGPUstatusRet
+                0x00000000018d89ec                psxVsb
+                0x00000000018d89f0                Ymin
+                0x00000000018d89f2                lx1
+                0x00000000018d89f4                lx3
+                0x00000000018d89f8                VRAMWrite
+                0x00000000018d8a08                iUseFixes
+                0x00000000018d8a0c                psxVuw
+                0x00000000018d8a10                ly2
+                0x00000000018d8a12                ly0
+                0x00000000018d8a14                drawH
+                0x00000000018d8a18                GlobalTextAddrY
+                0x00000000018d8a1c                drawX
+                0x00000000018d8a20                lLowerpart
+                0x00000000018d8a24                GlobalTextTP
+                0x00000000018d8a28                psxVsw
+                0x00000000018d8a2c                PSXDisplay
+                0x00000000018d8a78                DataReadMode
+                0x00000000018d8a7c                dwCfgFixes
+                0x00000000018d8a80                lGPUInfoVals
+                0x00000000018d8ac0                lx2
+                0x00000000018d8ac2                lx0
+                0x00000000018d8ac4                scenes
+                0x00000000018d8ac8                psxVul
+                0x00000000018d8acc                GlobalTextPAGE
+                0x00000000018d8ad0                ly3
+                0x00000000018d8ad2                ly1
+                0x00000000018d8ad4                psxVub
+                0x00000000018d8ad8                DataWriteMode
+                0x00000000018d8adc                GlobalTextABR
+                0x00000000018d8ae0                psxVuw_eom
+ COMMON         0x00000000018d8ae4        0x4 plugins/dfinput/main.o
+                0x00000000018d8ae4                CmdLen
+                0x00000000018d8ae5                CurByte
+                0x00000000018d8ae6                CurCmd
+                0x00000000018d8ae7                CurPad
+ COMMON         0x00000000018d8ae8       0x1c frontend/libpicofe/plat_sdl.o
+                0x00000000018d8ae8                plat_sdl_screen
+                0x00000000018d8aec                plat_sdl_gl_active
+                0x00000000018d8af0                plat_sdl_resize_cb
+                0x00000000018d8af4                sdl2_texture
+                0x00000000018d8af8                sdl2_window
+                0x00000000018d8afc                sdl2_renderer
+                0x00000000018d8b00                plat_sdl_quit_cb
+ COMMON         0x00000000018d8b04       0x34 frontend/libpicofe/plat_dummy.o
+                0x00000000018d8b04                plat_target
+ COMMON         0x00000000018d8b38        0x4 frontend/libpicofe/linux/in_evdev.o
+                0x00000000018d8b38                in_evdev_allow_abs_only
+ COMMON         0x00000000018d8b3c       0x40 frontend/plugin_lib.o
+                0x00000000018d8b3c                pl_plat_clear
+                0x00000000018d8b40                in_keystate
+                0x00000000018d8b44                g_layer_y
+                0x00000000018d8b48                g_layer_w
+                0x00000000018d8b4c                tsdev
+                0x00000000018d8b50                in_state_gun
+                0x00000000018d8b54                pl_vout_buf
+                0x00000000018d8b58                g_layer_h
+                0x00000000018d8b5c                pl_plat_hud_print
+                0x00000000018d8b60                in_type1
+                0x00000000018d8b64                g_layer_x
+                0x00000000018d8b68                in_enable_vibration
+                0x00000000018d8b6c                in_adev_is_nublike
+                0x00000000018d8b74                pl_plat_blit
+                0x00000000018d8b78                in_type2
+ COMMON         0x00000000018d8b7c       0x34 frontend/menu.o
+                0x00000000018d8b7c                g_menuscreen_h
+                0x00000000018d8b80                g_scaler
+                0x00000000018d8b84                soft_filter
+                0x00000000018d8b88                g_menubg_src_ptr
+                0x00000000018d8b8c                g_menubg_ptr
+                0x00000000018d8b90                analog_deadzone
+                0x00000000018d8b94                g_menuscreen_ptr
+                0x00000000018d8b98                open_invalid_time
+                0x00000000018d8b9c                scanlines
+                0x00000000018d8ba0                soft_scaling
+                0x00000000018d8ba4                g_opts
+                0x00000000018d8ba8                g_menuscreen_w
+                0x00000000018d8bac                g_autostateld_opt
+ COMMON         0x00000000018d8bb0      0x364 frontend/main.o
+                0x00000000018d8bb0                gpuDisp
+                0x00000000018d8bb4                changedisc_message
+                0x00000000018d8c34                isUnknowCdrom
+                0x00000000018d8c38                emu_action_old
+                0x00000000018d8c3c                state_slot
+                0x00000000018d8c40                g_emu_resetting
+                0x00000000018d8c44                g_emu_want_quit
+                0x00000000018d8c48                nottime_message
+                0x00000000018d8cc8                cfgfile_basename
+                0x00000000018d8dc8                ready_to_go
+                0x00000000018d8dcc                solodisc_message
+                0x00000000018d8e4c                hud_new_msg
+                0x00000000018d8e50                ok_image
+                0x00000000018d8ed0                hud_msg
+                0x00000000018d8f10                emu_action
+                0x00000000018d8f14                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00000000018d8f14                _bss_end__ = .
+                0x00000000018d8f14                __bss_end__ = .
+                0x00000000018d8f14                . = ALIGN (0x4)
+                0x00000000018d8f14                . = SEGMENT_START ("ldata-segment", .)
+                0x00000000018d8f14                . = ALIGN (0x4)
+                0x00000000018d8f14                __end__ = .
+                0x00000000018d8f14                _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x00000000018d8f14                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x4a
+ *(.comment)
+ .comment       0x0000000000000000       0x11 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x39 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+                                         0x3a (size before relaxing)
+ .comment       0x000000000000004a       0x3a libpcsxcore/cdriso.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/cdrom.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/cheat.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/debug.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/decode_xa.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/disr3000a.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/mdec.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/misc.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/plugins.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/ppf.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxbios.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxcommon.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxcounters.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxdma.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxhle.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxhw.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxinterpreter.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/psxmem.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/r3000a.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/sio.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/socket.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/spu.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/gte.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/gte_nf.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/gte_divider.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/new_dynarec/new_dynarec.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/new_dynarec/pcsxmem.o
+ .comment       0x000000000000004a       0x3a libpcsxcore/new_dynarec/emu_if.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/dma.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/freeze.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/registers.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/spu.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/out.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/nullsnd.o
+ .comment       0x000000000000004a       0x3a plugins/dfsound/sdl.o
+ .comment       0x000000000000004a       0x3a plugins/gpulib/gpu.o
+ .comment       0x000000000000004a       0x3a plugins/gpulib/vout_pl.o
+ .comment       0x000000000000004a       0x3a plugins/dfxvideo/gpulib_if.o
+ .comment       0x000000000000004a       0x3a plugins/cdrcimg/cdrcimg.o
+ .comment       0x000000000000004a       0x3a plugins/dfinput/main.o
+ .comment       0x000000000000004a       0x3a plugins/dfinput/pad.o
+ .comment       0x000000000000004a       0x3a plugins/dfinput/guncon.o
+ .comment       0x000000000000004a       0x3a frontend/cspace.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/in_sdl.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/plat_sdl.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/plat_dummy.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/linux/in_evdev.o
+ .comment       0x000000000000004a       0x3a frontend/plat_sdl.o
+ .comment       0x000000000000004a       0x3a frontend/plugin_lib.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/linux/plat.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/readpng.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/fonts.o
+ .comment       0x000000000000004a       0x3a frontend/menu.o
+ .comment       0x000000000000004a       0x3a frontend/libpicofe/input.o
+ .comment       0x000000000000004a       0x3a frontend/main.o
+ .comment       0x000000000000004a       0x3a frontend/plugin.o
+ .comment       0x000000000000004a       0x3a /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+
+.ARM.attributes
+                0x0000000000000000       0x39
+ .ARM.attributes
+                0x0000000000000000       0x3b /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .ARM.attributes
+                0x000000000000003b       0x2b /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .ARM.attributes
+                0x0000000000000066       0x33 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtbeginS.o
+ .ARM.attributes
+                0x0000000000000099       0x3d libpcsxcore/cdriso.o
+ .ARM.attributes
+                0x00000000000000d6       0x3d libpcsxcore/cdrom.o
+ .ARM.attributes
+                0x0000000000000113       0x3d libpcsxcore/cheat.o
+ .ARM.attributes
+                0x0000000000000150       0x3d libpcsxcore/debug.o
+ .ARM.attributes
+                0x000000000000018d       0x3d libpcsxcore/decode_xa.o
+ .ARM.attributes
+                0x00000000000001ca       0x3d libpcsxcore/disr3000a.o
+ .ARM.attributes
+                0x0000000000000207       0x3d libpcsxcore/mdec.o
+ .ARM.attributes
+                0x0000000000000244       0x3d libpcsxcore/misc.o
+ .ARM.attributes
+                0x0000000000000281       0x3d libpcsxcore/plugins.o
+ .ARM.attributes
+                0x00000000000002be       0x3d libpcsxcore/ppf.o
+ .ARM.attributes
+                0x00000000000002fb       0x3d libpcsxcore/psxbios.o
+ .ARM.attributes
+                0x0000000000000338       0x3d libpcsxcore/psxcommon.o
+ .ARM.attributes
+                0x0000000000000375       0x3d libpcsxcore/psxcounters.o
+ .ARM.attributes
+                0x00000000000003b2       0x3d libpcsxcore/psxdma.o
+ .ARM.attributes
+                0x00000000000003ef       0x3d libpcsxcore/psxhle.o
+ .ARM.attributes
+                0x000000000000042c       0x3d libpcsxcore/psxhw.o
+ .ARM.attributes
+                0x0000000000000469       0x3d libpcsxcore/psxinterpreter.o
+ .ARM.attributes
+                0x00000000000004a6       0x3d libpcsxcore/psxmem.o
+ .ARM.attributes
+                0x00000000000004e3       0x3d libpcsxcore/r3000a.o
+ .ARM.attributes
+                0x0000000000000520       0x3d libpcsxcore/sio.o
+ .ARM.attributes
+                0x000000000000055d       0x3d libpcsxcore/socket.o
+ .ARM.attributes
+                0x000000000000059a       0x3d libpcsxcore/spu.o
+ .ARM.attributes
+                0x00000000000005d7       0x3d libpcsxcore/gte.o
+ .ARM.attributes
+                0x0000000000000614       0x3d libpcsxcore/gte_nf.o
+ .ARM.attributes
+                0x0000000000000651       0x3d libpcsxcore/gte_divider.o
+ .ARM.attributes
+                0x000000000000068e       0x2d libpcsxcore/gte_arm.o
+ .ARM.attributes
+                0x00000000000006bb       0x2d libpcsxcore/gte_neon.o
+ .ARM.attributes
+                0x00000000000006e8       0x3d libpcsxcore/new_dynarec/new_dynarec.o
+ .ARM.attributes
+                0x0000000000000725       0x2d libpcsxcore/new_dynarec/linkage_arm.o
+ .ARM.attributes
+                0x0000000000000752       0x3d libpcsxcore/new_dynarec/pcsxmem.o
+ .ARM.attributes
+                0x000000000000078f       0x3d libpcsxcore/new_dynarec/emu_if.o
+ .ARM.attributes
+                0x00000000000007cc       0x3d plugins/dfsound/dma.o
+ .ARM.attributes
+                0x0000000000000809       0x3d plugins/dfsound/freeze.o
+ .ARM.attributes
+                0x0000000000000846       0x3d plugins/dfsound/registers.o
+ .ARM.attributes
+                0x0000000000000883       0x3d plugins/dfsound/spu.o
+ .ARM.attributes
+                0x00000000000008c0       0x3d plugins/dfsound/out.o
+ .ARM.attributes
+                0x00000000000008fd       0x3d plugins/dfsound/nullsnd.o
+ .ARM.attributes
+                0x000000000000093a       0x2d plugins/dfsound/arm_utils.o
+ .ARM.attributes
+                0x0000000000000967       0x3d plugins/dfsound/sdl.o
+ .ARM.attributes
+                0x00000000000009a4       0x3d plugins/gpulib/gpu.o
+ .ARM.attributes
+                0x00000000000009e1       0x3d plugins/gpulib/vout_pl.o
+ .ARM.attributes
+                0x0000000000000a1e       0x3d plugins/dfxvideo/gpulib_if.o
+ .ARM.attributes
+                0x0000000000000a5b       0x3d plugins/cdrcimg/cdrcimg.o
+ .ARM.attributes
+                0x0000000000000a98       0x3d plugins/dfinput/main.o
+ .ARM.attributes
+                0x0000000000000ad5       0x3d plugins/dfinput/pad.o
+ .ARM.attributes
+                0x0000000000000b12       0x3d plugins/dfinput/guncon.o
+ .ARM.attributes
+                0x0000000000000b4f       0x3d frontend/cspace.o
+ .ARM.attributes
+                0x0000000000000b8c       0x2d frontend/cspace_neon.o
+ .ARM.attributes
+                0x0000000000000bb9       0x3d frontend/libpicofe/in_sdl.o
+ .ARM.attributes
+                0x0000000000000bf6       0x3d frontend/libpicofe/plat_sdl.o
+ .ARM.attributes
+                0x0000000000000c33       0x3d frontend/libpicofe/plat_dummy.o
+ .ARM.attributes
+                0x0000000000000c70       0x3d frontend/libpicofe/linux/in_evdev.o
+ .ARM.attributes
+                0x0000000000000cad       0x3d frontend/plat_sdl.o
+ .ARM.attributes
+                0x0000000000000cea       0x3d frontend/plugin_lib.o
+ .ARM.attributes
+                0x0000000000000d27       0x3d frontend/libpicofe/linux/plat.o
+ .ARM.attributes
+                0x0000000000000d64       0x3d frontend/libpicofe/readpng.o
+ .ARM.attributes
+                0x0000000000000da1       0x3d frontend/libpicofe/fonts.o
+ .ARM.attributes
+                0x0000000000000dde       0x2d frontend/libpicofe/arm/neon_scale2x.o
+ .ARM.attributes
+                0x0000000000000e0b       0x2d frontend/libpicofe/arm/neon_eagle2x.o
+ .ARM.attributes
+                0x0000000000000e38       0x3d frontend/menu.o
+ .ARM.attributes
+                0x0000000000000e75       0x3d frontend/libpicofe/input.o
+ .ARM.attributes
+                0x0000000000000eb2       0x3d frontend/main.o
+ .ARM.attributes
+                0x0000000000000eef       0x3d frontend/plugin.o
+ .ARM.attributes
+                0x0000000000000f2c       0x21 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000f4d       0x21 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x0000000000000f6e       0x21 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_clear_cache.o)
+ .ARM.attributes
+                0x0000000000000f8f       0x33 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000000000000fc2       0x33 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/crtendS.o
+ .ARM.attributes
+                0x0000000000000ff5       0x2b /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x90
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x38 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .debug_aranges
+                0x0000000000000038       0x30 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .debug_aranges
+                0x0000000000000068       0x28 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000       0xa6
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x62 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .debug_info    0x0000000000000062       0x22 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .debug_info    0x0000000000000084       0x22 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug_abbrev   0x0000000000000000       0x6d
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x49 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .debug_abbrev  0x0000000000000049       0x12 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .debug_abbrev  0x000000000000005b       0x12 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug_line     0x0000000000000000      0x131
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x8e /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+ .debug_line    0x000000000000008e       0x5e /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .debug_line    0x00000000000000ec       0x45 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x171
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x163 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/Scrt1.o
+                                        0x188 (size before relaxing)
+ .debug_str     0x0000000000000163        0x7 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+                                         0x3a (size before relaxing)
+ .debug_str     0x000000000000016a        0x7 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+                                         0x3a (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x48
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x28 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crti.o
+ .debug_ranges  0x0000000000000028       0x20 /usr/lib/gcc-cross/arm-linux-gnueabihf/6/../../../../arm-linux-gnueabihf/lib/../lib/crtn.o
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(pcsx elf32-littlearm)

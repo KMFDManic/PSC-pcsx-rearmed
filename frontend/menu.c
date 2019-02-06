@@ -2132,6 +2132,8 @@ static void draw_frame_credits(void)
 
 static const char credits_text[] = 
 	"PCSX-ReARMed\n\n"
+	"Enhanced Edition by AutoBleem Team\n"
+	"screemer, nex, ThaFridge, mGGk\n\n"
 	"(C) 1999-2003 PCSX Team\n"
 	"(C) 2005-2009 PCSX-df Team\n"
 	"(C) 2009-2011 PCSX-Reloaded Team\n\n"

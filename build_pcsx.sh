@@ -8,13 +8,14 @@
 #         →Joysticの「select + △」押下でpcsxのメニューが開くpcsxがビルドされます。
 #
 #
-source /usr/local/oecore-x86_64/environment-setup-cortexa7hf-neon-vfpv4-poky-linux-gnueabi
-if [ ! -e config.log ]; then
-    # run configure
+#source /usr/local/oecore-x86_64/environment-setup-cortexa7hf-neon-vfpv4-poky-linux-gnueabi
+#if [ ! -e config.log ]; then
+    
     # set sdl2-config path
-    export PATH=$PATH:$SDKTARGETSYSROOT/usr/bin
-    CROSS_COMPILE=arm-poky-linux-gnueabi CFLAGS="-march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -mcpu=cortex-a7 -mtune=cortex-a7" ./configure --sound-drivers=sdl
-fi
+    #export PATH=$PATH:$SDKTARGETSYSROOT/usr/bin
+    CROSS_COMPILE=arm-linux-gnueabihf CFLAGS="-march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -mcpu=cortex-a7 -mtune=cortex-a7"
+    #./configure
+#fi
 # build.log include stdout & stderr
 if [ $# -eq 1 ]; then
     if [ $1 = "enable_menu" ]; then
@@ -22,7 +23,7 @@ if [ $# -eq 1 ]; then
     fi
 fi
 echo "make $BUILD_OPTION -j4 2>&1 | tee build.log"
-make $BUILD_OPTION -j4 2>&1 | tee build.log
+make $BUILD_OPTION 2>&1 | tee build.log
 
 TARGET_EXECUTABLE=pcsx
 STRIP_OPTION=-s

@@ -7,7 +7,7 @@ TMPO="/tmp/pcsx-conf-${RANDOM}-$$-${RANDOM}.o"
 TMPB="/tmp/pcsx-conf-${RANDOM}-$$-${RANDOM}"
 trap "rm -f $TMPC $TMPO $TMPB" EXIT INT QUIT TERM
 rm -f config.log
-
+# LIB_DIR = "/usr/arm/linux/gnueabihf/lib/"
 compile_object()
 {
   c="$CC $CFLAGS -c $TMPC -o $TMPO $@"

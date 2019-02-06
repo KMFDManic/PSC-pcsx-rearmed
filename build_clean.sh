@@ -5,7 +5,7 @@ rm -f plugins/*.so
 rm -f build.log
 # clean configure resource
 rm -f config.log
-rm -f config.mak
+#rm -f config.mak
 # clean binary data
 if [ -e ../rootfs/usr/sony/bin/pcsx ]; then
 	rm -f ../rootfs/usr/sony/bin/pcsx

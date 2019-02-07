@@ -12,8 +12,10 @@
 #if [ ! -e config.log ]; then
     
     # set sdl2-config path
-    #export PATH=$PATH:$SDKTARGETSYSROOT/usr/bin
-    CROSS_COMPILE=arm-linux-gnueabihf CFLAGS="-march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -mcpu=cortex-a7 -mtune=cortex-a7"
+    #export PATH=$PATH:$SDKTARGETSYSROOT/usr/bini
+    #CFLAGS=-march=armv7ve ./configure --enable-neon --gpu=neon --sound-drivers=sdl
+    # CROSS_COMPILE=arm-linux-gnueabihf CFLAGS="-march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -mcpu=cortex-a7 -mtune=cortex-a7"
+    CFLAGS="-march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -mcpu=cortex-a7 -mtune=cortex-a7"
     #./configure
 #fi
 # build.log include stdout & stderr
@@ -26,7 +28,7 @@ echo "make $BUILD_OPTION -j4 2>&1 | tee build.log"
 make $BUILD_OPTION 2>&1 | tee build.log
 
 TARGET_EXECUTABLE=pcsx
-STRIP_OPTION=-s
+STRIP_OPTION=-S
 cp ${TARGET_EXECUTABLE} ${TARGET_EXECUTABLE}.unstripped
 $(${STRIP} ${STRIP_OPTION} -o ${TARGET_EXECUTABLE} ${TARGET_EXECUTABLE}.unstripped)
 

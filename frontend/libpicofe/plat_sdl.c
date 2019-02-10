@@ -17,8 +17,6 @@
 #include "plat.h"
 #include "gl.h"
 #include "plat_sdl.h"
-#include <unistd.h>
-#include <execinfo.h>
 
 
 
@@ -50,20 +48,6 @@ static int vout_mode_overlay = -1, vout_mode_gl = -1;
 static void *display, *window;
 static int gl_quirks;
 int gl_works = 0;
-
-void handler(int sig) {
-  void *array[10];
-  size_t size;
-
-  // get void*'s for all entries on the stack
-  size = backtrace(array, 10);
-
-  // print out all the frames to stderr
-  fprintf(stderr, "Error: signal %d:\n", sig);
-  backtrace_symbols_fd(array, size, STDERR_FILENO);
-  exit(1);
-}
-
 
 /* w, h is layer resolution */
 int plat_sdl_change_video_mode(int w, int h, int force)
@@ -280,7 +264,6 @@ int plat_sdl_init(void)
 #endif
 {
   printf("+ /frontend/libpicofe/plat_sdl_init()\n");
-  signal(SIGSEGV, handler);
   static const char *vout_list[] = { NULL, NULL, NULL, NULL };
 #if SDL_MAJOR_VERSION == 1
   const SDL_VideoInfo *info;

@@ -236,6 +236,7 @@ create_surface(struct wayland_info *info)
 
 int __gl_platform_init(void **display, void **window, int *quirks)
 {
+    void gl_setup_wl_information(struct wl_display * idisplay,
 
 	struct wayland_info *info = malloc(sizeof(struct wayland_info));
 	
@@ -245,6 +246,7 @@ int __gl_platform_init(void **display, void **window, int *quirks)
 	info->display = wl_display_connect(NULL);
 	if (!info->display) {
 		printf("wl_display_connect is failed\n");
+		printf("Error WLDCNULL %s.\n",strerror(errno));
 		exit(EXIT_SUCCESS);
 	}
 
@@ -305,7 +307,7 @@ void gl_setup_wl_information(struct wl_display * idisplay,
 	plat_display = idisplay;
 	plat_surface = isurface;
 
-	printf("aaaa gl_setup_wl_information, display:0x%x, surface: 0x%x\n", 
+	printf("gl_setup_wl_information, display:0x%x, surface: 0x%x\n",
 		plat_display, plat_surface);
 
 }
@@ -321,6 +323,7 @@ int gl_platform_init(void **display, void **window, int *quirks)
 
 	info->display = aa_display;
 	if (!info->display) {
+		printf("Error AADISPLAY %s.\n",strerror(errno));
 		printf("wl_display_connect is failed\n");
 	}
 

@@ -1,23 +1,720 @@
+NEON GPU
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/cdriso.o libpcsxcore/cdriso.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/cdrom.o libpcsxcore/cdrom.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/cheat.o libpcsxcore/cheat.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/debug.o libpcsxcore/debug.c
+libpcsxcore/cdrom.c: In function ‘ReadTrack’:
+libpcsxcore/cdrom.c:506:6: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+  if (isTitleName(METAL_GEAR_SOLID_DISC_1_JP) ||
+      ^~~~~~~~~~~
+libpcsxcore/cdrom.c:511:3: warning: implicit declaration of function ‘check_scenes’ [-Wimplicit-function-declaration]
+   check_scenes(tmp[0], tmp[1], tmp[2]);
+   ^~~~~~~~~~~~
+libpcsxcore/cdrom.c:516:3: warning: implicit declaration of function ‘check_scenesforSPU’ [-Wimplicit-function-declaration]
+   check_scenesforSPU(tmp[0], tmp[1], tmp[2]);
+   ^~~~~~~~~~~~~~~~~~
+libpcsxcore/cdrom.c:495:6: warning: unused variable ‘crc’ [-Wunused-variable]
+  u16 crc;
+      ^~~
+libpcsxcore/cdrom.c: In function ‘cdrReadInterrupt’:
+libpcsxcore/cdrom.c:1419:31: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  } else if (isTitleName(WILD_ARMS_US) &&
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    cdr.SetSectorPlay[0] == 32 &&
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+    (cdr.SetSectorPlay[1] == 28 &&
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    (61 <= cdr.SetSectorPlay[2] && cdr.SetSectorPlay[2] <= 74)) ||
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from libpcsxcore/cdrom.c:28:0:
+libpcsxcore/cdrom.c: In function ‘cdrWrite1’:
+libpcsxcore/title.h:297:40: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define PARASITE_EVE_JP_DISABLE_VOLUME 0xffff8000
+                                        ^
+libpcsxcore/cdrom.c:1940:38: note: in expansion of macro ‘PARASITE_EVE_JP_DISABLE_VOLUME’
+      SPU_writeRegister(SET_VOLUME_L, PARASITE_EVE_JP_DISABLE_VOLUME, psxRegs.cycle);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/title.h:297:40: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define PARASITE_EVE_JP_DISABLE_VOLUME 0xffff8000
+                                        ^
+libpcsxcore/cdrom.c:1941:38: note: in expansion of macro ‘PARASITE_EVE_JP_DISABLE_VOLUME’
+      SPU_writeRegister(SET_VOLUME_R, PARASITE_EVE_JP_DISABLE_VOLUME, psxRegs.cycle);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/cdrom.c: At top level:
+libpcsxcore/cdrom.c:2687:6: warning: conflicting types for ‘check_scenes’
+ void check_scenes(unsigned char arg1, unsigned char arg2, unsigned char arg3) {
+      ^~~~~~~~~~~~
+libpcsxcore/cdrom.c:511:3: note: previous implicit declaration of ‘check_scenes’ was here
+   check_scenes(tmp[0], tmp[1], tmp[2]);
+   ^~~~~~~~~~~~
+libpcsxcore/cdrom.c:2723:6: warning: conflicting types for ‘check_scenesforSPU’
+ void check_scenesforSPU(unsigned char arg1, unsigned char arg2, unsigned char arg3) {
+      ^~~~~~~~~~~~~~~~~~
+libpcsxcore/cdrom.c:516:3: note: previous implicit declaration of ‘check_scenesforSPU’ was here
+   check_scenesforSPU(tmp[0], tmp[1], tmp[2]);
+   ^~~~~~~~~~~~~~~~~~
+In file included from libpcsxcore/cdrom.c:28:0:
+libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/decode_xa.o libpcsxcore/decode_xa.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/disr3000a.o libpcsxcore/disr3000a.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/mdec.o libpcsxcore/mdec.c
+libpcsxcore/mdec.c: In function ‘psxDma1’:
+libpcsxcore/mdec.c:627:6: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+  if (isTitleName(RIDGE_RACER_TYPE_4_EU)
+      ^~~~~~~~~~~
+In file included from libpcsxcore/mdec.c:22:0:
+At top level:
+libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/misc.o libpcsxcore/misc.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/plugins.o libpcsxcore/plugins.c
+libpcsxcore/misc.c: In function ‘LogPrint’:
+libpcsxcore/misc.c:139:9: warning: implicit declaration of function ‘gettimeofday’ [-Wimplicit-function-declaration]
+         gettimeofday(&myTime, NULL);
+         ^~~~~~~~~~~~
+libpcsxcore/misc.c:140:19: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘__time_t {aka long int}’ [-Wformat=]
+         printf("[%d.%6d] :%s, %d \n", myTime.tv_sec, myTime.tv_usec,title1, data );
+                   ^
+libpcsxcore/misc.c:140:23: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘__suseconds_t {aka long int}’ [-Wformat=]
+         printf("[%d.%6d] :%s, %d \n", myTime.tv_sec, myTime.tv_usec,title1, data );
+                       ^
+libpcsxcore/misc.c: In function ‘write_statefile’:
+libpcsxcore/misc.c:175:9: warning: unused variable ‘pid’ [-Wunused-variable]
+   pid_t pid;
+         ^~~
+libpcsxcore/misc.c: In function ‘save_error’:
+libpcsxcore/misc.c:243:57: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   ret = pthread_create(&statefile_thread, &thread_attr, write_statefile, err);
+                                                         ^~~~~~~~~~~~~~~
+In file included from libpcsxcore/misc.c:34:0:
+/usr/include/pthread.h:233:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘int (*)(struct error_info *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+libpcsxcore/misc.c: In function ‘setTileScreenAdjust’:
+libpcsxcore/misc.c:250:13: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+   int ret = isTitleName(COLIN_MCRAE_RALLY_EU)
+             ^~~~~~~~~~~
+libpcsxcore/misc.c: In function ‘setTitleName’:
+libpcsxcore/misc.c:392:3: warning: implicit declaration of function ‘setCdromId’ [-Wimplicit-function-declaration]
+   setCdromId();
+   ^~~~~~~~~~
+libpcsxcore/misc.c: At top level:
+libpcsxcore/misc.c:409:6: warning: conflicting types for ‘setCdromId’
+ void setCdromId(void) {
+      ^~~~~~~~~~
+libpcsxcore/misc.c:392:3: note: previous implicit declaration of ‘setCdromId’ was here
+   setCdromId();
+   ^~~~~~~~~~
+libpcsxcore/misc.c: In function ‘CheckCdrom’:
+libpcsxcore/misc.c:744:9: warning: unused variable ‘len’ [-Wunused-variable]
+  int i, len, c;
+         ^~~
+libpcsxcore/misc.c: In function ‘fadein’:
+libpcsxcore/misc.c:975:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+libpcsxcore/misc.c:972:14: note: declared here
+ static void *fadein(void* param) {
+              ^~~~~~
+libpcsxcore/misc.c: In function ‘SaveState’:
+libpcsxcore/misc.c:1024:38: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveState  to file [%s] \n", file);
+                                      ^
+libpcsxcore/misc.c:1024:9: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveState  to file [%s] \n", file);
+         ^
+libpcsxcore/misc.c: In function ‘SaveStateWork’:
+libpcsxcore/misc.c:1091:56: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork g_opts & OPT_AUTOSAVE  [%d] \n", g_opts & OPT_AUTOSAVE);
+                                                        ^
+libpcsxcore/misc.c:1091:56: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork g_opts & OPT_AUTOSAVE  [%d] \n", g_opts & OPT_AUTOSAVE);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1098:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   xprintf("SaveStateWork gFilledNum  [%d] \n", gFilledNum);
+                                              ^
+libpcsxcore/misc.c:1098:10: warning: statement with no effect [-Wunused-value]
+   xprintf("SaveStateWork gFilledNum  [%d] \n", gFilledNum);
+          ^
+libpcsxcore/misc.c:1116:78: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork old_index  [%d] , gLastCount [%d], gFilledNum[%d] \n", old_index, gLastCount, gFilledNum);
+                                                                              ^
+libpcsxcore/misc.c:1116:89: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork old_index  [%d] , gLastCount [%d], gFilledNum[%d] \n", old_index, gLastCount, gFilledNum);
+                                                                                         ^
+libpcsxcore/misc.c:1116:101: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork old_index  [%d] , gLastCount [%d], gFilledNum[%d] \n", old_index, gLastCount, gFilledNum);
+                                                                                                     ^
+libpcsxcore/misc.c:1116:9: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork old_index  [%d] , gLastCount [%d], gFilledNum[%d] \n", old_index, gLastCount, gFilledNum);
+         ^
+libpcsxcore/misc.c:1120:46: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘void *’ [-Wformat=]
+   printf("SaveStateWork file open failed!! [%s] \n", fname);
+                                              ^
+libpcsxcore/misc.c:1143:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork ScreenPic [%d] \n", pData->ScreenPic.Size);
+                                           ^
+libpcsxcore/misc.c:1143:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork ScreenPic [%d] \n", pData->ScreenPic.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1144:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork BIOS      [%d] \n", pData->BIOS.Size);
+                                           ^
+libpcsxcore/misc.c:1144:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork BIOS      [%d] \n", pData->BIOS.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1145:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork GPU       [%d] \n", pData->GPU.Size);
+                                           ^
+libpcsxcore/misc.c:1145:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork GPU       [%d] \n", pData->GPU.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1146:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork SPU       [%d] \n", pData->SPU.Size);
+                                           ^
+libpcsxcore/misc.c:1146:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork SPU       [%d] \n", pData->SPU.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1147:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork SPU1      [%d] \n", pData->SPU1.Size);
+                                           ^
+libpcsxcore/misc.c:1147:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork SPU1      [%d] \n", pData->SPU1.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1148:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork SIO   [%d] \n", pData->SIO.Size);
+                                       ^
+libpcsxcore/misc.c:1148:39: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork SIO   [%d] \n", pData->SIO.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1149:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork CDR   [%d] \n", pData->CDR.Size);
+                                       ^
+libpcsxcore/misc.c:1149:39: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork CDR   [%d] \n", pData->CDR.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1150:41: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork PSXHW   [%d] \n", pData->PSXHW.Size);
+                                         ^
+libpcsxcore/misc.c:1150:41: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork PSXHW   [%d] \n", pData->PSXHW.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1151:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork PSXRCNT   [%d] \n", pData->PSXRCNT.Size);
+                                           ^
+libpcsxcore/misc.c:1151:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork PSXRCNT   [%d] \n", pData->PSXRCNT.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1152:40: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork MDEC   [%d] \n", pData->MDEC.Size);
+                                        ^
+libpcsxcore/misc.c:1152:40: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork MDEC   [%d] \n", pData->MDEC.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1153:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork NewDyna   [%d] \n", pData->NewDyna.Size);
+                                           ^
+libpcsxcore/misc.c:1153:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork NewDyna   [%d] \n", pData->NewDyna.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1154:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("SaveStateWork Num       [%d] \n", pData->Num);
+                                           ^
+libpcsxcore/misc.c:1154:43: warning: statement with no effect [-Wunused-value]
+  xprintf("SaveStateWork Num       [%d] \n", pData->Num);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+libpcsxcore/misc.c: In function ‘AutoSaveState’:
+libpcsxcore/misc.c:1283:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState ScreenPic [%d] \n", pStateData->ScreenPic.Size);
+                                           ^
+libpcsxcore/misc.c:1283:43: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState ScreenPic [%d] \n", pStateData->ScreenPic.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1284:40: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState BIOS   [%d] \n", pStateData->BIOS.Size);
+                                        ^
+libpcsxcore/misc.c:1284:40: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState BIOS   [%d] \n", pStateData->BIOS.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1285:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState GPU   [%d] \n", pStateData->GPU.Size);
+                                       ^
+libpcsxcore/misc.c:1285:39: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState GPU   [%d] \n", pStateData->GPU.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1286:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState SPU   [%d] \n", pStateData->SPU.Size);
+                                       ^
+libpcsxcore/misc.c:1286:39: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState SPU   [%d] \n", pStateData->SPU.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1287:40: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState SPU1   [%d] \n", pStateData->SPU1.Size);
+                                        ^
+libpcsxcore/misc.c:1287:40: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState SPU1   [%d] \n", pStateData->SPU1.Size);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1288:43: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState NewDyna   [%d] \n", pStateData->iNewDynaValidDataSize);
+                                           ^
+libpcsxcore/misc.c:1288:43: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState NewDyna   [%d] \n", pStateData->iNewDynaValidDataSize);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c:1289:39: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("AutoSaveState Num   [%d] \n", pStateData->Num);
+                                       ^
+libpcsxcore/misc.c:1289:39: warning: statement with no effect [-Wunused-value]
+  xprintf("AutoSaveState Num   [%d] \n", pStateData->Num);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+libpcsxcore/misc.c: In function ‘emu_sync_state’:
+libpcsxcore/misc.c:1438:11: warning: statement with no effect [-Wunused-value]
+    xprintf("OPT_AUTOSAVE OFF! \n");
+           ^
+libpcsxcore/misc.c:1470:10: warning: statement with no effect [-Wunused-value]
+   xprintf("OPT_AUTOSAVE ON! \n");
+          ^
+libpcsxcore/misc.c: In function ‘emu_sync_state2’:
+libpcsxcore/misc.c:1509:34: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  LOG_Print("emu_sync_state start", count);
+                                  ^
+libpcsxcore/misc.c:1509:11: warning: statement with no effect [-Wunused-value]
+  LOG_Print("emu_sync_state start", count);
+           ^
+libpcsxcore/misc.c:1520:32: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  LOG_Print("emu_sync_state end", count);
+                                ^
+libpcsxcore/plugins.c: In function ‘ReleasePlugins’:
+libpcsxcore/plugins.c:790:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hCDRDriver != NULL) SysCloseLibrary(hCDRDriver); hCDRDriver = NULL;
+  ^~
+libpcsxcore/plugins.c:790:55: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hCDRDriver != NULL) SysCloseLibrary(hCDRDriver); hCDRDriver = NULL;
+                                                       ^~~~~~~~~~
+libpcsxcore/plugins.c:791:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hGPUDriver != NULL) SysCloseLibrary(hGPUDriver); hGPUDriver = NULL;
+  ^~
+libpcsxcore/plugins.c:791:55: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hGPUDriver != NULL) SysCloseLibrary(hGPUDriver); hGPUDriver = NULL;
+                                                       ^~~~~~~~~~
+libpcsxcore/plugins.c:792:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hSPUDriver != NULL) SysCloseLibrary(hSPUDriver); hSPUDriver = NULL;
+  ^~
+libpcsxcore/plugins.c:792:55: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hSPUDriver != NULL) SysCloseLibrary(hSPUDriver); hSPUDriver = NULL;
+                                                       ^~~~~~~~~~
+libpcsxcore/plugins.c:793:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hPAD1Driver != NULL) SysCloseLibrary(hPAD1Driver); hPAD1Driver = NULL;
+  ^~
+libpcsxcore/plugins.c:793:57: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hPAD1Driver != NULL) SysCloseLibrary(hPAD1Driver); hPAD1Driver = NULL;
+                                                         ^~~~~~~~~~~
+libpcsxcore/plugins.c:794:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hPAD2Driver != NULL) SysCloseLibrary(hPAD2Driver); hPAD2Driver = NULL;
+  ^~
+libpcsxcore/plugins.c:794:57: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hPAD2Driver != NULL) SysCloseLibrary(hPAD2Driver); hPAD2Driver = NULL;
+                                                         ^~~~~~~~~~~
+libpcsxcore/plugins.c: In function ‘ReloadCdromPlugin’:
+libpcsxcore/plugins.c:813:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  if (hCDRDriver != NULL) SysCloseLibrary(hCDRDriver); hCDRDriver = NULL;
+  ^~
+libpcsxcore/plugins.c:813:55: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+  if (hCDRDriver != NULL) SysCloseLibrary(hCDRDriver); hCDRDriver = NULL;
+                                                       ^~~~~~~~~~
+libpcsxcore/misc.c:1520:11: warning: statement with no effect [-Wunused-value]
+  LOG_Print("emu_sync_state end", count);
+           ^
+libpcsxcore/misc.c: In function ‘LoadState’:
+libpcsxcore/misc.c:1574:40: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  xprintf("LoadState spu Size [0x%d] \n", Size);
+                                        ^
+libpcsxcore/misc.c:1574:9: warning: statement with no effect [-Wunused-value]
+  xprintf("LoadState spu Size [0x%d] \n", Size);
+         ^
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/ppf.o libpcsxcore/ppf.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -Wno-nonnull   -c -o libpcsxcore/psxbios.o libpcsxcore/psxbios.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxcommon.o libpcsxcore/psxcommon.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxcounters.o libpcsxcore/psxcounters.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxdma.o libpcsxcore/psxdma.c
+libpcsxcore/psxcounters.c:69:18: warning: ‘VerboseLevel’ defined but not used [-Wunused-const-variable=]
+ static const s32 VerboseLevel     = VERBOSE_LEVEL;
+                  ^~~~~~~~~~~~
+In file included from libpcsxcore/psxcounters.c:27:0:
+libpcsxcore/../libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+libpcsxcore/../libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+libpcsxcore/psxdma.c: In function ‘psxDma2’:
+libpcsxcore/psxdma.c:201:8: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+    if (isTitleName(TOSHINDEN_JP)) {
+        ^~~~~~~~~~~
+In file included from libpcsxcore/psxdma.c:26:0:
+At top level:
+libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxhle.o libpcsxcore/psxhle.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxhw.o libpcsxcore/psxhw.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxinterpreter.o libpcsxcore/psxinterpreter.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/psxmem.o libpcsxcore/psxmem.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/r3000a.o libpcsxcore/r3000a.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/sio.o libpcsxcore/sio.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/socket.o libpcsxcore/socket.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/spu.o libpcsxcore/spu.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/gte.o libpcsxcore/gte.c
+gcc -c -o libpcsxcore/gte_nf.o libpcsxcore/gte.c -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DFLAGLESS
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/gte_divider.o libpcsxcore/gte_divider.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c libpcsxcore/gte_arm.S -o libpcsxcore/gte_arm.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c libpcsxcore/gte_neon.S -o libpcsxcore/gte_neon.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/new_dynarec/new_dynarec.o libpcsxcore/new_dynarec/new_dynarec.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c libpcsxcore/new_dynarec/linkage_arm.S -o libpcsxcore/new_dynarec/linkage_arm.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/new_dynarec/pcsxmem.o libpcsxcore/new_dynarec/pcsxmem.c
+libpcsxcore/new_dynarec/pcsxmem.c: In function ‘io_spu_write16’:
+libpcsxcore/new_dynarec/pcsxmem.c:213:6: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+  if (isTitleName(DESTRUCTION_DERBY_EU) ||
+      ^~~~~~~~~~~
+In file included from libpcsxcore/new_dynarec/pcsxmem.c:14:0:
+At top level:
+libpcsxcore/new_dynarec/../title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+libpcsxcore/new_dynarec/../title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o libpcsxcore/new_dynarec/emu_if.o libpcsxcore/new_dynarec/emu_if.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/dma.o plugins/dfsound/dma.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/freeze.o plugins/dfsound/freeze.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/registers.o plugins/dfsound/registers.c
+plugins/dfsound/registers.c: In function ‘SPUwriteRegister’:
+plugins/dfsound/registers.c:111:12: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+        if (isTitleName(PARASITE_EVE_DISC_1_JP) ||
+            ^~~~~~~~~~~
+plugins/dfsound/registers.c:159:11: warning: implicit declaration of function ‘SOUND_isPlaying’ [-Wimplicit-function-declaration]
+    while (SOUND_isPlaying()) {};
+           ^~~~~~~~~~~~~~~
+In file included from plugins/dfsound/registers.c:25:0:
+At top level:
+plugins/dfsound/../../libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+plugins/dfsound/../../libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/spu.o plugins/dfsound/spu.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DHAVE_SDL   -c -o plugins/dfsound/out.o plugins/dfsound/out.c
+In file included from plugins/dfsound/spu.c:94:0:
+plugins/dfsound/reverb.c: In function ‘MixREVERB’:
+plugins/dfsound/reverb.c:108:8: warning: implicit declaration of function ‘SPUisRvbConfigEnabled’ [-Wimplicit-function-declaration]
+    if (SPUisRvbConfigEnabled()) {
+        ^~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/nullsnd.o plugins/dfsound/nullsnd.c
+plugins/dfsound/spu.c: In function ‘SPUfadein’:
+plugins/dfsound/spu.c:1742:8: warning: implicit declaration of function ‘tanh’ [-Wimplicit-function-declaration]
+   v = (tanh(t) + 1) * (end / 2.0);
+        ^~~~
+plugins/dfsound/spu.c:1742:8: warning: incompatible implicit declaration of built-in function ‘tanh’
+plugins/dfsound/spu.c:1742:8: note: include ‘<math.h>’ or provide a declaration of ‘tanh’
+In file included from plugins/dfsound/spu.c:38:0:
+At top level:
+plugins/dfsound/../../libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+plugins/dfsound/../../libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c plugins/dfsound/arm_utils.S -o plugins/dfsound/arm_utils.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfsound/sdl.o plugins/dfsound/sdl.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/gpulib/gpu.o plugins/gpulib/gpu.c
+plugins/gpulib/gpu.c: In function ‘GPUrearmedCallbacks’:
+plugins/gpulib/gpu.c:905:24: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   gpu.state.bo_trigger = &cbs->gpu_unai.lineskip;
+                        ^
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/gpulib/vout_pl.o plugins/gpulib/vout_pl.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DNEON_BUILD -DTEXTURE_CACHE_4BPP -DTEXTURE_CACHE_8BPP   -c -o plugins/gpu_neon/psx_gpu_if.o plugins/gpu_neon/psx_gpu_if.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c plugins/gpu_neon/psx_gpu/psx_gpu_arm_neon.S -o plugins/gpu_neon/psx_gpu/psx_gpu_arm_neon.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/cdrcimg/cdrcimg.o plugins/cdrcimg/cdrcimg.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfinput/main.o plugins/dfinput/main.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfinput/pad.o plugins/dfinput/pad.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o plugins/dfinput/guncon.o plugins/dfinput/guncon.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/cspace.o frontend/cspace.c
+In file included from frontend/cspace.c:11:0:
+frontend/cspace.h:9:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif __ARM_NEON__ 
+        ^~~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -c frontend/cspace_neon.S -o frontend/cspace_neon.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/in_sdl.o frontend/libpicofe/in_sdl.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DHAVE_GLES    -c -o frontend/libpicofe/plat_sdl.o frontend/libpicofe/plat_sdl.c
+frontend/libpicofe/in_sdl.c: In function ‘in_sdl_probe’:
+frontend/libpicofe/in_sdl.c:661:3: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+   close(fd0);
+   ^~~~~
+frontend/libpicofe/in_sdl.c: In function ‘collect_events’:
+frontend/libpicofe/in_sdl.c:1038:26: warning: implicit declaration of function ‘bIsValidHotPlugEvent’ [-Wimplicit-function-declaration]
+                  check = bIsValidHotPlugEvent(&events[i]);
+                          ^~~~~~~~~~~~~~~~~~~~
+frontend/libpicofe/in_sdl.c:1021:13: warning: unused variable ‘checkjoy0’ [-Wunused-variable]
+  static int checkjoy0=0;
+             ^~~~~~~~~
+At top level:
+frontend/libpicofe/in_sdl.c:1021:13: warning: ‘checkjoy0’ defined but not used [-Wunused-variable]
+frontend/libpicofe/plat_sdl.c: In function ‘plat_sdl_event_handler’:
+frontend/libpicofe/plat_sdl.c:219:14: warning: unused variable ‘was_active’ [-Wunused-variable]
+   static int was_active;
+              ^~~~~~~~~~
+frontend/libpicofe/plat_sdl.c: In function ‘plat_sdl_init’:
+frontend/libpicofe/plat_sdl.c:512:22: warning: format ‘%n’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("SDLGWrest %n", ret);
+                      ^
+frontend/libpicofe/plat_sdl.c:517:26: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct wl_display *’ [-Wformat=]
+       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 
+                          ^
+frontend/libpicofe/plat_sdl.c:517:32: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘struct wl_surface *’ [-Wformat=]
+       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 
+                                ^
+frontend/libpicofe/plat_sdl.c:517:38: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 4 has type ‘struct wl_shell_surface *’ [-Wformat=]
+       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 
+                                      ^
+At top level:
+frontend/libpicofe/plat_sdl.c:219:14: warning: ‘was_active’ defined but not used [-Wunused-variable]
+   static int was_active;
+              ^~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/plat_dummy.o frontend/libpicofe/plat_dummy.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/linux/in_evdev.o frontend/libpicofe/linux/in_evdev.c
 fatal: No names found, cannot describe anything.
-gcc -o pcsx libpcsxcore/cdriso.o libpcsxcore/cdrom.o libpcsxcore/cheat.o libpcsxcore/debug.o libpcsxcore/decode_xa.o libpcsxcore/disr3000a.o libpcsxcore/mdec.o libpcsxcore/misc.o libpcsxcore/plugins.o libpcsxcore/ppf.o libpcsxcore/psxbios.o libpcsxcore/psxcommon.o libpcsxcore/psxcounters.o libpcsxcore/psxdma.o libpcsxcore/psxhle.o libpcsxcore/psxhw.o libpcsxcore/psxinterpreter.o libpcsxcore/psxmem.o libpcsxcore/r3000a.o libpcsxcore/sio.o libpcsxcore/socket.o libpcsxcore/spu.o libpcsxcore/gte.o libpcsxcore/gte_nf.o libpcsxcore/gte_divider.o libpcsxcore/gte_arm.o libpcsxcore/gte_neon.o libpcsxcore/new_dynarec/new_dynarec.o libpcsxcore/new_dynarec/linkage_arm.o libpcsxcore/new_dynarec/pcsxmem.o libpcsxcore/new_dynarec/emu_if.o plugins/dfsound/dma.o plugins/dfsound/freeze.o plugins/dfsound/registers.o plugins/dfsound/spu.o plugins/dfsound/out.o plugins/dfsound/nullsnd.o plugins/dfsound/arm_utils.o plugins/dfsound/sdl.o plugins/gpulib/gpu.o plugins/gpulib/vout_pl.o plugins/gpu_neon/psx_gpu_if.o plugins/gpu_neon/psx_gpu/psx_gpu_arm_neon.o plugins/cdrcimg/cdrcimg.o plugins/dfinput/main.o plugins/dfinput/pad.o plugins/dfinput/guncon.o frontend/cspace.o frontend/cspace_neon.o frontend/libpicofe/in_sdl.o frontend/libpicofe/plat_sdl.o frontend/libpicofe/plat_dummy.o frontend/libpicofe/linux/in_evdev.o frontend/plat_sdl.o frontend/libpicofe/gl.o frontend/libpicofe/gl_platform.o frontend/plugin_lib.o frontend/libpicofe/linux/plat.o frontend/libpicofe/readpng.o frontend/libpicofe/fonts.o frontend/libpicofe/arm/neon_scale2x.o frontend/libpicofe/arm/neon_eagle2x.o frontend/menu.o frontend/libpicofe/input.o frontend/main.o frontend/plugin.o   -lSDL2 -lpng  -ldl -lm -lpthread -lz -lwayland-client -lwayland-egl -lEGL -lGLESv1_CM  -Wl,-Map=pcsx.map
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DHAVE_GLES    -c -o frontend/libpicofe/gl.o frontend/libpicofe/gl.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DHAVE_GLES    -c -o frontend/libpicofe/gl_platform.o frontend/libpicofe/gl_platform.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/plugin_lib.o frontend/plugin_lib.c
+frontend/libpicofe/gl_platform.c: In function ‘gl_setup_wl_information’:
+frontend/libpicofe/gl_platform.c:293:46: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct wl_display *’ [-Wformat=]
+  printf("gl_setup_wl_information, display:0x%x, surface: 0x%x\n", 
+                                              ^
+frontend/libpicofe/gl_platform.c:293:61: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘struct wl_surface *’ [-Wformat=]
+  printf("gl_setup_wl_information, display:0x%x, surface: 0x%x\n", 
+                                                             ^
+frontend/libpicofe/gl_platform.c: In function ‘gl_platform_init’:
+frontend/libpicofe/gl_platform.c:344:39: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct wl_display *’ [-Wformat=]
+  printf("gl_platform_init, display:0x%x, window: 0x%x\n", 
+                                       ^
+frontend/libpicofe/gl_platform.c:344:53: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘struct wl_egl_window *’ [-Wformat=]
+  printf("gl_platform_init, display:0x%x, window: 0x%x\n", 
+                                                     ^
+At top level:
+frontend/libpicofe/gl_platform.c:283:30: warning: ‘aa_window’ defined but not used [-Wunused-variable]
+ static struct wl_egl_window *aa_window;
+                              ^~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/linux/plat.o frontend/libpicofe/linux/plat.c
+In file included from frontend/plugin_lib.c:31:0:
+frontend/cspace.h:9:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif __ARM_NEON__ 
+        ^~~~~~~~~~~~
+frontend/plugin_lib.c: In function ‘set_bo_trg’:
+frontend/plugin_lib.c:90:7: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+  if ((isTitleName(METAL_GEAR_SOLID_DISC_1_JP) ||
+       ^~~~~~~~~~~
+frontend/plugin_lib.c: In function ‘pl_vout_flip’:
+frontend/plugin_lib.c:509:2: warning: implicit declaration of function ‘paint_black’ [-Wimplicit-function-declaration]
+  paint_black(dest, dstride * blank_pixel * pl_vout_bpp / 8);
+  ^~~~~~~~~~~
+frontend/plugin_lib.c: At top level:
+frontend/plugin_lib.c:557:6: warning: conflicting types for ‘paint_black’
+ void paint_black(void *dst_, int bytes) {
+      ^~~~~~~~~~~
+frontend/plugin_lib.c:509:2: note: previous implicit declaration of ‘paint_black’ was here
+  paint_black(dest, dstride * blank_pixel * pl_vout_bpp / 8);
+  ^~~~~~~~~~~
+frontend/plugin_lib.c: In function ‘update_input’:
+frontend/plugin_lib.c:778:3: warning: implicit declaration of function ‘save_error’ [-Wimplicit-function-declaration]
+   save_error(ERROR_CPUOVERHEAT, "CPU temperature is too high.");
+   ^~~~~~~~~~
+frontend/plugin_lib.c:787:24: warning: suggest parentheses around ‘+’ inside ‘<<’ [-Wparentheses]
+     ((in_keystate & (1 << DKEY_START + ONE_CONTROLLER)) ||
+                        ^~
+frontend/plugin_lib.c:788:23: warning: suggest parentheses around ‘+’ inside ‘<<’ [-Wparentheses]
+     (in_keystate & (1 << DKEY_START + TWO_CONTROLLER)))) {
+                       ^~
+In file included from frontend/plugin_lib.c:37:0:
+At top level:
+frontend/../libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+frontend/../libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/readpng.o frontend/libpicofe/readpng.c
+frontend/libpicofe/readpng.c: In function ‘readpng’:
+frontend/libpicofe/readpng.c:107:7: warning: value computed is not used [-Wunused-value]
+       *dst++;
+       ^~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/fonts.o frontend/libpicofe/fonts.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DDO_BGR_TO_RGB -c frontend/libpicofe/arm/neon_scale2x.S -o frontend/libpicofe/arm/neon_scale2x.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DDO_BGR_TO_RGB -c frontend/libpicofe/arm/neon_eagle2x.S -o frontend/libpicofe/arm/neon_eagle2x.o
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/menu.o frontend/menu.c
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/libpicofe/input.o frontend/libpicofe/input.c
+In file included from frontend/menu.c:29:0:
+frontend/cspace.h:9:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif __ARM_NEON__ 
+        ^~~~~~~~~~~~
+frontend/menu.c: In function ‘menu_sync_config’:
+frontend/menu.c:335:2: warning: implicit declaration of function ‘config_change’ [-Wimplicit-function-declaration]
+  config_change();
+  ^~~~~~~~~~~~~
+frontend/menu.c: At top level:
+frontend/menu.c:341:6: warning: conflicting types for ‘config_change’
+ void config_change() {
+      ^~~~~~~~~~~~~
+frontend/menu.c:335:2: note: previous implicit declaration of ‘config_change’ was here
+  config_change();
+  ^~~~~~~~~~~~~
+frontend/menu.c: In function ‘config_change’:
+frontend/menu.c:343:12: warning: implicit declaration of function ‘isTitleName’ [-Wimplicit-function-declaration]
+        if (isTitleName(FINAL_FANTANSY_VII_DICS_1_EU) ||
+            ^~~~~~~~~~~
+In file included from frontend/menu.c:948:0:
+frontend/libpicofe/menu.c: In function ‘menu_init_base’:
+frontend/libpicofe/menu.c:263:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if (fd8x8&0x40) *fd |= 0x0f; fd++;
+    ^~
+frontend/libpicofe/menu.c:263:33: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+    if (fd8x8&0x40) *fd |= 0x0f; fd++;
+                                 ^~
+frontend/libpicofe/menu.c:265:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if (fd8x8&0x10) *fd |= 0x0f; fd++;
+    ^~
+frontend/libpicofe/menu.c:265:33: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+    if (fd8x8&0x10) *fd |= 0x0f; fd++;
+                                 ^~
+frontend/libpicofe/menu.c:267:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if (fd8x8&0x04) *fd |= 0x0f; fd++;
+    ^~
+frontend/libpicofe/menu.c:267:33: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+    if (fd8x8&0x04) *fd |= 0x0f; fd++;
+                                 ^~
+frontend/libpicofe/menu.c:269:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    if (fd8x8&0x01) *fd |= 0x0f; fd++;
+    ^~
+frontend/libpicofe/menu.c:269:33: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’
+    if (fd8x8&0x01) *fd |= 0x0f; fd++;
+                                 ^~
+In file included from frontend/menu.c:948:0:
+frontend/libpicofe/menu.c: In function ‘draw_dirlist’:
+frontend/libpicofe/menu.c:908:19: warning: unused variable ‘color’ [-Wunused-variable]
+    unsigned short color = fname2color(namelist[i+1]->d_name);
+                   ^~~~~
+frontend/libpicofe/menu.c:935:6: warning: unused variable ‘skin_dir’ [-Wunused-variable]
+  int skin_dir;
+      ^~~~~~~~
+frontend/libpicofe/menu.c:882:8: warning: unused variable ‘darken_ptr’ [-Wunused-variable]
+  void *darken_ptr;
+        ^~~~~~~~~~
+frontend/menu.c: In function ‘reset_game’:
+frontend/menu.c:2161:3: warning: implicit declaration of function ‘make_file_name’ [-Wimplicit-function-declaration]
+   make_file_name();
+   ^~~~~~~~~~~~~~
+At top level:
+frontend/menu.c:2061:13: warning: ‘menu_bios_warn’ defined but not used [-Wunused-function]
+ static void menu_bios_warn(void)
+             ^~~~~~~~~~~~~~
+frontend/menu.c:1760:19: warning: ‘h_cfg_rcnt1’ defined but not used [-Wunused-const-variable=]
+ static const char h_cfg_rcnt1[]  = "Parasite Eve 2, Vandal Hearts 1/2 Fix\n"
+                   ^~~~~~~~~~~
+frontend/menu.c:1758:19: warning: ‘h_cfg_sio’ defined but not used [-Wunused-const-variable=]
+ static const char h_cfg_sio[]    = "You should not need this, breaks games";
+                   ^~~~~~~~~
+frontend/menu.c:1457:19: warning: ‘h_overlay’ defined but not used [-Wunused-const-variable=]
+ static const char h_overlay[]   = "Overlay provides hardware accelerated scaling";
+                   ^~~~~~~~~
+In file included from frontend/menu.c:948:0:
+frontend/libpicofe/menu.c:1043:12: warning: ‘dirent_seek_char’ defined but not used [-Wunused-function]
+ static int dirent_seek_char(struct dirent **namelist, int len, int sel, char c)
+            ^~~~~~~~~~~~~~~~
+In file included from frontend/menu.c:39:0:
+frontend/../libpcsxcore/title.h:280:24: warning: ‘g_eTitleName’ defined but not used [-Wunused-variable]
+ static enum TITLE_NAME g_eTitleName = TITLE_NAME_NONE;
+                        ^~~~~~~~~~~~
+frontend/../libpcsxcore/title.h:146:29: warning: ‘stTitleList’ defined but not used [-Wunused-variable]
+ static struct INCLUDE_TITLE stTitleList[] = {
+                             ^~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/main.o frontend/main.c
+frontend/main.c: In function ‘do_emu_action’:
+frontend/main.c:320:3: warning: implicit declaration of function ‘emu_sync_state2’ [-Wimplicit-function-declaration]
+   emu_sync_state2();
+   ^~~~~~~~~~~~~~~
+frontend/main.c:365:9: warning: implicit declaration of function ‘emu_auto_save_state’ [-Wimplicit-function-declaration]
+   ret = emu_auto_save_state(0);
+         ^~~~~~~~~~~~~~~~~~~
+frontend/main.c:393:4: warning: implicit declaration of function ‘make_file_name’ [-Wimplicit-function-declaration]
+    make_file_name();
+    ^~~~~~~~~~~~~~
+frontend/main.c: In function ‘main’:
+frontend/main.c:791:2: warning: implicit declaration of function ‘setTitleName’ [-Wimplicit-function-declaration]
+  setTitleName();
+  ^~~~~~~~~~~~
+frontend/main.c:819:2: warning: implicit declaration of function ‘save_error’ [-Wimplicit-function-declaration]
+  save_error(ERROR_PCSXCRITICALERROR, "Sorry, error occurred during running system...");
+  ^~~~~~~~~~
+frontend/main.c:867:13: warning: implicit declaration of function ‘begin_watch_cpu_temperature’ [-Wimplicit-function-declaration]
+         if (begin_watch_cpu_temperature() != 0) {
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+frontend/main.c: In function ‘create_power_off_thread’:
+frontend/main.c:1343:58: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘pthread_t {aka long unsigned int}’ [-Wformat=]
+   printf("auto power off thread is already started, id [%d] \n", th_power_off_state);
+                                                          ^
+frontend/main.c: In function ‘watch_cpu_temperature’:
+frontend/main.c:1416:23: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[(0, 20u)]’ [-Wformat=]
+    ret = fscanf(fp, "%s%d", &temp_limit_str, &temp_limit_val);
+                       ^
+frontend/main.c: In function ‘begin_watch_cpu_temperature’:
+frontend/main.c:1446:64: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+         ret = pthread_create(&cpu_temp_thread, &cpu_temp_attr, watch_cpu_temperature, NULL);
+                                                                ^~~~~~~~~~~~~~~~~~~~~
+In file included from frontend/main.c:14:0:
+/usr/include/pthread.h:233:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(void)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic   -c -o frontend/plugin.o frontend/plugin.c
 make -C plugins/spunull/
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[1]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/spunull'
-gcc -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -shared -fPIC -ggdb -O2 -o spunull.so spunull.c
+gcc -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -shared -fPIC -ggdb -O2 -o spunull.so spunull.c
 ln -fs spunull/spunull.so ../
 make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/spunull'
 make -C plugins/dfxvideo/
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[1]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/dfxvideo'
 make -C ../gpulib/ all
 make[2]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/gpulib'
-gcc  -ggdb -Wall -O2 -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -fPIC -c -o obj/gpu.o gpu.c
+gcc  -ggdb -Wall -O2 -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -fPIC -c -o obj/gpu.o gpu.c
 gpu.c: In function ‘GPUrearmedCallbacks’:
 gpu.c:905:24: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
    gpu.state.bo_trigger = &cbs->gpu_unai.lineskip;
                         ^
-gcc  -ggdb -Wall -O2 -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -fPIC -c -o obj/vout_pl.o vout_pl.c
+gcc  -ggdb -Wall -O2 -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -fPIC -c -o obj/vout_pl.o vout_pl.c
+make -C plugins/gpu_unai/
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu_unai'
+make -C ../gpulib/ all
+make[2]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/gpulib'
+gcc  -ggdb -Wall -O2 -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -fPIC -c -o obj/vout_pl.o vout_pl.c
 ar crs gpulib.a obj/gpu.o obj/vout_pl.o
 make[2]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/gpulib'
-gcc -o gpu_peops.so -Wall -ggdb -O2 -fno-strict-aliasing -ffast-math -I../../include -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -fPIC  -shared -Wl,--no-undefined gpulib_if.c ../gpulib/gpulib.a  
+gcc -o gpu_peops.so -Wall -ggdb -O2 -fno-strict-aliasing -ffast-math -I../../include -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -fPIC  -shared -Wl,--no-undefined gpulib_if.c ../gpulib/gpulib.a  
+ar crs gpulib.a obj/gpu.o obj/vout_pl.o
+make[2]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/gpulib'
+g++ -o gpu_unai.so -ggdb -Wall -O3 -ffast-math -DREARMED -I../../include -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -fPIC  -shared -Wl,--no-undefined gpu_arm.s gpulib_if.cpp ../gpulib/gpulib.a  
 gpulib_if.c:94:59: warning: missing braces around initializer [-Wmissing-braces]
  static unsigned int skip_frame_data[CMD_DATA_COUNT][12] = {
                                                            ^
@@ -97,20 +794,73 @@ gpulib_if.c: In function ‘renderer_set_config’:
 gpulib_if.c:679:9: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
   scenes = &cbs->gpu_peops.scenes;
          ^
-ln -fs dfxvideo/gpu_peops.so ../
-make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/dfxvideo'
-make -C plugins/gpu_unai/
-make[1]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu_unai'
-g++ -o gpu_unai.so -ggdb -Wall -O3 -ffast-math -DREARMED -I../../include -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -fPIC  -shared -Wl,--no-undefined gpu_arm.s gpulib_if.cpp ../gpulib/gpulib.a  
-ln -fs gpu_unai/gpu_unai.so ../
-make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu_unai'
 make -C plugins/gpu-gles/
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 make[1]: Entering directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu-gles'
-gcc -o gpu_gles.so -ggdb -fPIC -O2  -march=armv7ve -mfpu=neon-vfpv4 -marm -D_REENTRANT -I/usr/include/SDL2 -D_FILE_OFFSET_BITS=64 -Wno-unused-result -mfloat-abi=hard -Iinclude  -fPIC  -Wl,--allow-multiple-definition -shared -Wl,--no-undefined gpulib_if.c ../gpulib/gpulib.a -Llib -lEGL -lGLESv1_CM  
+gcc -o gpu_gles.so -ggdb -fPIC -O2  -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -Iinclude  -fPIC  -Wl,--allow-multiple-definition -shared -Wl,--no-undefined gpulib_if.c ../gpulib/gpulib.a -Llib -lEGL -lGLESv1_CM  
 In file included from gpulib_if.c:478:0:
 ../gpulib/gpu.c: In function ‘GPUrearmedCallbacks’:
 ../gpulib/gpu.c:905:24: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
    gpu.state.bo_trigger = &cbs->gpu_unai.lineskip;
                         ^
+ln -fs dfxvideo/gpu_peops.so ../
+make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/dfxvideo'
+gcc -Wall -Iinclude -ffast-math -DCONFIG_ENABLE_MENU -O2 -DNDEBUG -march=armv7-a -mfpu=neon -marm -D_REENTRANT -I/home/pi/SDL2-2.0.4/include -D_FILE_OFFSET_BITS=64 -Wno-unused-result -DSDL_VIDEO_DRIVER_WAYLAND -DHAVE_GLES -g -rdynamic -DHAVE_GLES    -c -o frontend/plat_sdl.o frontend/plat_sdl.c
+In file included from frontend/plat_sdl.c:20:0:
+frontend/cspace.h:9:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif __ARM_NEON__ 
+        ^~~~~~~~~~~~
+frontend/plat_sdl.c: In function ‘plat_gvideo_set_mode’:
+frontend/plat_sdl.c:376:28: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+     printf("   shadow_fb=%0x\n",shadow_fb);
+                            ^
+frontend/plat_sdl.c:380:42: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+     printf("   plat_sdl_screen->pixels=%0x\n",plat_sdl_screen->pixels);
+                                          ^
+frontend/plat_sdl.c: In function ‘plat_video_menu_enter’:
+frontend/plat_sdl.c:521:35: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+     printf("memcpy   menubg_img=%0x,plat_sdl_screen->pixels=%0x,psx_w=%d,psx_h=%d\n",menubg_img,plat_sdl_screen->pixels,psx_w,psx_h);
+                                   ^
+frontend/plat_sdl.c:521:63: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘void *’ [-Wformat=]
+     printf("memcpy   menubg_img=%0x,plat_sdl_screen->pixels=%0x,psx_w=%d,psx_h=%d\n",menubg_img,plat_sdl_screen->pixels,psx_w,psx_h);
+                                                               ^
+frontend/plat_sdl.c: In function ‘plat_video_menu_begin’:
+frontend/plat_sdl.c:555:24: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+   printf("  shadow_fb=%x\n",shadow_fb);
+                        ^
+frontend/plat_sdl.c:556:38: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+   printf("  plat_sdl_screen->pixels=%x\n",plat_sdl_screen->pixels);
+                                      ^
+frontend/plat_sdl.c:557:31: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+   printf("  g_menuscreen_ptr=%x\n",g_menuscreen_ptr);
+                               ^
+frontend/plat_sdl.c: In function ‘plat_video_menu_end’:
+frontend/plat_sdl.c:591:42: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘void *’ [-Wformat=]
+     printf("gl_flip() g_menuscreen_ptr=%0x, g_menuscreen_w=%d, g_menuscreen_h=%d\n",g_menuscreen_ptr,g_menuscreen_w,g_menuscreen_h);
+                                          ^
+At top level:
+frontend/plat_sdl.c:336:13: warning: ‘overlay_hud_print’ defined but not used [-Wunused-function]
+ static void overlay_hud_print(int x, int y, const char *str, int bpp)
+             ^~~~~~~~~~~~~~~~~
+frontend/plat_sdl.c:311:13: warning: ‘overlay_blit’ defined but not used [-Wunused-function]
+ static void overlay_blit(int doffs, const void *src_, int w, int h,
+             ^~~~~~~~~~~~
+frontend/plat_sdl.c:293:13: warning: ‘uyvy_to_rgb565’ defined but not used [-Wunused-function]
+ static void uyvy_to_rgb565(void *d, const void *s, int pixels)
+             ^~~~~~~~~~~~~~
+frontend/plat_sdl.c: In function ‘plat_gvideo_flip’:
+frontend/plat_sdl.c:413:14: warning: ‘window’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     renderer = SDL_CreateRenderer(window, -1, 0);
+     ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+frontend/plat_sdl.c: In function ‘plat_video_menu_enter’:
+frontend/plat_sdl.c:514:5: warning: ‘darken_surface’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     SDL_FreeSurface(darken_surface);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+frontend/plat_sdl.c:513:5: warning: ‘target_surface’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     SDL_FreeSurface(target_surface);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o pcsx libpcsxcore/cdriso.o libpcsxcore/cdrom.o libpcsxcore/cheat.o libpcsxcore/debug.o libpcsxcore/decode_xa.o libpcsxcore/disr3000a.o libpcsxcore/mdec.o libpcsxcore/misc.o libpcsxcore/plugins.o libpcsxcore/ppf.o libpcsxcore/psxbios.o libpcsxcore/psxcommon.o libpcsxcore/psxcounters.o libpcsxcore/psxdma.o libpcsxcore/psxhle.o libpcsxcore/psxhw.o libpcsxcore/psxinterpreter.o libpcsxcore/psxmem.o libpcsxcore/r3000a.o libpcsxcore/sio.o libpcsxcore/socket.o libpcsxcore/spu.o libpcsxcore/gte.o libpcsxcore/gte_nf.o libpcsxcore/gte_divider.o libpcsxcore/gte_arm.o libpcsxcore/gte_neon.o libpcsxcore/new_dynarec/new_dynarec.o libpcsxcore/new_dynarec/linkage_arm.o libpcsxcore/new_dynarec/pcsxmem.o libpcsxcore/new_dynarec/emu_if.o plugins/dfsound/dma.o plugins/dfsound/freeze.o plugins/dfsound/registers.o plugins/dfsound/spu.o plugins/dfsound/out.o plugins/dfsound/nullsnd.o plugins/dfsound/arm_utils.o plugins/dfsound/sdl.o plugins/gpulib/gpu.o plugins/gpulib/vout_pl.o plugins/gpu_neon/psx_gpu_if.o plugins/gpu_neon/psx_gpu/psx_gpu_arm_neon.o plugins/cdrcimg/cdrcimg.o plugins/dfinput/main.o plugins/dfinput/pad.o plugins/dfinput/guncon.o frontend/cspace.o frontend/cspace_neon.o frontend/libpicofe/in_sdl.o frontend/libpicofe/plat_sdl.o frontend/libpicofe/plat_dummy.o frontend/libpicofe/linux/in_evdev.o frontend/plat_sdl.o frontend/libpicofe/gl.o frontend/libpicofe/gl_platform.o frontend/plugin_lib.o frontend/libpicofe/linux/plat.o frontend/libpicofe/readpng.o frontend/libpicofe/fonts.o frontend/libpicofe/arm/neon_scale2x.o frontend/libpicofe/arm/neon_eagle2x.o frontend/menu.o frontend/libpicofe/input.o frontend/main.o frontend/plugin.o   -lSDL2 -lpng  -ldl -lm -lpthread -lz -lwayland-client -lwayland-egl -lEGL -lGLESv1_CM  -Wl,-Map=pcsx.map
 ln -fs gpu-gles/gpu_gles.so ../
 make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu-gles'
+ln -fs gpu_unai/gpu_unai.so ../
+make[1]: Leaving directory '/home/pi/PSC-pcsx-rearmed/plugins/gpu_unai'

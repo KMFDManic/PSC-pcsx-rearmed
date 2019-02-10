@@ -1,3 +1,7 @@
 .idea/
 
 *.o
+*.so
+pcsx
+pcsx.map
+pcsx.unstripped

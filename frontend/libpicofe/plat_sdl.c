@@ -17,6 +17,10 @@
 #include "plat.h"
 #include "gl.h"
 #include "plat_sdl.h"
+#include <unistd.h>
+#include <execinfo.h>
+
+
 
 // XXX: maybe determine this instead..
 #define WM_DECORATION_H 32
@@ -46,6 +50,20 @@ static int vout_mode_overlay = -1, vout_mode_gl = -1;
 static void *display, *window;
 static int gl_quirks;
 int gl_works = 0;
+
+void handler(int sig) {
+  void *array[10];
+  size_t size;
+
+  // get void*'s for all entries on the stack
+  size = backtrace(array, 10);
+
+  // print out all the frames to stderr
+  fprintf(stderr, "Error: signal %d:\n", sig);
+  backtrace_symbols_fd(array, size, STDERR_FILENO);
+  exit(1);
+}
+
 
 /* w, h is layer resolution */
 int plat_sdl_change_video_mode(int w, int h, int force)
@@ -262,6 +280,7 @@ int plat_sdl_init(void)
 #endif
 {
   printf("+ /frontend/libpicofe/plat_sdl_init()\n");
+  signal(SIGSEGV, handler);
   static const char *vout_list[] = { NULL, NULL, NULL, NULL };
 #if SDL_MAJOR_VERSION == 1
   const SDL_VideoInfo *info;
@@ -285,7 +304,6 @@ int plat_sdl_init(void)
     fprintf(stderr, "plat_sdl_init() : SDL_Init() failed: %s\n", SDL_GetError());
     return -1;
   }
-
 #endif
 	
 	
@@ -468,8 +486,9 @@ int plat_sdl_init(void)
 #else
   SDL_VideoDriverName(vid_drv_name, sizeof(vid_drv_name));
 #endif
-
+printf("DOFFYS BEFORE X11");
 #ifdef SDL_VIDEO_DRIVER_X11
+  printf("DOFFYS LOADING X11");
   if (strcmp(vid_drv_name, "x11") == 0) {
     SDL_VERSION(&wminfo.version);
 #if SDL_MAJOR_VERSION == 2
@@ -483,15 +502,23 @@ int plat_sdl_init(void)
     }
   }
 #else
-
+printf("DOFFYS PREPARE WAYLAND");
 #if 1
+  printf("DOOFYS BEFORE");
   (void)wminfo;
-  ret = SDL_GetWindowWMInfo(sdl2_window, &wminfo); 
+  printf("DOOFYS AFTER");
+  ret = SDL_GetWindowWMInfo(sdl2_window, &wminfo);
+  printf("DOOFYS STILL THERE");
+  printf("SDLGWrest %n", ret);
   if (ret > 0) {
-      gl_setup_wl_information(wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
+      printf("RET INITIALIZED !");
+      //gl_setup_wl_information(wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
 	  
       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 
 	  	wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
+  }else{
+      printf("SDL_Init failed: %s\n", SDL_GetError());
+      SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Couldn't get window information: %s", SDL_GetError());
   }
 #endif
 

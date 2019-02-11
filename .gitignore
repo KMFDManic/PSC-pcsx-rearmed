@@ -2,6 +2,16 @@
 
 *.o
 *.so
+*.a
+
 pcsx
 pcsx.map
 pcsx.unstripped
+Game/
+cmake-build-debug/
+build.log
+CMakeLists.txt
+err.txt
+error
+
+*.bat

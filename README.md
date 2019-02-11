@@ -1,7 +1,12 @@
 PCSX-ReARMed - yet another PCSX fork
 ====================================
 
-[![Build Status](https://travis-ci.org/notaz/pcsx_rearmed.svg?branch=master)](https://travis-ci.org/notaz/pcsx_rearmed)
+THIS IS A MODIFIED VERSION OF PCSX SONY'S VERSION MADE BY THE AUTOBLEEM TEAM
+
+*screemer
+*nex
+*mGGk
+*ThaFridge
 
 *see [readme.txt](readme.txt) for more complete documentation*
 

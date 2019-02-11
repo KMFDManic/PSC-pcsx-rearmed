@@ -491,11 +491,12 @@ printf("DOFFYS PREPARE WAYLAND");
   (void)wminfo;
   printf("DOOFYS AFTER");
   ret = SDL_GetWindowWMInfo(sdl2_window, &wminfo);
+  SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Couldn't get window information: %s", SDL_GetError());
   printf("DOOFYS STILL THERE");
-  printf("SDLGWrest %n", ret);
-  if (ret > 0) {
+  //printf("SDLGWrest %n", ret);
+  if (ret == SDL_TRUE) {
       printf("RET INITIALIZED !");
-      //gl_setup_wl_information(wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
+      gl_setup_wl_information(wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
 	  
       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 
 	  	wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);

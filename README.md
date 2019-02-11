@@ -1,12 +1,12 @@
 PCSX-ReARMed - yet another PCSX fork
 ====================================
 
-THIS IS A MODIFIED VERSION OF PCSX SONY'S VERSION MADE BY THE AUTOBLEEM TEAM
+**THIS IS A MODIFIED VERSION OF PCSX SONY'S VERSION MADE BY THE AUTOBLEEM TEAM**
 
-*screemer
-*nex
-*mGGk
-*ThaFridge
+- screemer
+- nex
+- mGGk
+- ThaFridge
 
 *see [readme.txt](readme.txt) for more complete documentation*
 

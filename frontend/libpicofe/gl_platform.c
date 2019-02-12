@@ -323,7 +323,6 @@ int gl_platform_init(void **display, void **window, int *quirks)
 
 	info->display = aa_display;
 	if (!info->display) {
-		printf("Error AADISPLAY %s.\n",strerror(errno));
 		printf("wl_display_connect is failed\n");
 	}
 

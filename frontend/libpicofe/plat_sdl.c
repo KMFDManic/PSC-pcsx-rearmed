@@ -469,7 +469,6 @@ int plat_sdl_init(void)
 #else
   SDL_VideoDriverName(vid_drv_name, sizeof(vid_drv_name));
 #endif
-printf("DOFFYS BEFORE X11");
 #ifdef SDL_VIDEO_DRIVER_X11
   printf("DOFFYS LOADING X11");
   if (strcmp(vid_drv_name, "x11") == 0) {
@@ -485,17 +484,12 @@ printf("DOFFYS BEFORE X11");
     }
   }
 #else
-printf("DOFFYS PREPARE WAYLAND");
 #if 1
-  printf("DOOFYS BEFORE");
   (void)wminfo;
-  printf("DOOFYS AFTER");
   ret = SDL_GetWindowWMInfo(sdl2_window, &wminfo);
   SDL_LogError(SDL_LOG_CATEGORY_ERROR, "Couldn't get window information: %s", SDL_GetError());
-  printf("DOOFYS STILL THERE");
   //printf("SDLGWrest %n", ret);
   if (ret == SDL_TRUE) {
-      printf("RET INITIALIZED !");
       gl_setup_wl_information(wminfo.info.wl.display, wminfo.info.wl.surface, wminfo.info.wl.shell_surface);
 	  
       printf("wminfo: 0x%x, 0x%x, 0x%x\n", 

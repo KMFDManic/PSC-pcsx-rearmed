@@ -13,5 +13,6 @@ build.log
 CMakeLists.txt
 err.txt
 error
+config.mak
 
 *.bat

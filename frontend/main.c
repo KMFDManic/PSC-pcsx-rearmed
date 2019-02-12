@@ -1318,10 +1318,10 @@ static void power_manage(void) {
 	}
 
 	power_wd = inotify_add_watch(power_fd, POWER_DIR, IN_CREATE);
-	/*if(power_wd == -1) {
+	if(power_wd == -1) {
 		printf("ERROR:failed to add watch descriptor for power manage\n");
 		return;
-	}*/
+	}
 
 	while (is_power_on) {
 		is_power_on = check_poweroff_event(power_fd);
@@ -1438,7 +1438,6 @@ static void watch_cpu_temperature(void)
 int begin_watch_cpu_temperature(void)
 {
         int ret;
-        return 0;
         pthread_attr_t cpu_temp_attr;
 
         pthread_attr_init(&cpu_temp_attr);

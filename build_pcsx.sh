@@ -27,7 +27,7 @@ echo "make $BUILD_OPTION -j4 2>&1 | tee build.log"
 make $BUILD_OPTION -j4 2>&1 | tee build.log
 
 #TARGET_EXECUTABLE=pcsx
-#STRIP_OPTION=-S
+#STRIP_OPTION=-s
 #cp ${TARGET_EXECUTABLE} ${TARGET_EXECUTABLE}.unstripped
 #$(${STRIP} ${STRIP_OPTION} -o ${TARGET_EXECUTABLE} ${TARGET_EXECUTABLE}.unstripped)
 

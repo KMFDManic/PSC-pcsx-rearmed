@@ -55,6 +55,12 @@ extern char cfgfile_basename[MAXPATHLEN];
 #define REGION_MAX 4
 #define REGION_DEFAULT 3
 #define ENTER_DEFAULT 0
+
+#define FILTER_ON      0
+#define FILTER_OFF     1
+#define FILTER_DEFAULT 0
+
+extern int filter_mode;
 extern int display_mode;
 extern int language;
 extern int region;

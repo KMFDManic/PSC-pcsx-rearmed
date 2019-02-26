@@ -72,6 +72,7 @@ int display_mode = DISPLAY_MODE_DEFAULT;
 int language = LANGUAGE_DEFAULT;
 int region = REGION_DEFAULT;
 int enter_mode = ENTER_DEFAULT;
+int filter_mode = FILTER_DEFAULT;
 
 static int cpu_temp_limit = DEFAULT_TEMP_LIMIT;
 
@@ -731,6 +732,15 @@ int main(int argc, char *argv[])
 				region = REGION_DEFAULT;
 			}
 		}
+			 else if (!strcmp(argv[i], "-filter")) {
+				 if (i+1 >= argc) {
+					 break;
+				 }
+				 filter_mode = atoi(argv[++i]);
+				 if (filter_mode < 0 || filter_mode > 1) {
+					 filter_mode = FILTER_DEFAULT;
+				 }
+			 }
 		else if (!strcmp(argv[i], "-enter")) {
 			if (i+1 >= argc) {
 				break;
@@ -887,6 +897,12 @@ int main(int argc, char *argv[])
 #endif
 	}
 	printf("while (g_emu_want_quit=%d) end \n",g_emu_want_quit);
+
+
+	printf ("Saving state on exit \n");
+	emu_action = SACTION_RESET_EVENT;
+	do_emu_action();
+	printf ("Done \n");
 
 	printf("Exit..\n");
 	ClosePlugins();

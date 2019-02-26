@@ -93,6 +93,7 @@ typedef enum
 	MA_OPT_VOUT_MODE,
 	MA_OPT_SCANLINES,
 	MA_OPT_SCANLINE_LEVEL,
+	MA_MAIN_FILTER
 } menu_id;
 
 static int last_vout_w, last_vout_h, last_vout_bpp;
@@ -2507,6 +2508,15 @@ static int main_menu_handler(int id, int keys)
 		emu_core_ask_exit();
 		from_escape = 0;
 		return 1;
+	case MA_MAIN_FILTER:
+		if (filter_mode==FILTER_ON)
+		{
+			filter_mode = FILTER_OFF;
+		} else
+		{
+			filter_mode = FILTER_ON;
+		}
+		break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
 		break;
@@ -2541,6 +2551,7 @@ static int main_menu1_handler(int id, int keys)
 
 static menu_entry e_menu_main3[] =
 {
+		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),
         mee_handler_id("Exit",            MA_MAIN_EXIT,      main_menu_handler),

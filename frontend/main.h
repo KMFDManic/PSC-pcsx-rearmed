@@ -129,6 +129,7 @@ enum sched_action {
 	SACTION_POWER_OFF,      // action when power button pushed
 	SACTION_CD_CHANGE,
 	SACTION_SYNC_STATE,
+	SACTION_FILTER
 };
 
 #define SACTION_GUN_MASK (0x0f << SACTION_GUN_TRIGGER)

@@ -825,9 +825,9 @@ static int menu_load_config(int is_game)
 			if(strcmp(config_data[i].name,"Bios") == 0) {
 				// set BIOS name by me.
 
-				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!
+				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!: TODO: Fix it later - the proposed code does not work
 
-				if (strcmp(config_data[i].val, "SET_BY_PCSX")) {
+
 					char iso_path[MAXPATHLEN];
 					char *iso_char;
 					strcpy(iso_path, GetIsoFile());
@@ -840,7 +840,7 @@ static int menu_load_config(int is_game)
 							strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
 						}
 					}
-				}
+
 			}
 			continue;
 		}

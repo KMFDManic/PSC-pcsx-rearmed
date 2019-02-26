@@ -825,9 +825,11 @@ static int menu_load_config(int is_game)
 			if(strcmp(config_data[i].name,"Bios") == 0) {
 				// set BIOS name by me.
 
-				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!: TODO: Fix it later - the proposed code does not work
+				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!:
 
+				// TODO: Fix it later - the proposed code does not work
 
+				if (strcmp(config_data[i].val,"SET_BY_PCSX") == 0) {
 					char iso_path[MAXPATHLEN];
 					char *iso_char;
 					strcpy(iso_path, GetIsoFile());
@@ -840,7 +842,7 @@ static int menu_load_config(int is_game)
 							strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
 						}
 					}
-
+				}
 			}
 			continue;
 		}
@@ -2522,6 +2524,8 @@ static int main_menu_handler(int id, int keys)
 		{
 			filter_mode = FILTER_ON;
 		}
+		if (ready_to_go)
+			return 1;
 		break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);

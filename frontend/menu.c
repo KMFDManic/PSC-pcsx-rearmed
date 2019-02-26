@@ -821,18 +821,24 @@ static int menu_load_config(int is_game)
 		if (config_data[i].len == 0) {
 			parse_str_val(config_data[i].val, tmp);
 
+			// Makes no sense as if no bios found ... it goes to HLE
 			if(strcmp(config_data[i].name,"Bios") == 0) {
 				// set BIOS name by me.
-				char iso_path[MAXPATHLEN];
-				char *iso_char;
-				strcpy(iso_path, GetIsoFile());
-				iso_char = strrchr(iso_path, '/');
-				if (iso_char != NULL) {
-					iso_char += 3;
-					if(*iso_char == 'P' || *iso_char == 'p') {
-						strcpy(config_data[i].val, CONFIG_JP_BIOS_NAME);
-					} else {
-						strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
+
+				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!
+
+				if (strcmp(config_data[i].val, "SET_BY_PCSX")) {
+					char iso_path[MAXPATHLEN];
+					char *iso_char;
+					strcpy(iso_path, GetIsoFile());
+					iso_char = strrchr(iso_path, '/');
+					if (iso_char != NULL) {
+						iso_char += 3;
+						if (*iso_char == 'P' || *iso_char == 'p') {
+							strcpy(config_data[i].val, CONFIG_JP_BIOS_NAME);
+						} else {
+							strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
+						}
 					}
 				}
 			}

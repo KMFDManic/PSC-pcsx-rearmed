@@ -840,7 +840,7 @@ static void ControlJoysticEscape(struct in_sdl_state *arg_pState,
 #endif
 
   if (arg_pState->joy) {
-   env_menu = 2;// getenv("PCSX_ESC_KEY");
+   env_menu = "2";// getenv("PCSX_ESC_KEY");
    if(env_menu != NULL) {
        env = strtol(env_menu, &endptr, 10);
        if(strlen(endptr) > 0 || env > 2) {

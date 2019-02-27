@@ -336,7 +336,7 @@ int gl_platform_init(void **display, void **window, int *quirks)
 	printf("gl_platform_init before window_create\n");
 
 	info->surface.egl_window = wl_egl_window_create(info->surface.surface,
-							960,
+							1280,
 						   	720);
 	*window = info->surface.egl_window;
 	

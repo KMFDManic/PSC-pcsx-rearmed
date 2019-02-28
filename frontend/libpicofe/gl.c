@@ -142,12 +142,22 @@ out:
 	return retval;
 }
 
+/*
 static float vertices[] = {
 	-0.95f,  0.95f,  0.0f, // 0    0  1
 	 0.95f,  0.95f,  0.0f, // 1  ^
 	-0.95f, -0.95f,  0.0f, // 2  | 2  3
 	 0.95f, -0.95f,  0.0f, // 3  +-->
 };
+*/
+
+static float vertices[] = {
+		-1.0f,  1.0f,  0.0f, // 0    0  1
+		1.0f,  1.0f,  0.0f, // 1  ^
+		-1.0f, -1.0f,  0.0f, // 2  | 2  3
+		1.0f, -1.0f,  0.0f, // 3  +-->
+};
+
 
 static float texture[] = {
 	0.0f, 0.0f, // we flip this:

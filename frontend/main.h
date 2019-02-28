@@ -60,10 +60,14 @@ extern char cfgfile_basename[MAXPATHLEN];
 #define FILTER_OFF     1
 #define FILTER_DEFAULT 0
 
+#define ASPECT_4_3  0
+#define ASPECT_16_9 1
+
 extern int filter_mode;
 extern int display_mode;
 extern int language;
 extern int region;
+extern int aspect_ratio;
 
 extern char changedisc_message[128];
 extern char solodisc_message[128];

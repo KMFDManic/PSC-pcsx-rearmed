@@ -5,6 +5,7 @@
 #include <GLES/gl.h>
 #include "gl_platform.h"
 #include "gl.h"
+#include "../main.h"
 
 static EGLDisplay edpy;
 static EGLSurface esfc;
@@ -112,9 +113,16 @@ int gl_init(void *display, void *window, int *quirks)
 		goto out;
 
 	// no mipmaps
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
+	if (filter_mode==FILTER_ON)
+	{
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	}
+	else if (filter_mode == FILTER_OFF)
+	{
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	}
 	//glViewport(0, 0, 512, 512);
 	glLoadIdentity();
 	glFrontFace(GL_CW);
@@ -134,12 +142,22 @@ out:
 	return retval;
 }
 
+/*
 static float vertices[] = {
 	-0.95f,  0.95f,  0.0f, // 0    0  1
 	 0.95f,  0.95f,  0.0f, // 1  ^
 	-0.95f, -0.95f,  0.0f, // 2  | 2  3
 	 0.95f, -0.95f,  0.0f, // 3  +-->
 };
+*/
+
+static float vertices[] = {
+		-1.0f,  1.0f,  0.0f, // 0    0  1
+		1.0f,  1.0f,  0.0f, // 1  ^
+		-1.0f, -1.0f,  0.0f, // 2  | 2  3
+		1.0f, -1.0f,  0.0f, // 3  +-->
+};
+
 
 static float texture[] = {
 	0.0f, 0.0f, // we flip this:

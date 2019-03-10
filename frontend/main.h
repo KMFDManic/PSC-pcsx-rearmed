@@ -55,9 +55,19 @@ extern char cfgfile_basename[MAXPATHLEN];
 #define REGION_MAX 4
 #define REGION_DEFAULT 3
 #define ENTER_DEFAULT 0
+
+#define FILTER_ON      0
+#define FILTER_OFF     1
+#define FILTER_DEFAULT 0
+
+#define ASPECT_4_3  0
+#define ASPECT_16_9 1
+
+extern int filter_mode;
 extern int display_mode;
 extern int language;
 extern int region;
+extern int aspect_ratio;
 
 extern char changedisc_message[128];
 extern char solodisc_message[128];
@@ -123,6 +133,7 @@ enum sched_action {
 	SACTION_POWER_OFF,      // action when power button pushed
 	SACTION_CD_CHANGE,
 	SACTION_SYNC_STATE,
+	SACTION_FILTER
 };
 
 #define SACTION_GUN_MASK (0x0f << SACTION_GUN_TRIGGER)

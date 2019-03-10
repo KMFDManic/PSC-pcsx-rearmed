@@ -5,6 +5,7 @@
 
 #include "gl.h"
 #include "gl_platform.h"
+#include "../main.h"
 
 #include <errno.h>
 #include <stdbool.h>
@@ -313,30 +314,37 @@ void gl_setup_wl_information(struct wl_display * idisplay,
 }
 #endif
 
-int gl_platform_init(void **display, void **window, int *quirks)
-{
+int gl_platform_init(void **display, void **window, int *quirks) {
 #if 1
-	struct wayland_info *info = malloc(sizeof(struct wayland_info));
-	
-	if (info == NULL)
-		return 0;
+    struct wayland_info *info = malloc(sizeof(struct wayland_info));
 
-	info->display = aa_display;
-	if (!info->display) {
-		printf("wl_display_connect is failed\n");
-	}
+    if (info == NULL)
+        return 0;
 
-
-	*display = info->display;
-
-	info->surface.surface = aa_surface;
-	info->surface.shell_surface = aa_shell_surface;
+    info->display = aa_display;
+    if (!info->display) {
+        printf("wl_display_connect is failed\n");
+    }
 
 
-	printf("gl_platform_init before window_create\n");
+    *display = info->display;
 
+    info->surface.surface = aa_surface;
+    info->surface.shell_surface = aa_shell_surface;
+
+
+    printf("gl_platform_init before window_create\n");
+
+    int win_width = 0;
+    if (aspect_ratio == ASPECT_4_3) {
+        win_width = 960;
+    }
+    if (aspect_ratio == ASPECT_16_9)
+    {
+        win_width = 1280;
+    }
 	info->surface.egl_window = wl_egl_window_create(info->surface.surface,
-							960,
+							win_width,
 						   	720);
 	*window = info->surface.egl_window;
 	

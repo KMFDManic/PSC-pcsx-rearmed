@@ -93,6 +93,7 @@ typedef enum
 	MA_OPT_VOUT_MODE,
 	MA_OPT_SCANLINES,
 	MA_OPT_SCANLINE_LEVEL,
+	MA_MAIN_FILTER
 } menu_id;
 
 static int last_vout_w, last_vout_h, last_vout_bpp;
@@ -820,18 +821,26 @@ static int menu_load_config(int is_game)
 		if (config_data[i].len == 0) {
 			parse_str_val(config_data[i].val, tmp);
 
+			// Makes no sense as if no bios found ... it goes to HLE
 			if(strcmp(config_data[i].name,"Bios") == 0) {
 				// set BIOS name by me.
-				char iso_path[MAXPATHLEN];
-				char *iso_char;
-				strcpy(iso_path, GetIsoFile());
-				iso_char = strrchr(iso_path, '/');
-				if (iso_char != NULL) {
-					iso_char += 3;
-					if(*iso_char == 'P' || *iso_char == 'p') {
-						strcpy(config_data[i].val, CONFIG_JP_BIOS_NAME);
-					} else {
-						strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
+
+				// NO NO NO - SONY - DO NOT DO IT THIS WAY !!!:
+
+				// TODO: Fix it later - the proposed code does not work
+
+				if (strcmp(config_data[i].val,"SET_BY_PCSX") == 0) {
+					char iso_path[MAXPATHLEN];
+					char *iso_char;
+					strcpy(iso_path, GetIsoFile());
+					iso_char = strrchr(iso_path, '/');
+					if (iso_char != NULL) {
+						iso_char += 3;
+						if (*iso_char == 'P' || *iso_char == 'p') {
+							strcpy(config_data[i].val, CONFIG_JP_BIOS_NAME);
+						} else {
+							strcpy(config_data[i].val, CONFIG_WORLD_BIOS_NAME);
+						}
 					}
 				}
 			}
@@ -2507,6 +2516,17 @@ static int main_menu_handler(int id, int keys)
 		emu_core_ask_exit();
 		from_escape = 0;
 		return 1;
+	case MA_MAIN_FILTER:
+		if (filter_mode==FILTER_ON)
+		{
+			filter_mode = FILTER_OFF;
+		} else
+		{
+			filter_mode = FILTER_ON;
+		}
+		if (ready_to_go)
+			return 1;
+		break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
 		break;
@@ -2541,6 +2561,7 @@ static int main_menu1_handler(int id, int keys)
 
 static menu_entry e_menu_main3[] =
 {
+		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),
         mee_handler_id("Exit",            MA_MAIN_EXIT,      main_menu_handler),

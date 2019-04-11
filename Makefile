@@ -3,9 +3,7 @@
 # default stuff goes here, so that config can override
 TARGET ?= pcsx
 CFLAGS += -Wall -Iinclude -ffast-math
-ifdef CONFIG_ENABLE_MENU
 CFLAGS += -DCONFIG_ENABLE_MENU
-endif
 ifndef DEBUG
 CFLAGS += -O2 -DNDEBUG
 endif
@@ -13,7 +11,7 @@ CXXFLAGS += $(CFLAGS)
 #DRC_DBG = 1
 #PCNT = 1
 
-all: config.mak target_ plugins_
+all: config.mak  target_ plugins_
 
 ifndef NO_CONFIG_MAK
 ifneq ($(wildcard config.mak),)
@@ -155,18 +153,17 @@ endif
 
 ifeq "$(PLATFORM)" "generic"
 OBJS += frontend/libpicofe/in_sdl.o
+OBJS += frontend/libpicofe/in_ableem.o
 OBJS += frontend/libpicofe/plat_sdl.o
 OBJS += frontend/libpicofe/plat_dummy.o
 OBJS += frontend/libpicofe/linux/in_evdev.o
 OBJS += frontend/plat_sdl.o
-ifeq "$(HAVE_GLES)" "1"
 OBJS += frontend/libpicofe/gl.o frontend/libpicofe/gl_platform.o
 LDLIBS += $(LDLIBS_GLES)
 frontend/libpicofe/plat_sdl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/libpicofe/gl_platform.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/libpicofe/gl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/plat_sdl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
-endif
 USE_PLUGIN_LIB = 1
 USE_FRONTEND = 1
 endif

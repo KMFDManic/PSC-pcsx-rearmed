@@ -46,6 +46,8 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
+char *padConfig = NULL;
+
 #if SDL_MAJOR_VERSION == 2
 SDLK_to_MY_SDLK SDLK_to_AB_SDLK_ARRAY[] = {
         {SDLK_UNKNOWN,            MY_SDLK_UNKNOWN},
@@ -735,14 +737,12 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
         case SDL_JOYHATMOTION:
 
             // cleanup states
-            for (int i=0;i<4;i++)
-            {
+            for (int i = 0; i < 4; i++) {
                 kc = state->hat_state[i];
-                if (kc!=0)
-                {
+                if (kc != 0) {
                     update_keystate(state->keystate, kc, 0);
                 }
-                state->hat_state[i]=0;
+                state->hat_state[i] = 0;
             }
 
 
@@ -751,14 +751,12 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
 
             switch (event->jhat.value) {
                 case SDL_HAT_CENTERED:
-                    for (int i=0;i<4;i++)
-                    {
+                    for (int i = 0; i < 4; i++) {
                         kc = state->hat_state[i];
-                        if (kc!=0)
-                        {
+                        if (kc != 0) {
                             update_keystate(state->keystate, kc, 0);
                         }
-                        state->hat_state[i]=0;
+                        state->hat_state[i] = 0;
                     }
                     down = 0;
                     ret = 1;
@@ -905,6 +903,43 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
 #else
             kc = (int)event->jbutton.button + SDLK_WORLD_0;
 #endif
+            // TODO: fix this and vary
+            // custom handler
+            switch (event->jbutton.button) {
+                case 0:
+                    kc = MY_SDLK_d;
+                    break;
+                case 1:
+                    kc = MY_SDLK_x;
+                    break;
+                case 2:
+                    kc = MY_SDLK_z;
+                    break;
+                case 3:
+                    kc = MY_SDLK_s;
+                    break;
+                case 4:
+                    kc = MY_SDLK_w;
+                    break;
+                case 5:
+                    kc = MY_SDLK_r;
+                    break;
+                case 6:
+                    kc = MY_SDLK_e;
+                    break;
+                case 7:
+                    kc = MY_SDLK_w;
+                    break;
+                case 8:
+                    kc = MY_SDLK_t;
+                    break;
+                case 9:
+                    kc = MY_SDLK_c;
+                    break;
+
+            }
+
+
             down = event->jbutton.state == SDL_PRESSED;
             ret = 1;
             break;

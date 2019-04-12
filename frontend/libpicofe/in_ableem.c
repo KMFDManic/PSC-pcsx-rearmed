@@ -759,113 +759,119 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
     switch (event->type) {
 
 
+
+
         // Support for Digital directional buttons (So called is SDL2  "A HAT")
         case SDL_JOYHATMOTION:
 
-            // cleanup states
-            for (int i = 0; i < 4; i++) {
-                kc = state->hat_state[i];
-                if (kc != 0) {
-                    update_keystate(state->keystate, kc, 0);
-                }
-                state->hat_state[i] = 0;
-            }
-
-
-            if (event->jhat.which != state->joy_id)
-                return -2;
-
-            switch (event->jhat.value) {
-                case SDL_HAT_CENTERED:
-                    for (int i = 0; i < 4; i++) {
-                        kc = state->hat_state[i];
-                        if (kc != 0) {
-                            update_keystate(state->keystate, kc, 0);
-                        }
-                        state->hat_state[i] = 0;
+            if (has_dpad()) {
+                // cleanup states
+                for (int i = 0; i < 4; i++) {
+                    kc = state->hat_state[i];
+                    if (kc != 0) {
+                        update_keystate(state->keystate, kc, 0);
                     }
-                    down = 0;
-                    ret = 1;
-                    break;
-                case SDL_HAT_UP:
-                    kc = MY_SDLK_UP;
-                    state->hat_state[0] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_DOWN:
-                    kc = MY_SDLK_DOWN;
-                    state->hat_state[1] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_LEFT:
-                    kc = MY_SDLK_LEFT;
-                    state->hat_state[2] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_RIGHT:
-                    kc = MY_SDLK_RIGHT;
-                    state->hat_state[3] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_RIGHTUP:
-                    kc = MY_SDLK_RIGHT;
-                    state->hat_state[3] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    kc = MY_SDLK_UP;
-                    state->hat_state[0] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_LEFTUP:
-                    kc = MY_SDLK_LEFT;
-                    state->hat_state[2] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    kc = MY_SDLK_UP;
-                    state->hat_state[0] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_RIGHTDOWN:
-                    kc = MY_SDLK_RIGHT;
-                    state->hat_state[3] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    kc = MY_SDLK_DOWN;
-                    state->hat_state[1] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
-                case SDL_HAT_LEFTDOWN:
-                    kc = MY_SDLK_LEFT;
-                    state->hat_state[2] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    kc = MY_SDLK_DOWN;
-                    state->hat_state[1] = kc;
-                    update_keystate(state->keystate, kc, 1);
-                    down = 1;
-                    ret = 1;
-                    break;
+                    state->hat_state[i] = 0;
+                }
 
+
+                if (event->jhat.which != state->joy_id)
+                    return -2;
+
+                switch (event->jhat.value) {
+                    case SDL_HAT_CENTERED:
+                        for (int i = 0; i < 4; i++) {
+                            kc = state->hat_state[i];
+                            if (kc != 0) {
+                                update_keystate(state->keystate, kc, 0);
+                            }
+                            state->hat_state[i] = 0;
+                        }
+                        down = 0;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_UP:
+                        kc = MY_SDLK_UP;
+                        state->hat_state[0] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_DOWN:
+                        kc = MY_SDLK_DOWN;
+                        state->hat_state[1] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_LEFT:
+                        kc = MY_SDLK_LEFT;
+                        state->hat_state[2] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_RIGHT:
+                        kc = MY_SDLK_RIGHT;
+                        state->hat_state[3] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_RIGHTUP:
+                        kc = MY_SDLK_RIGHT;
+                        state->hat_state[3] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        kc = MY_SDLK_UP;
+                        state->hat_state[0] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_LEFTUP:
+                        kc = MY_SDLK_LEFT;
+                        state->hat_state[2] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        kc = MY_SDLK_UP;
+                        state->hat_state[0] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_RIGHTDOWN:
+                        kc = MY_SDLK_RIGHT;
+                        state->hat_state[3] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        kc = MY_SDLK_DOWN;
+                        state->hat_state[1] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+                    case SDL_HAT_LEFTDOWN:
+                        kc = MY_SDLK_LEFT;
+                        state->hat_state[2] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        kc = MY_SDLK_DOWN;
+                        state->hat_state[1] = kc;
+                        update_keystate(state->keystate, kc, 1);
+                        down = 1;
+                        ret = 1;
+                        break;
+
+                }
+
+
+                kc = NULL;
+
+                if (kc_out != NULL)
+                    *kc_out = kc;
+                if (down_out != NULL)
+                    *down_out = down;
+            } else
+            {
+                ret = -2;
             }
-
-
-            kc = NULL;
-
-            if (kc_out != NULL)
-                *kc_out = kc;
-            if (down_out != NULL)
-                *down_out = down;
-
             return ret;
 
         case SDL_JOYAXISMOTION:
@@ -958,10 +964,10 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
                         xc = MY_SDLK_e;
                         break;
                     case 7:
-                        xc = MY_SDLK_w;
+                        xc = MY_SDLK_t;
                         break;
                     case 8:
-                        xc = MY_SDLK_t;
+                        xc = MY_SDLK_v;
                         break;
                     case 9:
                         xc = MY_SDLK_c;

@@ -46,7 +46,7 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
-char *padConfig = "3210456789D1100";
+char *padConfig = "3210456798D1100";
 
 int translate_button_map(int in)
 {

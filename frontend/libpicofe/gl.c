@@ -35,6 +35,9 @@ static int gles_have_error(const char *name)
 	return 0;
 }
 
+void *tmp_tex_sface = NULL;
+GLuint overlay_tex = 1;
+
 int gl_init(void *display, void *window, int *quirks)
 {
 	EGLConfig ecfg = NULL;
@@ -58,6 +61,7 @@ int gl_init(void *display, void *window, int *quirks)
 	}
 
 	tmp_texture_mem = calloc(1, 1024 * 1024 * 3);
+    tmp_tex_sface = calloc(1, 1280 * 720 * 4);
 	if (tmp_texture_mem == NULL) {
 		fprintf(stderr, "OOM\n");
 		goto out;
@@ -104,11 +108,18 @@ int gl_init(void *display, void *window, int *quirks)
 	glEnable(GL_TEXTURE_2D);
 
 	glGenTextures(1, &texture_name);
+	glGenTextures(1, &overlay_tex);
+
+    glBindTexture(GL_TEXTURE_2D, overlay_tex);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1280, 720, 0, GL_RGBA,
+                 GL_UNSIGNED_BYTE, tmp_tex_sface);
+
 
 	glBindTexture(GL_TEXTURE_2D, texture_name);
 
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 1024, 1024, 0, GL_RGB,
 		GL_UNSIGNED_BYTE, tmp_texture_mem);
+
 	if (gl_have_error("glTexImage2D"))
 		goto out;
 
@@ -168,6 +179,17 @@ static float texture[] = {
 
 int gl_flip(const void *fb, int w, int h, int rgb888)
 {
+    // no mipmaps
+    if (filter_mode==FILTER_ON)
+    {
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    }
+    else if (filter_mode == FILTER_OFF)
+    {
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    }
 	static int old_w, old_h;
 
 	if (fb != NULL) {
@@ -199,6 +221,8 @@ int gl_flip(const void *fb, int w, int h, int rgb888)
 
 	if (gl_have_error("glDrawArrays"))
 		return -1;
+
+	// TODO: render overlay here
 
 	eglSwapBuffers(edpy, esfc);
 	if (gles_have_error("eglSwapBuffers"))

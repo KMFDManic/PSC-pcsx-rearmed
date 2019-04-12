@@ -734,6 +734,18 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
         // Support for Digital directional buttons (So called is SDL2  "A HAT")
         case SDL_JOYHATMOTION:
 
+            // cleanup states
+            for (int i=0;i<4;i++)
+            {
+                kc = state->hat_state[i];
+                if (kc!=0)
+                {
+                    update_keystate(state->keystate, kc, 0);
+                }
+                state->hat_state[i]=0;
+            }
+
+
             if (event->jhat.which != state->joy_id)
                 return -2;
 

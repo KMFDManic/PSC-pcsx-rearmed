@@ -46,7 +46,33 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
-char *padConfig = NULL;
+char *padConfig = "3210456789D1100";
+
+int translate_button_map(int in)
+{
+    if ((in>9) || (in<0) ) return -1;
+    if (padConfig!=NULL)
+    {
+        return padConfig[in] -'0';
+    } else
+    {
+        return in;
+    }
+
+}
+
+int has_dpad()
+{
+    if (padConfig!=NULL)
+    {
+        return (padConfig[10]=='D');
+    } else
+    {
+        return -1;
+    }
+}
+
+
 
 #if SDL_MAJOR_VERSION == 2
 SDLK_to_MY_SDLK SDLK_to_AB_SDLK_ARRAY[] = {
@@ -897,50 +923,54 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
 #endif
             if (event->jbutton.which != state->joy_id)
                 return -2;
-            // TODO: Here is a place to sort out button mapping on non sony controllers ... huh - need to do something here  to read gamepad config
+
 #if SDL_MAJOR_VERSION == 2
             kc = (int) event->jbutton.button + MY_SDLK_WORLD_0;
 #else
             kc = (int)event->jbutton.button + SDLK_WORLD_0;
 #endif
-            // TODO: fix this and vary
-            // custom handler
-            switch (event->jbutton.button) {
-                case 0:
-                    kc = MY_SDLK_d;
-                    break;
-                case 1:
-                    kc = MY_SDLK_x;
-                    break;
-                case 2:
-                    kc = MY_SDLK_z;
-                    break;
-                case 3:
-                    kc = MY_SDLK_s;
-                    break;
-                case 4:
-                    kc = MY_SDLK_w;
-                    break;
-                case 5:
-                    kc = MY_SDLK_r;
-                    break;
-                case 6:
-                    kc = MY_SDLK_e;
-                    break;
-                case 7:
-                    kc = MY_SDLK_w;
-                    break;
-                case 8:
-                    kc = MY_SDLK_t;
-                    break;
-                case 9:
-                    kc = MY_SDLK_c;
-                    break;
-
-            }
-
-
             down = event->jbutton.state == SDL_PRESSED;
+
+            if (padConfig!=NULL) {
+                int xc = 0;
+                // TODO: fix this and vary
+                // custom handler
+                switch (translate_button_map(event->jbutton.button)) {
+                    case 0:
+                        xc = MY_SDLK_d;
+                        break;
+                    case 1:
+                        xc = MY_SDLK_x;
+                        break;
+                    case 2:
+                        xc = MY_SDLK_z;
+                        break;
+                    case 3:
+                        xc = MY_SDLK_s;
+                        break;
+                    case 4:
+                        xc = MY_SDLK_w;
+                        break;
+                    case 5:
+                        xc = MY_SDLK_r;
+                        break;
+                    case 6:
+                        xc = MY_SDLK_e;
+                        break;
+                    case 7:
+                        xc = MY_SDLK_w;
+                        break;
+                    case 8:
+                        xc = MY_SDLK_t;
+                        break;
+                    case 9:
+                        xc = MY_SDLK_c;
+                        break;
+
+                }
+
+                update_keystate(state->keystate, xc, down);
+            }
             ret = 1;
             break;
         default:

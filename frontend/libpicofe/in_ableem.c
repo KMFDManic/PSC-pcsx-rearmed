@@ -759,22 +759,22 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
                     ret = 1;
                     break;
                 case SDL_HAT_DOWN:
-                    state->hat_state[1] = 1;
                     kc = MY_SDLK_DOWN;
+                    state->hat_state[1] = kc;
                     update_keystate(state->keystate, kc, 1);
                     down = 1;
                     ret = 1;
                     break;
                 case SDL_HAT_LEFT:
-                    state->hat_state[0] = 1;
-                    kc = MY_SDLK_UP;
+                    kc = MY_SDLK_LEFT;
+                    state->hat_state[2] = kc;
                     update_keystate(state->keystate, kc, 1);
                     down = 1;
                     ret = 1;
                     break;
                 case SDL_HAT_RIGHT:
-                    state->hat_state[1] = 1;
-                    kc = MY_SDLK_DOWN;
+                    kc = MY_SDLK_RIGHT;
+                    state->hat_state[3] = kc;
                     update_keystate(state->keystate, kc, 1);
                     down = 1;
                     ret = 1;

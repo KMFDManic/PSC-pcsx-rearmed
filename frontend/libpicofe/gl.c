@@ -190,7 +190,7 @@ int gl_flip(const void *fb, int w, int h, int rgb888) {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     }
     static int old_w, old_h;
-
+    glBindTexture(GL_TEXTURE_2D, texture_name);
     if (fb != NULL) {
         if (w != old_w || h != old_h) {
             float f_w = (float) w / 1024.0f;
@@ -214,7 +214,7 @@ int gl_flip(const void *fb, int w, int h, int rgb888) {
             return -1;
     }
 
-    glBindTexture(GL_TEXTURE_2D, texture_name);
+
 
     glVertexPointer(3, GL_FLOAT, 0, vertices);
     glTexCoordPointer(2, GL_FLOAT, 0, texture);
@@ -227,7 +227,7 @@ int gl_flip(const void *fb, int w, int h, int rgb888) {
 
     // TODO: render overlay here
     glBindTexture(GL_TEXTURE_2D, overlay_tex);
-    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glVertexPointer(3, GL_FLOAT, 0, overlayvert);
     glTexCoordPointer(2, GL_FLOAT, 0, texture);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 

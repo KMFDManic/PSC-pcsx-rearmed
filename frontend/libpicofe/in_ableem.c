@@ -46,14 +46,14 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
-char *padConfig = "3210456798D1100";
+char *PAD_CONFIG_STRING = "3210456798D1100";
 
 int translate_button_map(int in)
 {
     if ((in>9) || (in<0) ) return -1;
-    if (padConfig!=NULL)
+    if (PAD_CONFIG_STRING!=NULL)
     {
-        return padConfig[in] -'0';
+        return PAD_CONFIG_STRING[in] -'0';
     } else
     {
         return in;
@@ -63,9 +63,9 @@ int translate_button_map(int in)
 
 int has_dpad()
 {
-    if (padConfig!=NULL)
+    if (PAD_CONFIG_STRING!=NULL)
     {
-        return (padConfig[10]=='D');
+        return (PAD_CONFIG_STRING[10]=='D');
     } else
     {
         return -1;
@@ -937,7 +937,7 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
 #endif
             down = event->jbutton.state == SDL_PRESSED;
 
-            if (padConfig!=NULL) {
+            if (PAD_CONFIG_STRING!=NULL) {
                 int xc = 0;
                 // TODO: fix this and vary
                 // custom handler

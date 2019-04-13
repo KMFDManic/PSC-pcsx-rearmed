@@ -650,6 +650,8 @@ int main_ui(int argc, char *argv[])
     printf("+ frontend/main_ui()\n");
 #else
 
+extern char *PAD_CONFIG_STRING;
+
 int main(int argc, char *argv[]) {
     //printf("+ frontend/main()\n");
 #endif
@@ -694,6 +696,9 @@ int main(int argc, char *argv[]) {
         } else if (!strcmp(argv[i], "-loadf")) {
             if (i + 1 >= argc) break;
             loadst_f = argv[++i];
+        } else if (!strcmp(argv[i], "-pad")) {
+            if (i + 1 >= argc) break;
+            PAD_CONFIG_STRING = argv[++i];
         } else if (!strcmp(argv[i], "-display")) {
             if (i + 1 >= argc) {
                 break;

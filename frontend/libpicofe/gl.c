@@ -35,10 +35,10 @@ static int gles_have_error(const char *name) {
 
 void *tmp_tex_sface = NULL;
 GLuint overlay_tex = 1;
-
+GLuint texture_name = 0;
 int gl_init(void *display, void *window, int *quirks) {
     EGLConfig ecfg = NULL;
-    GLuint texture_name = 0;
+
     void *tmp_texture_mem = NULL;
     EGLint num_config;
     int retval = -1;

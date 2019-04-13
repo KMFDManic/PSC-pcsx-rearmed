@@ -46,7 +46,7 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
-char *PAD_CONFIG_STRING = "3210456798D1100";
+char *PAD_CONFIG_STRING = NULL; // "3210456798D1100";
 
 int translate_button_map(int in)
 {
@@ -758,9 +758,6 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
     /* TODO: remaining axis */
     switch (event->type) {
 
-
-
-
         // Support for Digital directional buttons (So called is SDL2  "A HAT")
         case SDL_JOYHATMOTION:
 
@@ -939,7 +936,7 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
 
             if (PAD_CONFIG_STRING!=NULL) {
                 int xc = 0;
-                // TODO: fix this and vary
+
                 // custom handler
                 switch (translate_button_map(event->jbutton.button)) {
                     case 0:

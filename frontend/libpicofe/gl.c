@@ -226,11 +226,14 @@ int gl_flip(const void *fb, int w, int h, int rgb888) {
         return -1;
 
     // TODO: render overlay here
+
+    /*
     glBindTexture(GL_TEXTURE_2D, overlay_tex);
     glVertexPointer(3, GL_FLOAT, 0, overlayvert);
     glTexCoordPointer(2, GL_FLOAT, 0, texture);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
+     */
     eglSwapBuffers(edpy, esfc);
     if (gles_have_error("eglSwapBuffers"))
         return -1;

@@ -699,6 +699,10 @@ int main(int argc, char *argv[]) {
         } else if (!strcmp(argv[i], "-pad")) {
             if (i + 1 >= argc) break;
             PAD_CONFIG_STRING = argv[++i];
+            if (strcmp(PAD_CONFIG_STRING,"NA"))
+            {
+                PAD_CONFIG_STRING = NULL;
+            }
         } else if (!strcmp(argv[i], "-display")) {
             if (i + 1 >= argc) {
                 break;

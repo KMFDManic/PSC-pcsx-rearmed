@@ -772,7 +772,7 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
     /* TODO: remaining axis */
     switch (event->type) {
 
-        // Support for Digital directional buttons (So called is SDL2  "A HAT")
+        // Support for Digital directional buttons by screemer :) (So called is SDL2  "A HAT")
         case SDL_JOYHATMOTION:
 
             if (has_dpad()) {
@@ -785,10 +785,8 @@ static int handle_joy_event(struct in_ableem_state *state, SDL_Event *event,
                     state->hat_state[i] = 0;
                 }
 
-
                 if (event->jhat.which != state->joy_id)
                     return -2;
-
                 switch (event->jhat.value) {
                     case SDL_HAT_CENTERED:
                         for (int i = 0; i < 4; i++) {

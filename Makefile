@@ -1,7 +1,7 @@
 # Makefile for PCSX ReARMed
 
 # default stuff goes here, so that config can override
-TARGET ?= pcsx
+TARGET ?= pcsx-ab
 CFLAGS += -Wall -Iinclude -ffast-math
 CFLAGS += -DCONFIG_ENABLE_MENU
 ifndef DEBUG
@@ -314,7 +314,7 @@ PLAT_CLEAN = caanoo_clean
 caanoo_clean:
 	$(RM) frontend/320240/pollux_set
 
-rel: pcsx $(PLUGINS) \
+rel: pcsx-ab $(PLUGINS) \
 		frontend/320240/caanoo.gpe frontend/320240/pcsx26.png \
 		frontend/320240/pcsxb.png frontend/320240/skin \
 		frontend/warm/bin/warm_2.6.24.ko frontend/320240/pollux_set \

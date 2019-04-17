@@ -46,14 +46,28 @@ struct in_ableem_state {
 
 static void (*ext_event_handler)(void *event);
 
-char *PAD_CONFIG_STRING = NULL; // "3210456798D1100";
+char *PAD_CONFIG_STRING = NULL; // "3|2|1|0|4|5|6|7|9|8|D|1|1|0|0";
+char *PAD_CONFIG_ARRAY[16];
+
+void tokenizeConfig()
+{
+   int i=0;
+   if (PAD_CONFIG_STRING==NULL) return;
+   char *p = strtok (PAD_CONFIG_STRING, "|");
+   while (p != NULL )
+   {
+      PAD_CONFIG_ARRAY[i++] = p;
+      p = strtok (NULL, "|");
+   }
+}
 
 int translate_button_map(int in)
 {
-    if ((in>9) || (in<0) ) return -1;
+    if ((in>9) || (in<0) ) return -1; // we only support 10 buttons - sorry 
     if (PAD_CONFIG_STRING!=NULL)
     {
-        return PAD_CONFIG_STRING[in] -'0';
+	return atoi(PAD_CONFIG_ARRAY[in]);
+        //return PAD_CONFIG_STRING[in] -'0';
     } else
     {
         return in;
@@ -65,7 +79,7 @@ int has_dpad()
 {
     if (PAD_CONFIG_STRING!=NULL)
     {
-        return (PAD_CONFIG_STRING[10]=='D');
+        return (strcmp(PAD_CONFIG_ARRAY[10],"D"));
     } else
     {
         return -1;
@@ -1476,8 +1490,8 @@ int in_ableem_init(const struct in_pdata *pdata, void (*handler)(void *event)) {
     if (!pdata) {
         fprintf(stderr, "in_ableem: Missing input platform data\n");
         return -1;
-    }
-
+    } 
+    tokenizeConfig();
     in_register_driver(&in_ableem_drv, pdata->defbinds, pdata);
     ext_event_handler = handler;
     return 0;

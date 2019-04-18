@@ -81,7 +81,7 @@ int has_dpad()
 {
     if (PAD_CONFIG_STRING!=NULL)
     {
-        return (strcmp(PAD_CONFIG_ARRAY[10],"D"));
+        return (strcmp(PAD_CONFIG_ARRAY[10],"D")==0);
     } else
     {
         return -1;

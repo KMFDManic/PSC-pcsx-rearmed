@@ -697,9 +697,12 @@ int main(int argc, char *argv[]) {
             if (i + 1 >= argc) break;
             loadst_f = argv[++i];
         } else if (!strcmp(argv[i], "-pad")) {
+            printf ("Reading pad config\n");
+
             if (i + 1 >= argc) break;
             PAD_CONFIG_STRING = argv[++i];
-            if (strcmp(PAD_CONFIG_STRING,"NA"))
+            printf("PAD_CONFIG_STRING %s \n",PAD_CONFIG_STRING);
+            if (strcmp(PAD_CONFIG_STRING,"NA")==0)
             {
                 PAD_CONFIG_STRING = NULL;
             }

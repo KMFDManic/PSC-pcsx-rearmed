@@ -51,7 +51,7 @@ char *PAD_CONFIG_ARRAY[16];
 
 void tokenizeConfig()
 {
-    printf("tokenizing config %s",PAD_CONFIG_STRING);
+    printf("tokenizing config %s \n",PAD_CONFIG_STRING);
    int i=0;
    if (PAD_CONFIG_STRING==NULL) return;
    char *p = strtok (PAD_CONFIG_STRING, "|");
@@ -59,7 +59,7 @@ void tokenizeConfig()
    {
       PAD_CONFIG_ARRAY[i++] = p;
       p = strtok (NULL, "|");
-      printf ("New button: %s",p);
+      printf ("New button: %s \n",p);
    }
 }
 

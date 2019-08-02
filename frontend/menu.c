@@ -2531,9 +2531,13 @@ static int main_menu_handler(int id, int keys)
 		break;
 	    case MA_QUICKSAVE:
 	        emu_save_state(2);
+            if (ready_to_go)
+                return 1;
 	        break;
 	    case MA_QUICKLOAD:
 	        emu_load_state(2);
+            if (ready_to_go)
+                return 1;
 	        break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
@@ -2570,7 +2574,7 @@ static int main_menu1_handler(int id, int keys)
 static menu_entry e_menu_main3[] =
 {
         mee_handler_id("Quick Save",   MA_QUICKSAVE,   main_menu_handler),
-        mee_handler_id("Quick Save",   MA_QUICKLOAD,   main_menu_handler),
+        mee_handler_id("Quick Load",   MA_QUICKLOAD,   main_menu_handler),
 		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),

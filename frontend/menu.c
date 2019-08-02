@@ -93,7 +93,9 @@ typedef enum
 	MA_OPT_VOUT_MODE,
 	MA_OPT_SCANLINES,
 	MA_OPT_SCANLINE_LEVEL,
-	MA_MAIN_FILTER
+	MA_MAIN_FILTER,
+	MA_QUICKSAVE,
+	MA_QUICKLOAD
 } menu_id;
 
 static int last_vout_w, last_vout_h, last_vout_bpp;
@@ -2527,6 +2529,12 @@ static int main_menu_handler(int id, int keys)
 		if (ready_to_go)
 			return 1;
 		break;
+	    case MA_QUICKSAVE:
+	        emu_save_state(2);
+	        break;
+	    case MA_QUICKLOAD:
+	        emu_load_state(2);
+	        break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
 		break;
@@ -2561,6 +2569,8 @@ static int main_menu1_handler(int id, int keys)
 
 static menu_entry e_menu_main3[] =
 {
+        mee_handler_id("Quick Save",   MA_QUICKSAVE,   main_menu_handler),
+        mee_handler_id("Quick Save",   MA_QUICKLOAD,   main_menu_handler),
 		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),

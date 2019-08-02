@@ -9,10 +9,11 @@
  */
 
 #include <stdio.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "libpicofe/input.h"
-#include "libpicofe/in_sdl.h"
+//#include "libpicofe/in_sdl.h"
+#include "libpicofe/in_ableem.h"
 #include "libpicofe/menu.h"
 #include "libpicofe/fonts.h"
 #include "libpicofe/plat_sdl.h"
@@ -262,12 +263,18 @@ void plat_init(void)
     fprintf(stderr, "OOM\n");
     exit(1);
   }
+   
+  // init our fixed plugin  instead of regular SDL -
+
+ 
+
   if (enter_mode == 1) {
-    in_sdl_init(&in_sdl_platform_data_1, plat_sdl_event_handler);
+      in_ableem_init(&in_sdl_platform_data_1, plat_sdl_event_handler);
   }
   else {
-    in_sdl_init(&in_sdl_platform_data_2, plat_sdl_event_handler);
+      in_ableem_init(&in_sdl_platform_data_2, plat_sdl_event_handler);
   }
+
   in_probe();
   pl_rearmed_cbs.only_16bpp = 0;
   pl_rearmed_cbs.pl_get_layer_pos = get_layer_pos;

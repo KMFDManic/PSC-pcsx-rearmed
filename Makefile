@@ -1,11 +1,9 @@
 # Makefile for PCSX ReARMed
 
 # default stuff goes here, so that config can override
-TARGET ?= pcsx
+TARGET ?= pcsx-ab
 CFLAGS += -Wall -Iinclude -ffast-math
-ifdef CONFIG_ENABLE_MENU
 CFLAGS += -DCONFIG_ENABLE_MENU
-endif
 ifndef DEBUG
 CFLAGS += -O2 -DNDEBUG
 endif
@@ -13,7 +11,7 @@ CXXFLAGS += $(CFLAGS)
 #DRC_DBG = 1
 #PCNT = 1
 
-all: config.mak target_ plugins_
+all: config.mak  target_ plugins_
 
 ifndef NO_CONFIG_MAK
 ifneq ($(wildcard config.mak),)
@@ -155,18 +153,17 @@ endif
 
 ifeq "$(PLATFORM)" "generic"
 OBJS += frontend/libpicofe/in_sdl.o
+OBJS += frontend/libpicofe/in_ableem.o
 OBJS += frontend/libpicofe/plat_sdl.o
 OBJS += frontend/libpicofe/plat_dummy.o
 OBJS += frontend/libpicofe/linux/in_evdev.o
 OBJS += frontend/plat_sdl.o
-ifeq "$(HAVE_GLES)" "1"
 OBJS += frontend/libpicofe/gl.o frontend/libpicofe/gl_platform.o
 LDLIBS += $(LDLIBS_GLES)
 frontend/libpicofe/plat_sdl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/libpicofe/gl_platform.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/libpicofe/gl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
 frontend/plat_sdl.o: CFLAGS += -DHAVE_GLES $(CFLAGS_GLES)
-endif
 USE_PLUGIN_LIB = 1
 USE_FRONTEND = 1
 endif
@@ -317,7 +314,7 @@ PLAT_CLEAN = caanoo_clean
 caanoo_clean:
 	$(RM) frontend/320240/pollux_set
 
-rel: pcsx $(PLUGINS) \
+rel: pcsx-ab $(PLUGINS) \
 		frontend/320240/caanoo.gpe frontend/320240/pcsx26.png \
 		frontend/320240/pcsxb.png frontend/320240/skin \
 		frontend/warm/bin/warm_2.6.24.ko frontend/320240/pollux_set \

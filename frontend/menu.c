@@ -2561,8 +2561,7 @@ static int main_menu_handler(int id, int keys)
 	        break;
 	    case MA_SAVEABCONFIG:
 	        mh_savecfg(MA_OPT_SAVECFG_AB,0);
-            if (ready_to_go)
-                return 1;
+
             break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);

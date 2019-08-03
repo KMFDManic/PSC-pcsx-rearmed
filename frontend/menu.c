@@ -683,9 +683,7 @@ static void make_cfg_fname(char *buf, size_t size, int is_game)
             break;
 
     }
-	if (is_game==0)
 
-	else
 
 }
 

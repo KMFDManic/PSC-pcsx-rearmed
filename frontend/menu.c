@@ -672,10 +672,10 @@ static void make_cfg_fname(char *buf, size_t size, int is_game)
 {
     switch (is_game)
     {
-        case 0:
+        case 1:
             snprintf(buf, size, "." PCSX_DOT_DIR "cfg/%.32s-%.9s.cfg", get_cd_label(), CdromId);
         break;
-        case 1:
+        case 0:
             snprintf(buf, size, "." PCSX_DOT_DIR "%s", cfgfile_basename);
             break;
         case 2:

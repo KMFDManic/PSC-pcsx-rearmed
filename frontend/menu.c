@@ -81,6 +81,7 @@ typedef enum
 	MA_CTRL_DONE,
 	MA_OPT_SAVECFG,
 	MA_OPT_SAVECFG_GAME,
+	MA_OPT_SAVECFG_AB,
 	MA_OPT_CPU_CLOCKS,
 	MA_OPT_SPU_THREAD,
 	MA_OPT_DISP_OPTS,
@@ -669,10 +670,23 @@ static char *get_cd_label(void)
 
 static void make_cfg_fname(char *buf, size_t size, int is_game)
 {
-	if (is_game)
-		snprintf(buf, size, "." PCSX_DOT_DIR "cfg/%.32s-%.9s.cfg", get_cd_label(), CdromId);
+    switch (is_game)
+    {
+        case 0:
+            snprintf(buf, size, "." PCSX_DOT_DIR "cfg/%.32s-%.9s.cfg", get_cd_label(), CdromId);
+        break;
+        case 1:
+            snprintf(buf, size, "." PCSX_DOT_DIR "%s", cfgfile_basename);
+            break;
+        case 2:
+            snprintf(buf, size, "." PCSX_DOT_DIR "%s", "autobleem.cfg");
+            break;
+
+    }
+	if (is_game==0)
+
 	else
-		snprintf(buf, size, "." PCSX_DOT_DIR "%s", cfgfile_basename);
+
 }
 
 static void keys_write_all(FILE *f);
@@ -1387,7 +1401,12 @@ static const char *mgn_saveloadcfg(int id, int *offs)
 
 static int mh_savecfg(int id, int keys)
 {
-	if (menu_write_config(id == MA_OPT_SAVECFG_GAME ? 1 : 0) == 0)
+    int optionFile;
+    if (id == MA_OPT_SAVECFG) optionFile = 1;
+    if (id == MA_OPT_SAVECFG_GAME) optionFile = 0;
+    if (id == MA_OPT_SAVECFG_AB) optionFile = 2;
+
+    if (menu_write_config(optionFile) == 0)
 		menu_update_msg("config saved");
 	else
 		menu_update_msg("failed to write config");
@@ -1427,7 +1446,7 @@ static menu_entry e_menu_keyconfig[] =
 	mee_onoff_h   ("Vibration",         MA_CTRL_VIBRATION,  in_enable_vibration, 1, h_vibration),
 	mee_range     ("Analog deadzone",   MA_CTRL_DEADZONE,   analog_deadzone, 1, 99),
 	mee_onoff_h   ("No TS Gun trigger", 0, g_opts, OPT_TSGUN_NOTRIGGER, h_notsgun),
-	mee_cust_nosave("Save global config",       MA_OPT_SAVECFG,      mh_savecfg, mgn_saveloadcfg),
+	mee_cust_nosave("Save AutoBleem cfg",       MA_OPT_SAVECFG_AB,      mh_savecfg, mgn_saveloadcfg),
 	mee_cust_nosave("Save cfg for loaded game", MA_OPT_SAVECFG_GAME, mh_savecfg, mgn_saveloadcfg),
 	mee_handler   ("Rescan devices:",  mh_input_rescan),
 	mee_label     (""),
@@ -2531,11 +2550,13 @@ static int main_menu_handler(int id, int keys)
 		break;
 	    case MA_QUICKSAVE:
 	        emu_save_state(2);
+            menu_update_msg("quick save done");
             if (ready_to_go)
                 return 1;
 	        break;
 	    case MA_QUICKLOAD:
 	        emu_load_state(2);
+            menu_update_msg("loaded");
             if (ready_to_go)
                 return 1;
 	        break;

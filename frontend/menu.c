@@ -96,7 +96,8 @@ typedef enum
 	MA_OPT_SCANLINE_LEVEL,
 	MA_MAIN_FILTER,
 	MA_QUICKSAVE,
-	MA_QUICKLOAD
+	MA_QUICKLOAD,
+	MA_SAVEABCONFIG
 } menu_id;
 
 static int last_vout_w, last_vout_h, last_vout_bpp;
@@ -1854,7 +1855,7 @@ static menu_entry e_menu_options[] =
 	mee_handler_id("[Display]",                MA_OPT_DISP_OPTS, menu_loop_gfx_options),
 	mee_handler   ("[BIOS/Plugins]",           menu_loop_plugin_options),
 	mee_handler   ("[Advanced]",               menu_loop_adv_options),
-	mee_cust_nosave("Save global config",      MA_OPT_SAVECFG,      mh_savecfg, mgn_saveloadcfg),
+	mee_cust_nosave("Save AutoBleem config",      MA_OPT_SAVECFG_AB,      mh_savecfg, mgn_saveloadcfg),
 	mee_cust_nosave("Save cfg for loaded game",MA_OPT_SAVECFG_GAME, mh_savecfg, mgn_saveloadcfg),
 	mee_handler_h ("Restore default config",   mh_restore_defaults, h_restore_def),
 	mee_end,
@@ -2558,6 +2559,11 @@ static int main_menu_handler(int id, int keys)
             if (ready_to_go)
                 return 1;
 	        break;
+	    case MA_SAVEABCONFIG:
+	        mh_savecfg(MA_OPT_SAVECFG_AB,0);
+            if (ready_to_go)
+                return 1;
+            break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
 		break;
@@ -2597,6 +2603,7 @@ static menu_entry e_menu_main3[] =
 		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),
+        mee_handler_id("Save AutoBleem CFG",   MA_SAVEABCONFIG,   main_menu_handler),
         mee_handler_id("Exit",            MA_MAIN_EXIT,      main_menu_handler),
         mee_end,
 };

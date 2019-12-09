@@ -1202,7 +1202,7 @@ void retro_init(void)
 {
 	const char *bios[] = { "scph1001", "scph5501", "scph7001" };
 	const char *dir;
-	char path[256];
+	char path[MAXPATHLEN];
 	int i, ret;
 	bool found_bios = false;
 

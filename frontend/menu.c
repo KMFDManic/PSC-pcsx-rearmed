@@ -738,7 +738,7 @@ static int menu_write_config(int is_game)
 static int menu_do_last_cd_img(int is_get)
 {
 	static const char *defaults[] = { "/media", "/mnt/sd", "/mnt" };
-	char path[256];
+	char path[MAXPATHLEN];
 	struct stat64 st;
 	FILE *f;
 	int i, ret = -1;
@@ -3005,7 +3005,7 @@ int make_file_name(void)
 	char isolabel[33];
 	char isoid[10];
 
-	char path[256];
+	char path[MAXPATHLEN];
 	FILE *f;
 
 	if (CdromPath[0] != '\0' && CdromLabel[0] != '\0' && CdromId[0] != '\0' && !(g_opts & OPT_AUTOSAVE)) {

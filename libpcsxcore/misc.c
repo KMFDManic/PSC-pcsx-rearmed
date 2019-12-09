@@ -422,7 +422,7 @@ void setCdromId(void) {
 void setDiscChangeType()
 {
   int i, n, ret, cd_num;
-  char title_dir_path[128];
+  char title_dir_path[MAXPATHLEN];
   char *ext, *p;
   struct dirent **namelist;
 

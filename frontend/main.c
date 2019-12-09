@@ -621,7 +621,7 @@ static void check_memcards(void) {
 }
 
 static int check_prepare_suspend(void) {
-    char path[256];
+    char path[MAXPATHLEN];
     int ret = -1;
     FILE *f;
     snprintf(path, sizeof(path), POWER_DIR

@@ -81,6 +81,7 @@ typedef enum
 	MA_CTRL_DONE,
 	MA_OPT_SAVECFG,
 	MA_OPT_SAVECFG_GAME,
+	MA_OPT_SAVECFG_AB,
 	MA_OPT_CPU_CLOCKS,
 	MA_OPT_SPU_THREAD,
 	MA_OPT_DISP_OPTS,
@@ -95,7 +96,8 @@ typedef enum
 	MA_OPT_SCANLINE_LEVEL,
 	MA_MAIN_FILTER,
 	MA_QUICKSAVE,
-	MA_QUICKLOAD
+	MA_QUICKLOAD,
+	MA_SAVEABCONFIG
 } menu_id;
 
 static int last_vout_w, last_vout_h, last_vout_bpp;
@@ -669,10 +671,21 @@ static char *get_cd_label(void)
 
 static void make_cfg_fname(char *buf, size_t size, int is_game)
 {
-	if (is_game)
-		snprintf(buf, size, "." PCSX_DOT_DIR "cfg/%.32s-%.9s.cfg", get_cd_label(), CdromId);
-	else
-		snprintf(buf, size, "." PCSX_DOT_DIR "%s", cfgfile_basename);
+    switch (is_game)
+    {
+        case 1:
+            snprintf(buf, size, "." PCSX_DOT_DIR "cfg/%.32s-%.9s.cfg", get_cd_label(), CdromId);
+        break;
+        case 0:
+            snprintf(buf, size, "." PCSX_DOT_DIR "%s", cfgfile_basename);
+            break;
+        case 2:
+            snprintf(buf, size, "." PCSX_DOT_DIR "%s", "autobleem.cfg");
+            break;
+
+    }
+
+
 }
 
 static void keys_write_all(FILE *f);
@@ -725,7 +738,7 @@ static int menu_write_config(int is_game)
 static int menu_do_last_cd_img(int is_get)
 {
 	static const char *defaults[] = { "/media", "/mnt/sd", "/mnt" };
-	char path[256];
+	char path[MAXPATHLEN];
 	struct stat64 st;
 	FILE *f;
 	int i, ret = -1;
@@ -1387,7 +1400,12 @@ static const char *mgn_saveloadcfg(int id, int *offs)
 
 static int mh_savecfg(int id, int keys)
 {
-	if (menu_write_config(id == MA_OPT_SAVECFG_GAME ? 1 : 0) == 0)
+    int optionFile;
+    if (id == MA_OPT_SAVECFG) optionFile = 1;
+    if (id == MA_OPT_SAVECFG_GAME) optionFile = 0;
+    if (id == MA_OPT_SAVECFG_AB) optionFile = 2;
+
+    if (menu_write_config(optionFile) == 0)
 		menu_update_msg("config saved");
 	else
 		menu_update_msg("failed to write config");
@@ -1427,7 +1445,7 @@ static menu_entry e_menu_keyconfig[] =
 	mee_onoff_h   ("Vibration",         MA_CTRL_VIBRATION,  in_enable_vibration, 1, h_vibration),
 	mee_range     ("Analog deadzone",   MA_CTRL_DEADZONE,   analog_deadzone, 1, 99),
 	mee_onoff_h   ("No TS Gun trigger", 0, g_opts, OPT_TSGUN_NOTRIGGER, h_notsgun),
-	mee_cust_nosave("Save global config",       MA_OPT_SAVECFG,      mh_savecfg, mgn_saveloadcfg),
+	mee_cust_nosave("Save AutoBleem cfg",       MA_OPT_SAVECFG_AB,      mh_savecfg, mgn_saveloadcfg),
 	mee_cust_nosave("Save cfg for loaded game", MA_OPT_SAVECFG_GAME, mh_savecfg, mgn_saveloadcfg),
 	mee_handler   ("Rescan devices:",  mh_input_rescan),
 	mee_label     (""),
@@ -1837,7 +1855,7 @@ static menu_entry e_menu_options[] =
 	mee_handler_id("[Display]",                MA_OPT_DISP_OPTS, menu_loop_gfx_options),
 	mee_handler   ("[BIOS/Plugins]",           menu_loop_plugin_options),
 	mee_handler   ("[Advanced]",               menu_loop_adv_options),
-	mee_cust_nosave("Save global config",      MA_OPT_SAVECFG,      mh_savecfg, mgn_saveloadcfg),
+	mee_cust_nosave("Save AutoBleem config",      MA_OPT_SAVECFG_AB,      mh_savecfg, mgn_saveloadcfg),
 	mee_cust_nosave("Save cfg for loaded game",MA_OPT_SAVECFG_GAME, mh_savecfg, mgn_saveloadcfg),
 	mee_handler_h ("Restore default config",   mh_restore_defaults, h_restore_def),
 	mee_end,
@@ -2531,10 +2549,20 @@ static int main_menu_handler(int id, int keys)
 		break;
 	    case MA_QUICKSAVE:
 	        emu_save_state(2);
+            menu_update_msg("quick save done");
+            if (ready_to_go)
+                return 1;
 	        break;
 	    case MA_QUICKLOAD:
 	        emu_load_state(2);
+            menu_update_msg("loaded");
+            if (ready_to_go)
+                return 1;
 	        break;
+	    case MA_SAVEABCONFIG:
+	        mh_savecfg(MA_OPT_SAVECFG_AB,0);
+
+            break;
 	default:
 		lprintf("%s: something unknown selected\n", __FUNCTION__);
 		break;
@@ -2570,10 +2598,11 @@ static int main_menu1_handler(int id, int keys)
 static menu_entry e_menu_main3[] =
 {
         mee_handler_id("Quick Save",   MA_QUICKSAVE,   main_menu_handler),
-        mee_handler_id("Quick Save",   MA_QUICKLOAD,   main_menu_handler),
+        mee_handler_id("Quick Load",   MA_QUICKLOAD,   main_menu_handler),
 		mee_handler_id("Toggle Filter",   MA_MAIN_FILTER,   main_menu_handler),
         mee_handler_id("Change CD image", MA_MAIN_SWAP_CD,   main_menu_handler),
         mee_handler   ("PCSX Menu",       main_menu1_handler),
+        mee_handler_id("Save AutoBleem CFG",   MA_SAVEABCONFIG,   main_menu_handler),
         mee_handler_id("Exit",            MA_MAIN_EXIT,      main_menu_handler),
         mee_end,
 };
@@ -2976,7 +3005,7 @@ int make_file_name(void)
 	char isolabel[33];
 	char isoid[10];
 
-	char path[256];
+	char path[MAXPATHLEN];
 	FILE *f;
 
 	if (CdromPath[0] != '\0' && CdromLabel[0] != '\0' && CdromId[0] != '\0' && !(g_opts & OPT_AUTOSAVE)) {

@@ -42,7 +42,7 @@ void do_emu_action(void);
 
 static void ChangeWorkingDirectory(char *exe)
 {
-	char exepath[1024];
+	char exepath[MAXPATHLEN];
 	char *s;
 	snprintf(exepath, sizeof(exepath), "%s", exe);
 	s = strrchr(exepath, '/');

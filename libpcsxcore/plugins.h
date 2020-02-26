@@ -306,13 +306,13 @@ typedef struct {
 	GPUshowScreenPic GPU_showScreenPic;
 	GPUdisplayText GPU_displayText;
 	PADsetSensitive PAD_setSensitive;
-	char GPUpath[MAXPATHLEN];	// paths must be absolute
-	char SPUpath[MAXPATHLEN];
-	char CDRpath[MAXPATHLEN];
-	char MCD1path[MAXPATHLEN];
-	char MCD2path[MAXPATHLEN];
-	char BIOSpath[MAXPATHLEN];	// 'HLE' for internal bios
-	char Unused[MAXPATHLEN];
+    char GPUpath[256];	// paths must be absolute
+    char SPUpath[256];
+    char CDRpath[256];
+    char MCD1path[256];
+    char MCD2path[256];
+    char BIOSpath[256];	// 'HLE' for internal bios
+    char Unused[1024];
 } netInfo;
 
 typedef long (CALLBACK* NETsetInfo)(netInfo *);

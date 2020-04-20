@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "input.h"
 #include "plat.h"
@@ -1037,7 +1037,8 @@ typedef int bool;
 bool bIsValidHotPlugEvent(SDL_Event *arg_pEvent) {
 	bool bRet = false;
 
-	if((arg_pEvent->jdevice.type == SDL_JOYDEVICEADDED) ||
+
+    if((arg_pEvent->jdevice.type == SDL_JOYDEVICEADDED) ||
 	   (arg_pEvent->jdevice.type == SDL_JOYDEVICEREMOVED)) {
 		bRet = true;
 	}

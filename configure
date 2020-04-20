@@ -360,7 +360,7 @@ EOF
 check_sdl()
 {
   cat > $TMPC <<EOF
-  #include <SDL.h>
+  #include <SDL2/SDL.h>
   void main() { SDL_OpenAudio(0, 0); }
 EOF
   compile_binary "$@"
